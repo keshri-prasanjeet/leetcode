@@ -1,12 +1,30 @@
 class Solution {
     public int maxSubArray(int[] nums) {
-        if(nums.length == 0) return 0;
-        int curSum = nums[0];
-        int gloSum = nums[0];
-        for(int i=1;i<nums.length;i++){
-            curSum = curSum < 0 ? nums[i] : curSum + nums[i];
-            gloSum = Math.max(curSum, gloSum);
+        return maxSubArray(nums, 0, nums.length-1);
+    }
+
+    private int maxSubArray(int[] nums, int start, int end){
+        if(start == end) return nums[start];
+        int mid = start + (end-start)/2;
+        int leftMax = maxSubArray(nums, start, mid);
+        int rightMax= maxSubArray(nums, mid+1, end);
+        int crossMax= maxCrossingSubArray(nums, start, mid, end);
+        return Math.max(crossMax, (Math.max(leftMax, rightMax)));
+    }
+
+    private int maxCrossingSubArray(int[] nums, int start, int mid, int end){
+        int leftSum = Integer.MIN_VALUE;
+        int rightSum= Integer.MIN_VALUE;
+        int curSum = 0;
+        for(int i=mid; i >=start; i--){
+            curSum +=nums[i];
+            if(leftSum < curSum) leftSum = curSum;
         }
-        return gloSum;
+        curSum = 0;
+        for(int i=mid+1;i<=end;i++){
+            curSum +=nums[i];
+            if(rightSum < curSum) rightSum = curSum;
+        }
+        return leftSum + rightSum;
     }
 }
