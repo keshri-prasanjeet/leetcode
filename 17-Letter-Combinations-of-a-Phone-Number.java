@@ -1,25 +1,25 @@
 class Solution {
-    String[] phoneLetters = new String[]{\abc\,\def\,\ghi\,\jkl\,\mno\,\pqrs\,\tuv\,\wxyz\};
+    String[] letterMap = new String[]{\abc\, \def\, \ghi\, \jkl\, \mno\, \pqrs\, \tuv\, \wxyz\};
     public List<String> letterCombinations(String digits) {
         
-        List<String> ans = new ArrayList<>();
-        StringBuilder cur = new StringBuilder();
-        if(!digits.isEmpty()) backTrack(ans, 0, cur, digits);
-        return ans;
+        List<String> letterCombinations = new ArrayList<>();
+        StringBuilder combination = new StringBuilder();
+        if(!digits.isEmpty()) dfs(digits, 0, letterCombinations, combination);
+        return letterCombinations;
     }
 
-    private void backTrack(List<String> ans, int index, StringBuilder cur, String digits){
-        if(digits.length()==cur.length()){
-            ans.add(cur.toString());
+    private void dfs(String digits, int index, List<String> letterCombinations, StringBuilder combination){
+        if(index==digits.length()){
+            letterCombinations.add(combination.toString());
             return;
         }
 
-        int num = digits.charAt(index) - '0' - 2;
-        String letters = phoneLetters[num];
+        String letters = letterMap[digits.charAt(index) - '0' -2];
         for(int i=0;i<letters.length();i++){
-            cur.append(letters.charAt(i));
-            backTrack(ans, index+1, cur, digits);
-            cur.deleteCharAt(cur.length()-1);
+            combination.append(letters.charAt(i));
+            dfs(digits, index+1, letterCombinations, combination);
+            combination.deleteCharAt(combination.length()-1);
         }
+        return;
     }
 }
