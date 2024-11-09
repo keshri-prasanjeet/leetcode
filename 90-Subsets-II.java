@@ -16,11 +16,12 @@ class Solution {
         subset.add(nums[index]);
         dfs(nums, allSubsets, subset, index+1);
         subset.remove(subset.size()-1);
-
-        while(index+1<nums.length && nums[index]==nums[index+1]){
+        
+        while(index + 1 < nums.length && nums[index] == nums[index+1]){
             index++;
         }
 
-        dfs(nums, allSubsets, subset, index+1);
+        dfs(nums, allSubsets, subset, index +1);
+
     }
 }
