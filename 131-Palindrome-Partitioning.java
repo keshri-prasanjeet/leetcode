@@ -2,7 +2,6 @@ class Solution {
     public List<List<String>> partition(String s) {
         List<List<String>> allPartitions = new ArrayList<>();
         List<String> partition = new ArrayList<>();
-
         dfs(s, allPartitions, partition, 0);
         return allPartitions;
     }
@@ -15,19 +14,19 @@ class Solution {
 
         for(int end = start; end<s.length();end++){
             if(isPalindrome(s, start, end)){
-                partition.add(s.substring(start,end+1));
+                partition.add(s.substring(start, end+1));
                 dfs(s, allPartitions, partition, end+1);
                 partition.remove(partition.size()-1);
             }
         }
-
+        return;
     }
 
-    private boolean isPalindrome(String s, int start, int end){
-        while(start <= end){
-            if(s.charAt(start) != s.charAt(end)) return false;
-            start++;
-            end--;
+    private boolean isPalindrome(String s, int left, int right){
+        while(left <= right){
+            if(s.charAt(left)!=s.charAt(right)) return false;
+            left++;
+            right--;
         }
         return true;
     }
