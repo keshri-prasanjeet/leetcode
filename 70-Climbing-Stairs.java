@@ -1,17 +1,18 @@
 class Solution {
-    Map<Integer,Integer> dpMap;
+    Map<Integer,Integer> stairsMap;
     public int climbStairs(int n) {
-        this.dpMap = new HashMap<>();
+        this.stairsMap = new HashMap<>();
         return helper(n);
     }
 
     private int helper(int n){
-        if(n==0 || n==1) return 1;
+        if(n==1 || n==0) return 1;
 
-        if(dpMap.containsKey(n)) return dpMap.get(n);
+        if(stairsMap.containsKey(n)) return stairsMap.get(n);
 
         int ways = helper(n-1) + helper(n-2);
-        dpMap.put(n, ways);
+
+        stairsMap.put(n,ways);
         return ways;
     }
 }
