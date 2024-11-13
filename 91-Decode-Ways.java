@@ -1,41 +1,29 @@
 class Solution {
+    int[] dp;
     public int numDecodings(String s) {
-        Map<Integer,Integer> dp = new HashMap<>();
-        dp.put(s.length(), 1);
-        return countDecoding(s, 0, dp);
+        int len = s.length();
+        this.dp = new int[len + 1];
+        for(int i=0;i<len;i++){
+            dp[i] = -1;
+        }
+        dp[len] =1;
+        return countWays(s, 0);
     }
 
-    private int countDecoding(String s, int index, Map<Integer, Integer> dp){
-        if(dp.containsKey(index)) return dp.get(index);
+    private int countWays(String s, int index){
+        if(dp[index]!=-1) return dp[index];
+        if(index > s.length()) return 0;
+        if(s.charAt(index) == '0') return 0;
 
-        if(index >= s.length()) return 0;
+        int ways = 0;
+        ways += countWays(s, index+1);
 
-        if(s.charAt(index)=='0') return 0;
-
-        int res = 0;
-
-        res+=countDecoding(s,index+1,dp);
-
-        if(index +1 < s.length() && 
-            (
-                (s.charAt(index) == '1') || 
-                    (s.charAt(index) == '2' && 
-                        (
-                            s.charAt(index+1) == '0' || 
-                            s.charAt(index+1) == '1' || 
-                            s.charAt(index+1) == '2' ||
-                            s.charAt(index+1) == '3' ||
-                            s.charAt(index+1) == '4' ||
-                            s.charAt(index+1) == '5' ||
-                            s.charAt(index+1) == '6'
-                        )
-                    )
-                )
-            ){
-                res+=countDecoding(s, index+2,dp);
+        if(index + 1 < s.length()){
+            if(s.charAt(index) == '1' || (s.charAt(index)=='2' && s.charAt(index+1) - '0' <=6)){
+                ways += countWays(s, index+2);
             }
-        
-        dp.put(index, res);
-        return res;
+        }
+        dp[index] = ways;
+        return ways;
     }
 }
