@@ -21,9 +21,11 @@ class RandomizedSet {
         if(!randMap.containsKey(val)){
             return false;
         }
-        // int indexOfNumber = randMap.get(val);
+        int indexOfNumber = randMap.get(val);
+        nums.set(indexOfNumber, nums.get(nums.size()-1));
+        randMap.put(nums.get(indexOfNumber),indexOfNumber);
+        nums.remove(nums.size()-1);
         randMap.remove(val);
-        nums.remove(Integer.valueOf(val));
         return true;
     }
     
