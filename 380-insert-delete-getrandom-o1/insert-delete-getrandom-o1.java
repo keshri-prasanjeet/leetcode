@@ -24,8 +24,8 @@ class RandomizedSet {
         int indexOfNumber = randMap.get(val);
         nums.set(indexOfNumber, nums.get(nums.size()-1));
         randMap.put(nums.get(indexOfNumber),indexOfNumber);
-        nums.remove(nums.size()-1);
         randMap.remove(val);
+        nums.remove(nums.size()-1);
         return true;
     }
     
