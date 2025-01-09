@@ -13,6 +13,9 @@ class Solution {
                 candy[i] = candy[i+1]+1;
             }
         }
-        return Arrays.stream(candy).sum() + len; // adding len because did not fill with 1 so adding 1 candy for each kid
+        // return Arrays.stream(candy).sum() + len; // adding len because did not fill with 1 so adding 1 candy for each kid
+        int totalCandy = 0;
+        for(int i:candy) totalCandy+=i;
+        return totalCandy + len;
     }
 }
