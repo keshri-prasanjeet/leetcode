@@ -1,19 +1,19 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
-        int index = 0;
+        int i=0;
         boolean allowOnce = true;
-        for(int i=1;i<nums.length;i++){
-            if(nums[i]!=nums[index]){
-                nums[index+1] = nums[i];
-                index++;
-                allowOnce = true;
-            }
-            else if(allowOnce == true){
-                nums[index+1] = nums[i];
-                index++;
+        for(int j=1;j<nums.length;j++){
+            if(nums[j]==nums[i] && allowOnce == true){
+                i++;
+                nums[i] = nums[j];
                 allowOnce = false;
             }
+            else if(nums[j]!=nums[i]){
+                i++;
+                nums[i] = nums[j];
+                allowOnce = true;
+            }
         }
-        return index+1;
+        return i+1;
     }
 }
