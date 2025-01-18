@@ -4,10 +4,9 @@ class Solution {
         int right = 0;
         int farthest = 0;
         int jumps = 0;
-        while(right < nums.length-1){
-            farthest = 0;
-            for(int i =left;i<=right;i++){
-                farthest = Math.max(farthest, i + nums[i]);
+        while(right< nums.length-1){
+            for(int i=left;i<=right;i++){
+                farthest = Math.max(farthest, i+nums[i]);
             }
             left = right+1;
             right = farthest;
