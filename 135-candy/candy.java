@@ -1,21 +1,47 @@
 class Solution {
     public int candy(int[] ratings) {
         int len = ratings.length;
-        int[] candy = new int[len];
-        // Arrays.fill(candy, 1);
-        for(int i=1;i<len;i++){
-            if(ratings[i] > ratings[i-1] && candy[i] <= candy[i-1]){
-                candy[i] = candy[i-1]+1;
+        int[] candyArray = new int[len];
+        for(int i=0;i<len;i++){
+            candyArray[i] = 1;
+        }
+        int prevCandy = 0;
+        int prevRating = 0;
+        for(int i=0;i<len;i++){
+            if(i-1<0){
+                prevRating = ratings[i];
+                prevCandy = 1;
+            }
+            else{
+                prevCandy = candyArray[i-1];
+                prevRating= ratings[i-1];
+            }
+
+            if(ratings[i] > prevRating && candyArray[i] <= prevCandy){
+                candyArray[i] = prevCandy+1;
             }
         }
-        for(int i=len-2;i>=0;i--){
-            if(ratings[i] > ratings[i+1] && candy[i] <= candy[i+1]){
-                candy[i] = candy[i+1]+1;
+
+        for(int i=len-1;i>=0;i--){
+            if(i+1==len){
+                prevRating = ratings[i];
+                prevCandy = 1;
+            }
+            else{
+                prevCandy = candyArray[i+1];
+                prevRating= ratings[i+1];
+            }
+
+            if(ratings[i] > prevRating && candyArray[i] <= prevCandy){
+                candyArray[i] = prevCandy+1;
             }
         }
-        // return Arrays.stream(candy).sum() + len; // adding len because did not fill with 1 so adding 1 candy for each kid
-        int totalCandy = 0;
-        for(int i:candy) totalCandy+=i;
-        return totalCandy + len;
+
+        int ans = 0;
+        for(var i:candyArray){
+            ans+=i;
+        }
+        return ans;
+
     }
 }
