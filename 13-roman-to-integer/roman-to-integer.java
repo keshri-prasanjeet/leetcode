@@ -20,15 +20,22 @@ class Solution {
         );
 
         int number = 0;
+        StringBuilder sb = new StringBuilder();
         
         for(int i=0;i<s.length();i++){
             if(i+2<=s.length()){
-                String sub = s.substring(i,i+2);
-                if(exceptions.containsKey(sub)){
-                    number+=exceptions.get(sub);
+                // String sub = s.substring(i,i+2);
+                sb.append(s.charAt(i));
+                sb.append(s.charAt(i+1));
+                // System.out.println("the exception is "+sb.toString());
+                if(exceptions.containsKey(sb.toString())){
+                    // System.out.println("the exception is "+sb.toString());
+                    number+=exceptions.get(sb.toString());
                     i++;
+                    sb.setLength(0);
                     continue;
                 }
+                sb.setLength(0);
             }
             number += romanVals.get(s.charAt(i));
         }
