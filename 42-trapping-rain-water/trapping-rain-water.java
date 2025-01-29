@@ -10,13 +10,10 @@ class Solution {
                 start = i;
             }
             else if(start != -1 && height[i] > height[start]){
-                System.out.println("Start is "+ start);
-                System.out.println("End is " + i);
                 water += Math.min(height[start], height[i]) * (i-start-1);
                 water -= blocks;
                 start = i;
                 blocks = 0;
-                System.out.println("water is "+ water);
             }
             else{
                 blocks += height[i];
@@ -32,13 +29,10 @@ class Solution {
                 start = i;
             }
             else if(start != -1 && height[i] >= height[start]){
-                System.out.println("Start is "+ start);
-                System.out.println("End is " + i);
                 water += Math.min(height[start], height[i]) * (start-i-1);
                 water -= blocks;
                 start = i;
                 blocks = 0;
-                System.out.println("water is "+ water);
             }
             else{
                 blocks += height[i];
