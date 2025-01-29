@@ -1,46 +1,56 @@
 class Solution {
     public int romanToInt(String s) {
-
-        Map<String, Integer> exceptions = Map.of(
-            "IV", 4,
-            "IX", 9,
-            "XL", 40,
-            "XC", 90,
-            "CD", 400,
-            "CM", 900);
-
-        Map<Character, Integer> romanVals = Map.of(
-            'I', 1,
-            'V', 5,
-            'X', 10,
-            'L', 50,
-            'C', 100,
-            'D', 500,
-            'M', 1000
-        );
-
+        Map<Character,Integer> romanSymbols = new HashMap<>();
+        romanSymbols.put('I', 1);
+        romanSymbols.put('V', 5);
+        romanSymbols.put('X', 10);
+        romanSymbols.put('L', 50);
+        romanSymbols.put('C', 100);
+        romanSymbols.put('D', 500);
+        romanSymbols.put('M', 1000);
         int number = 0;
-        StringBuilder sb = new StringBuilder();
-        
-        for(int i=0;i<s.length();i++){
-            if(i+2<=s.length()){
-                // String sub = s.substring(i,i+2);
-                sb.append(s.charAt(i));
-                sb.append(s.charAt(i+1));
-                // System.out.println("the exception is "+sb.toString());
-                if(exceptions.containsKey(sb.toString())){
-                    // System.out.println("the exception is "+sb.toString());
-                    number+=exceptions.get(sb.toString());
-                    i++;
-                    sb.setLength(0);
-                    continue;
+        int len = s.length();
+        for(int i=0;i<len;i++){
+            char a = s.charAt(i);
+            int curNum = romanSymbols.get(a);
+            if(a=='I'){
+                if(i+1<len){
+                    if(s.charAt(i+1)=='X'){
+                        curNum = 9;
+                        i++;
+                    }
+                    else if(s.charAt(i+1)=='V'){
+                        curNum = 4;
+                        i++;
+                    }
                 }
-                sb.setLength(0);
             }
-            number += romanVals.get(s.charAt(i));
+            if(a=='X'){
+                if(i+1<len){
+                    if(s.charAt(i+1)=='C'){
+                        curNum = 90;
+                        i++;
+                    }
+                    else if(s.charAt(i+1)=='L'){
+                        curNum = 40;
+                        i++;
+                    }
+                }
+            }
+            if(a=='C'){
+                if(i+1<len){
+                    if(s.charAt(i+1)=='M'){
+                        curNum = 900;
+                        i++;
+                    }
+                    else if(s.charAt(i+1)=='D'){
+                        curNum = 400;
+                        i++;
+                    }
+                }
+            }
+            number +=curNum;
         }
-
         return number;
-
     }
 }
