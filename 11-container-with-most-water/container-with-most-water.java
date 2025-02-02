@@ -13,14 +13,14 @@ class Solution {
             else left++;
         }
 
-        while(left < right){
-            curWater = (right-left) * Math.min(height[left], height[right]);
-            maxWater = Math.max(curWater, maxWater);
-            if(height[left] < height[right]){
-                left++;
-            }
-            else right++;
-        }
+        // while(left < right){
+        //     curWater = (right-left) * Math.min(height[left], height[right]);
+        //     maxWater = Math.max(curWater, maxWater);
+        //     if(height[left] < height[right]){
+        //         left++;
+        //     }
+        //     else right++;
+        // }
 
         return maxWater;
 
