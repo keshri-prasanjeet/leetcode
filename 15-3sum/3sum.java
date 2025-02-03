@@ -11,7 +11,8 @@ class Solution {
             while(left < right){
                 int curSum = nums[left] + nums[right] + fixed;
                 if(curSum == 0){
-                    answer.add(new ArrayList<>(List.of(fixed, nums[left], nums[right])));
+                    // answer.add(new ArrayList<>(List.of(fixed, nums[left], nums[right])));
+                    answer.add(Arrays.asList(fixed, nums[left], nums[right]));
                     left++;
                     right--;
                     while(left < right && nums[left] == nums[left-1]) left++;
