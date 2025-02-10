@@ -1,9 +1,7 @@
 class Solution {
     public boolean wordPattern(String pattern, String s) {
         String[] splitted= s.split(" ");
-        // for(int i=0;i<splitted.length;i++){
-        //     System.out.println(splitted[i]);
-        // }
+        if(splitted.length != pattern.length()) return false;
         Map<Character, Integer> patternMap = new HashMap<>();
         Map<String, Integer> wordMap = new HashMap<>();
         int patternNum = 1;
