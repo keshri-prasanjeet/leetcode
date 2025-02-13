@@ -5,20 +5,19 @@ class Solution {
         for(char c:t.toCharArray()){
             tMap.put(c, tMap.getOrDefault(c,0)+1);
         }
+        int left=0;
+        int right=0;
         int minLen = Integer.MAX_VALUE;
-        Map<Character, Integer> windowMap = new HashMap<>();
-        int left = 0;
-        int right = 0;
-        int required = tMap.size();
         int windowStart = left;
+        int required = tMap.size();
         int found = 0;
-        while(right<s.length()){
+        Map<Character, Integer> windowMap = new HashMap<>();
+        while(right < s.length()){
             char rightChar = s.charAt(right);
-            windowMap.put(rightChar, windowMap.getOrDefault(rightChar,0)+1);
+            windowMap.put(rightChar, windowMap.getOrDefault(rightChar, 0)+1);
             if(tMap.containsKey(rightChar) && tMap.get(rightChar).equals(windowMap.get(rightChar))){
                 found++;
             }
-
             while(found==required){
                 if(minLen > right-left+1){
                     minLen = right-left+1;
@@ -33,6 +32,6 @@ class Solution {
             }
             right++;
         }
-        return minLen==Integer.MAX_VALUE ? "" : s.substring(windowStart, windowStart+minLen);
+        return minLen == Integer.MAX_VALUE ? "" : s.substring(windowStart, windowStart+minLen);
     }
 }
