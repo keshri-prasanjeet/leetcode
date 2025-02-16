@@ -11,9 +11,9 @@
  */
 public class Solution {
     public boolean hasCycle(ListNode head) {
+        if(head == null || head.next == null) return false;
         ListNode tortoise = head;
         ListNode hare = head;
-        if(head == null || head.next == null) return false;
         do{
             tortoise = tortoise.next;
             hare = hare.next;
