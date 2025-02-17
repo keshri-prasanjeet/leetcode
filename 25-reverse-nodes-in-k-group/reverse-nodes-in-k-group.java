@@ -32,16 +32,12 @@ class Solution {
             pointer.next = curr;
         }
         if(nodeGroup.size() == k){
-            // System.out.println("pointer at " + pointer.val);
             while(!nodeGroup.isEmpty()){
                 pointer.next = nodeGroup.pop();
                 pointer = pointer.next;
-                // System.out.println("Now pointer at " + pointer.val);
             }
             pointer.next = null;
         }
-        
-        // System.out.println("dummy is " + dummy.next.next.val);
         return dummy.next;
     }
 }
