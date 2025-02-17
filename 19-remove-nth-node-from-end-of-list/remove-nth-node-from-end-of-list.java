@@ -22,11 +22,9 @@ class Solution {
         int nodeToDelete = totalNodes - n;
         pointer = head;
         while(nodeToDelete!=1){
-            // System.out.println("nodes to delete is " + nodeToDelete + " pointer at " + pointer.val);
             pointer = pointer.next;
             nodeToDelete--;
         }
-        // System.out.println("final pointer is at " + pointer.val);
         pointer.next = pointer.next.next;
         return head;
     }
