@@ -10,36 +10,21 @@
  */
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-        ListNode dummy = new ListNode(-200);
-        ListNode pointer = dummy;
-        if(head== null || head.next == null) return head;
-        ListNode p1 = head;
-        ListNode p2 = head.next;
-        while(p1!=null){
-            if(p2==null) return dummy.next;
-            // System.out.println("p1 is " + p1.val + " p2 is " + p2.val);
-            if(p1.val != p2.val){
-                pointer.next = p1;
-                pointer = pointer.next;
-                p1 = p1.next;
-                p2 = p2.next;
+        ListNode sentinel = new ListNode();
+        sentinel.next = head;
+        ListNode prev = sentinel;
+        while(head!=null){
+            if(head.next!=null && head.val == head.next.val){
+                while(head.next!=null && head.val == head.next.val){
+                    head = head.next;
+                }
+                prev.next = head.next;
             }
             else{
-                while(p2!=null && p1.val == p2.val){
-                    p2 = p2.next;
-                }
-                if(p2==null){
-                    pointer.next = null;
-                    return dummy.next;
-                }
-                p1 = p2;
-                p2 = p2.next;
-                if(p2==null){
-                    pointer.next = p1;
-                    return dummy.next;
-                }
+                prev = prev.next;
             }
+            head = head.next;
         }
-        return dummy.next;
+        return sentinel.next;
     }
 }
