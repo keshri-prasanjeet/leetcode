@@ -14,23 +14,15 @@
  * }
  */
 class Solution {
-    List<TreeNode> preorderTree = new ArrayList<>();
+    TreeNode prev = null;
     public void flatten(TreeNode root) {
-        //do preorder
-        if(root==null) return;
-        doPreorder(root);
-        TreeNode dummy = new TreeNode();
-        for(TreeNode pointer: preorderTree){
-            dummy.left = null;
-            dummy.right = pointer;
-            dummy = dummy.right;
-        }
-    }
+        if(root == null) return;
 
-    private void doPreorder(TreeNode node){
-        if(node == null) return;
-        preorderTree.add(node);
-        doPreorder(node.left);
-        doPreorder(node.right);
+        flatten(root.right);
+        flatten(root.left);
+
+        root.right = prev;
+        prev = root;
+        root.left = null;
     }
 }
