@@ -34,7 +34,6 @@ class Solution {
         }
         return root;
     }
-
     private void levelOrderTraversal(Node node, int level){
         if(node == null) return;
         if(levelOrderList.size() == 0 || levelOrderList.size() <= level){
