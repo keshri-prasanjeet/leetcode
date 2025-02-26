@@ -24,8 +24,8 @@ class Solution {
     
     private void helper(int depth, TreeNode node){
         if(node == null) return;
-        if(depth >= levelOrderList.size()) levelOrderList.add(new ArrayList<>(List.of(node.val)));
-        else levelOrderList.get(depth).add(node.val);
+        if(depth >= levelOrderList.size()) levelOrderList.add(new ArrayList<>());
+        levelOrderList.get(depth).add(node.val);
         helper(depth+1, node.left);
         helper(depth+1, node.right);
     }
