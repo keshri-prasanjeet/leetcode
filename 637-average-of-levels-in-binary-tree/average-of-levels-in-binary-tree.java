@@ -15,27 +15,31 @@
  */
 class Solution {
     List<Double> levelAverageList;
-    List<List<Integer>> levelOrderList;
+    Map<Integer, Integer> lengthOfLevel;
     public List<Double> averageOfLevels(TreeNode root) {
         levelAverageList = new ArrayList<>();
-        levelOrderList = new ArrayList<>();
+        lengthOfLevel = new HashMap<>();
         if(root == null) return levelAverageList;
         levelOrderTraversal(0, root);
-        System.out.println(levelOrderList);
-        for(List<Integer> l: levelOrderList){
-            double sum =0;
-            for(Integer val: l){
-                sum+=val;
-            }
-            double avg = sum / (double)l.size();
-            levelAverageList.add(avg);
+        for(int i=0;i<levelAverageList.size();i++){
+            double val = levelAverageList.get(i);
+            val /= (double)lengthOfLevel.get(i);
+            levelAverageList.set(i, val);
         }
         return levelAverageList;
     }
     private void levelOrderTraversal(int depth, TreeNode root){
         if(root == null) return;
-        if(depth >= levelOrderList.size()) levelOrderList.add(new ArrayList<>(List.of(root.val)));
-        else levelOrderList.get(depth).add(root.val);
+        if(depth >= levelAverageList.size()) {
+            lengthOfLevel.put(depth, lengthOfLevel.getOrDefault(depth,0)+1);
+            levelAverageList.add((double)root.val);
+        }
+        else {
+            double val = levelAverageList.get(depth);
+            val+=(double) root.val;
+            levelAverageList.set(depth, val);
+            lengthOfLevel.put(depth, lengthOfLevel.get(depth)+1);
+        }
         levelOrderTraversal(depth+1, root.left);
         levelOrderTraversal(depth+1, root.right);
     }
