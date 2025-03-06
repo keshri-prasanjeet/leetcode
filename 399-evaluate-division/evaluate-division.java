@@ -38,9 +38,9 @@ class Solution {
 
             for(List<Object> neighbor: adj.get(nodeKey)){
                 String neighborKey = (String) neighbor.get(0);
-                double neighborVal = (double) neighbor.get(1);
-                double newVal = nodeVal * neighborVal;
                 if(!visited.contains(neighborKey)){
+                    double neighborVal = (double) neighbor.get(1);
+                    double newVal = nodeVal * neighborVal;
                     q.offer(new Object[]{neighborKey, newVal});
                     visited.add(neighborKey);
                 }
