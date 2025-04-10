@@ -1,38 +1,28 @@
 class Solution {
     public String reverseVowels(String s) {
-        List<Character> vowels = new ArrayList<>();
+        boolean[] vowels = new boolean[128];//all the ASCII chars
+        for(char a:"aeiouAEIOU".toCharArray()){
+            vowels[a] = true;
+        }
         int len = s.length();
-        char[] word = new char[len];
-        for(int i=0;i<len;i++){
-            if(s.charAt(i)=='A' || 
-                s.charAt(i)=='a' || 
-                s.charAt(i)== 'e' || 
-                s.charAt(i)=='E' || 
-                s.charAt(i)=='i' || 
-                s.charAt(i)=='I' || 
-                s.charAt(i)=='o' || 
-                s.charAt(i)=='O' || 
-                s.charAt(i)=='u' || 
-                s.charAt(i)=='U'){
-                vowels.add(s.charAt(i));
+        int i = 0;
+        int j = len-1;
+        char[] word = s.toCharArray();
+        while(i<j){
+            while(i<j && !vowels[word[i]]){
+                i++;
             }
-            word[i] = s.charAt(i);
-        }
-        int vowelLen = vowels.size()-1;
-        for(int i=0;i<len;i++){
-            if(s.charAt(i)=='A' || 
-                s.charAt(i)=='a' || 
-                s.charAt(i)== 'e' || 
-                s.charAt(i)=='E' || 
-                s.charAt(i)=='i' || 
-                s.charAt(i)=='I' || 
-                s.charAt(i)=='o' || 
-                s.charAt(i)=='O' || 
-                s.charAt(i)=='u' || 
-                s.charAt(i)=='U'){
-                    word[i] = vowels.get(vowelLen--);
+            while(i<j && !vowels[word[j]]){
+                j--;
+            }
+            if(i<j){
+                char temp = word[i];
+                word[i] = word[j];
+                word[j] = temp;
+                i++;
+                j--;
             }
         }
-        return new String(word);
+        return String.valueOf(word);
     }
 }
