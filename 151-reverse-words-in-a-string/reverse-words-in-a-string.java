@@ -1,32 +1,18 @@
 class Solution {
     public String reverseWords(String s) {
         int len = s.length();
+        if(len == 1) return s;
+        String space = "";
+        String[] splitted = s.split(" ");
         StringBuilder sb = new StringBuilder();
-        StringBuilder master = new StringBuilder();
-        boolean once = false;
-        boolean manyWords = false;
-        for(int i=0;i<len;i++){
-            if(i==0 && s.charAt(i) != ' '){
-                sb.append(s.charAt(i));
-            }
-            else if(s.charAt(i) != ' '){
-                sb.append(s.charAt(i));
-            }
-            else if (s.charAt(i)== ' ' || i==len-1){
-                if(sb.length() > 0){
-                    if(once==true) sb.append(' ');
-                    once = true;
-                    master.insert(0,sb);
-                    sb.setLength(0);
-                    manyWords = true;
-                }
+        System.out.println(splitted.length);
+        for(int i=splitted.length-1;i>=0;i--){
+            if(splitted[i].length() >0){
+                sb.append(space);
+                sb.append(splitted[i]);
+                space = " ";
             }
         }
-        if(sb.length() > 0){
-            if(manyWords == true) sb.append(' ');
-            master.insert(0,sb);
-            sb.setLength(0);
-        }
-        return master.toString();
+        return sb.toString();
     }
 }
