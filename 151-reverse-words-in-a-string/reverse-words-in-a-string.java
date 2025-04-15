@@ -1,22 +1,32 @@
 class Solution {
     public String reverseWords(String s) {
-        //split the words from the stirng
-        //run a loop from behind for this split array of strings
-        //if the split is empty then skip this
-        //merge these together in a final stringbuilder that would get converted to the string that we return 
-
         int len = s.length();
-        if(len==1) return s;
-        String[] splitted = s.split(" ");
         StringBuilder sb = new StringBuilder();
-        String space = "";
-        for(int i=splitted.length-1;i>=0;i--){
-            if(splitted[i].length()!=0){
-                sb.append(space);
-                space = " ";
-                sb.append(splitted[i]);
+        StringBuilder master = new StringBuilder();
+        boolean once = false;
+        boolean manyWords = false;
+        for(int i=0;i<len;i++){
+            if(i==0 && s.charAt(i) != ' '){
+                sb.append(s.charAt(i));
+            }
+            else if(s.charAt(i) != ' '){
+                sb.append(s.charAt(i));
+            }
+            else if (s.charAt(i)== ' ' || i==len-1){
+                if(sb.length() > 0){
+                    if(once==true) sb.append(' ');
+                    once = true;
+                    master.insert(0,sb);
+                    sb.setLength(0);
+                    manyWords = true;
+                }
             }
         }
-        return sb.toString();
+        if(sb.length() > 0){
+            if(manyWords == true) sb.append(' ');
+            master.insert(0,sb);
+            sb.setLength(0);
+        }
+        return master.toString();
     }
 }
