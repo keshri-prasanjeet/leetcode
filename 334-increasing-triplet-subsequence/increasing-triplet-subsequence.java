@@ -7,14 +7,14 @@ class Solution {
             if(nums[i] <= first){
                 first = nums[i];
                 // second = Integer.MAX_VALUE;
-                System.out.println(first);
+                // System.out.println(first);
             }
             else if(nums[i] > first && nums[i] <= second){
                 second = nums[i];
-                System.out.println(first+ " " + second);
+                // System.out.println(first+ " " + second);
             }
             else {
-                System.out.println(first+ " " + second + " " + nums[i]);
+                // System.out.println(first+ " " + second + " " + nums[i]);
                 return true;
             }
         }
