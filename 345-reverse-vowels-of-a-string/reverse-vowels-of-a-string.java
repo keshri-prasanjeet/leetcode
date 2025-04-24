@@ -21,11 +21,11 @@ class Solution {
                 right--;
             }
             if(lVow == true && rVow == true){
-                System.out.println(left + " " + right);
+                // System.out.println(left + " " + right);
                 char temp = sArr[left];
                 sArr[left] = sArr[right];
                 sArr[right] = temp;
-                System.out.println(sArr[left] + " " + sArr[right]);
+                // System.out.println(sArr[left] + " " + sArr[right]);
                 left++;
                 right--;
                 lVow = false;
