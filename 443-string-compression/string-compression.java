@@ -3,7 +3,6 @@ class Solution {
         int len = chars.length;
         char a = chars[0];
         int count = 1;
-        char[] compressed = new char[len];
         StringBuilder sb = new StringBuilder();
         for(int i=1;i<len;i++){
             if(a==chars[i]){
