@@ -1,15 +1,12 @@
 class Solution {
     public String reverseWords(String s) {
-        int len = s.length();
-        if(len == 1) return s;
-        String space = "";
-        String[] splitted = s.split(" ");
+        String[] splitWords = s.split(" ");
         StringBuilder sb = new StringBuilder();
-        System.out.println(splitted.length);
-        for(int i=splitted.length-1;i>=0;i--){
-            if(splitted[i].length() >0){
-                sb.append(space);
-                sb.append(splitted[i]);
+        String space = "";
+        for(String word: splitWords){
+            if(word.length()>0){
+                sb.insert(0, space);
+                sb.insert(0, word);
                 space = " ";
             }
         }
