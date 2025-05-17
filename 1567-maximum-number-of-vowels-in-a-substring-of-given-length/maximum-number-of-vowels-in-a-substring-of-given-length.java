@@ -1,25 +1,28 @@
 class Solution {
     public int maxVowels(String s, int k) {
+        boolean[] vowels = new boolean[128];
+        for(char a: "aeiouAEIOU".toCharArray()){
+            vowels[a] = true;
+        }
+
         int vowelCount = 0;
-        boolean[] arr = new boolean[128];
-        for(char c: "aeiouAEIOU".toCharArray()){
-            arr[c] = true;
-        }
         for(int i=0;i<k;i++){
-            if(arr[s.charAt(i)]==true){
+            if(vowels[s.charAt(i)]==true){
                 vowelCount++;
             }
         }
-        int maxVowel = vowelCount;
-        for(int i=k;i<s.length();i++){
-            if(arr[s.charAt(i)] == true){
+        int start = 0;
+        int end = k;
+        int maxVowels = vowelCount;
+        while(end<s.length()){
+            if(vowels[s.charAt(end++)]==true){
                 vowelCount++;
             }
-            if(arr[s.charAt(i-k)] == true){
+            if(vowels[s.charAt(start++)]==true){
                 vowelCount--;
             }
-            maxVowel = Math.max(maxVowel, vowelCount);
+            maxVowels = Math.max(maxVowels, vowelCount);
         }
-        return maxVowel;
+        return maxVowels;
     }
 }
