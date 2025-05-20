@@ -1,27 +1,20 @@
 class Solution {
     public boolean closeStrings(String word1, String word2) {
-        Map<Character, Integer> w1 = new HashMap<>();
-        Map<Character, Integer> w2 = new HashMap<>();
+        int[] map1 = new int[128];
+        int[] map2 = new int[128];
         int len = word1.length();
         if(len != word2.length()) return false;
+
         for(int i=0;i<len;i++){
-            char a = word1.charAt(i);
-            char b = word2.charAt(i);
-            w1.put(a, w1.getOrDefault(a, 0)+1);
-            w2.put(b, w2.getOrDefault(b, 0)+1);
-        }
-        for(Character c: w1.keySet()){
-            if(!w2.containsKey(c)) return false;
-        }
-        int[] letters = new int[100000];
-        for(Integer i: w1.values()){
-            letters[i]++;
+            map1[word1.charAt(i)]++;
+            map2[word2.charAt(i)]++;
         }
 
-        for(Integer j: w2.values()){
-            if(letters[j] == 0) return false;
-            letters[j]--;
+        for(int i=0;i<128;i++){
+            if((map1[i] ==0 && map2[i]!=0) || (map1[i] !=0 && map2[i]==0)) return false;
         }
-        return true;
+        Arrays.sort(map1);
+        Arrays.sort(map2);
+        return Arrays.equals(map1, map2);
     }
 }
