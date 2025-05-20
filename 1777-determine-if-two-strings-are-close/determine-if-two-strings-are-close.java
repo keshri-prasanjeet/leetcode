@@ -10,7 +10,7 @@ class Solution {
             map2[word2.charAt(i)]++;
         }
 
-        for(int i=0;i<128;i++){
+        for(int i='a';i<='z';i++){
             if((map1[i] ==0 && map2[i]!=0) || (map1[i] !=0 && map2[i]==0)) return false;
         }
         Arrays.sort(map1);
