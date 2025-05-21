@@ -3,23 +3,19 @@ class Solution {
         Map<String,Integer> rowMap = new HashMap<>();
         int m = grid.length;
         int n = grid[0].length;
-        StringBuilder sb = new StringBuilder();
         int equalPairCount = 0;
         for(int i=0;i<m;i++){
-            sb.setLength(0);
-            for(int num: grid[i]){
-                sb.append(num).append(",");
-            }
-            String rowNum = sb.toString();
+            String rowNum = Arrays.toString(grid[i]);
             rowMap.put(rowNum, rowMap.getOrDefault(rowNum,0)+1);
         }
-
+        int[] temp = new int[m];
+        int index = 0;
         for(int i=0;i<n;i++){
-            sb.setLength(0);
+            index = 0;
             for(int j=0;j<m;j++){
-                sb.append(grid[j][i]).append(",");
+                temp[index++] = grid[j][i];
             }
-            String colNum = sb.toString();
+            String colNum = Arrays.toString(temp);
             equalPairCount += rowMap.getOrDefault(colNum, 0);
         }
 
