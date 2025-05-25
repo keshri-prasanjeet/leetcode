@@ -1,35 +1,47 @@
 class Solution {
     public int[] asteroidCollision(int[] asteroids) {
-        Stack<Integer> st = new Stack<>();
-
-        for (int asteroid : asteroids) {
-            boolean destroyed = false;
-
-            while (!st.isEmpty() && asteroid < 0 && st.peek() > 0) {
-                if (st.peek() < -asteroid) {
-                    st.pop(); // Right-moving asteroid is smaller, so it explodes
-                } else if (st.peek() == -asteroid) {
-                    st.pop(); // Both asteroids are equal, both explode
-                    destroyed = true;
-                    break;
-                } else {
-                    // Right-moving asteroid is larger, current left-moving one explodes
-                    destroyed = true;
-                    break;
+        Stack<Integer> space = new Stack<>();
+        boolean incomingSurvives = false;
+        boolean shouldPush = true;
+        for(int asteroid : asteroids){
+            incomingSurvives = false;
+            shouldPush = true;
+            if(space.isEmpty()){
+                space.push(asteroid);
+            }
+            else{
+                int top = space.peek();
+                if(top < 0){
+                    space.push(asteroid);
+                }
+                else if(asteroid > 0){
+                    space.push(asteroid);
+                }
+                else{
+                    while(!space.isEmpty() && space.peek() > 0){
+                        top = space.peek();
+                        if(top < -asteroid){
+                            space.pop();
+                            incomingSurvives = true;
+                        }
+                        else if(top == -asteroid){
+                            space.pop();
+                            incomingSurvives = false;
+                            shouldPush = false;
+                            break;
+                        }
+                        else {
+                            incomingSurvives = false;
+                            break;
+                        }
+                    }
+                    if(space.isEmpty() || incomingSurvives) {
+                        if(shouldPush) space.push(asteroid); //incoming destroyed all
+                    }
+                
                 }
             }
-
-            if (!destroyed) {
-                st.push(asteroid);
-            }
         }
-
-        // Convert stack to array
-        int[] result = new int[st.size()];
-        for (int i = st.size() - 1; i >= 0; i--) {
-            result[i] = st.pop();
-        }
-
-        return result;
+        return space.stream().mapToInt(Integer::intValue).toArray();
     }
 }
