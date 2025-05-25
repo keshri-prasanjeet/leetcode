@@ -1,23 +1,12 @@
 class Solution {
     public String removeStars(String s) {
-        // Stack<Character> stack = new Stack<>();
-        Deque<Character> stack = new ArrayDeque<>();
-        for(char a: s.toCharArray()){
-            if(a != '*'){
-                stack.push(a);
-            }
+        Stack<Character> st = new Stack<>();
+        for(char ch: s.toCharArray()){
+            if(ch != '*') st.push(ch);
             else{
-                if(!stack.isEmpty()){
-                    stack.pop();
-                }
+                if(!st.isEmpty()) st.pop();
             }
         }
-
-        StringBuilder sb = new StringBuilder();
-        while(!stack.isEmpty()){
-            sb.append(stack.pop());
-        }
-        sb.reverse();
-        return sb.toString();
+        return st.stream().map(c -> String.valueOf(c)).collect(Collectors.joining());
     }
 }
