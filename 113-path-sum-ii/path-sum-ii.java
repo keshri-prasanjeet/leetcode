@@ -25,16 +25,15 @@ class Solution {
 
     private void helper(TreeNode node, int target, List<Integer> sumList){
         if(node == null) return;
-        int newTarget = target-node.val;
+        target-=node.val;
         // if(newTarget < 0) return;
         sumList.add(node.val);
-        if(newTarget == 0 && node.left == null && node.right == null){
+        if(target == 0 && node.left == null && node.right == null){
             finalAnswer.add(new ArrayList<>(sumList));
-            return;
         }
         else{
-            helper(node.left, newTarget, new ArrayList<>(sumList));
-            helper(node.right, newTarget, new ArrayList<>(sumList));
+            helper(node.left, target, sumList);
+            helper(node.right, target, sumList);
         }
 
         sumList.remove(sumList.size()-1);
