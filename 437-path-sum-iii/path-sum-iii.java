@@ -27,11 +27,12 @@ class Solution {
     private void helper(TreeNode node, int target, long prefixSum){
         if(node == null) return;
         prefixSum+=node.val;
-        count += prefixSumMap.getOrDefault(prefixSum - target, 0);
-        prefixSumMap.put(prefixSum, prefixSumMap.getOrDefault(prefixSum,0)+1);
+        count += prefixSumMap.getOrDefault(prefixSum - target, 0);//counting if my targetsum is part of current prefix sum
+        //if prefix sum map which is freq map of all prefix sums contains the number that even after - target exists in map 
+        // then it means that <some prefix> + <k> in this path
+        prefixSumMap.put(prefixSum, prefixSumMap.getOrDefault(prefixSum,0)+1);//update map with current prefix sum
         helper(node.left, target, prefixSum);
         helper(node.right, target,prefixSum);
         prefixSumMap.put(prefixSum, prefixSumMap.get(prefixSum)-1);
-        prefixSum-=node.val;
     }
 }
