@@ -29,10 +29,15 @@ class Solution {
         // if(newTarget < 0) return;
         sumList.add(node.val);
         if(newTarget == 0 && node.left == null && node.right == null){
-            finalAnswer.add(sumList);
+            finalAnswer.add(new ArrayList<>(sumList));
             return;
         }
-        helper(node.left, newTarget, new ArrayList<>(sumList));
-        helper(node.right, newTarget, new ArrayList<>(sumList));
+        else{
+            helper(node.left, newTarget, new ArrayList<>(sumList));
+            helper(node.right, newTarget, new ArrayList<>(sumList));
+        }
+
+        sumList.remove(sumList.size()-1);
+        
     }
 }
