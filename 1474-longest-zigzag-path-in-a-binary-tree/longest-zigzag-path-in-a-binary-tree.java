@@ -22,12 +22,14 @@ class Solution {
 
     private int[] doZigZag(TreeNode node){
         if(node == null) return new int[]{0,0};
-        int[] right = doZigZag(node.right);
-        int[] left = doZigZag(node.left);
 
-        int leftZigZag = 1 + left[1]; // left call's right(1) value
-        int rightZigZag = 1 + right[0];//right call;s left(0) value
-        maxZigZag = Math.max(maxZigZag, Math.max(leftZigZag, rightZigZag));
-        return new int[]{leftZigZag, rightZigZag};
+        int[] left = doZigZag(node.left);
+        int[] right= doZigZag(node.right);
+
+        int leftMax = 1 + left[1];
+        int rightMax= 1+ right[0];
+
+        maxZigZag = Math.max(maxZigZag, Math.max(leftMax, rightMax));
+        return new int[]{leftMax, rightMax};
     }
 }
