@@ -14,25 +14,23 @@
  * }
  */
 class Solution {
-    int count = 0;
-    Map<Long, Integer> prefixSumMap;
+    int maxPathSum = 0;
+    Map<Long, Integer> pathSumMap;
     public int pathSum(TreeNode root, int targetSum) {
-        if(root == null) return 0;
-        prefixSumMap = new HashMap<>();
-        prefixSumMap.put(0L,1);
-        helper(root, targetSum, 0L);
-        return count;
+        pathSumMap = new HashMap<>();
+        pathSumMap.put(0L,1);
+        doPathSum(root, targetSum, 0L);
+        return maxPathSum;
     }
 
-    private void helper(TreeNode node, int target, long prefixSum){
+    private void doPathSum(TreeNode node, int target, long pathSum){
         if(node == null) return;
-        prefixSum+=node.val;
-        count += prefixSumMap.getOrDefault(prefixSum - target, 0);
-        prefixSumMap.put(prefixSum, prefixSumMap.getOrDefault(prefixSum,0)+1);
 
-        helper(node.left, target, prefixSum);
-        helper(node.right, target,prefixSum);
-
-        prefixSumMap.put(prefixSum, prefixSumMap.get(prefixSum)-1);
+        pathSum+=node.val;
+        maxPathSum+=pathSumMap.getOrDefault(pathSum - target, 0);
+        pathSumMap.put(pathSum, pathSumMap.getOrDefault(pathSum, 0)+1);
+        doPathSum(node.left, target, pathSum);
+        doPathSum(node.right,target, pathSum);
+        pathSumMap.put(pathSum, pathSumMap.get(pathSum)-1);
     }
 }
