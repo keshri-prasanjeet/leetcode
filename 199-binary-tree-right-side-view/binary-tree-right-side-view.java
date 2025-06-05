@@ -14,17 +14,22 @@
  * }
  */
 class Solution {
-    List<Integer> rightSideList;
     public List<Integer> rightSideView(TreeNode root) {
-        this.rightSideList = new ArrayList<>();
-        if(root == null) return rightSideList;
-        findRightSideView(0, root);
-        return rightSideList;
-    }
-    private void findRightSideView(int depth, TreeNode node){
-        if(node == null) return;
-        if(depth >= rightSideList.size()) rightSideList.add(node.val);
-        findRightSideView(depth+1, node.right);
-        findRightSideView(depth+1, node.left);
+        //do bfs print first
+        if(root == null) return List.of();
+        List<Integer> answer = new ArrayList<>();
+        Queue<TreeNode> treeQ = new LinkedList<>();
+        treeQ.offer(root);
+        // answer.add(root.val);
+        while(!treeQ.isEmpty()){
+            int size = treeQ.size();
+            while(size-- != 0){
+                TreeNode top = treeQ.poll();
+                if(top.left!=null) treeQ.offer(top.left);
+                if(top.right!=null) treeQ.offer(top.right);
+                if(size == 0) answer.add(top.val);
+            }
+        }
+        return answer;
     }
 }
