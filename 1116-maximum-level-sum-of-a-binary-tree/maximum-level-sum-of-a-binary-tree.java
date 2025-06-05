@@ -17,10 +17,11 @@ class Solution {
     public int maxLevelSum(TreeNode root) {
         if(root == null) return 0;
         Queue<TreeNode> treeQ = new LinkedList<>();
-        Map<Integer,Integer> sumLevel = new HashMap<>();
+        // Map<Integer,Integer> sumLevel = new HashMap<>();
         int maxLevelSum = Integer.MIN_VALUE;
         treeQ.offer(root);
         int level=1;
+        int maxLevel = 0;
         while(!treeQ.isEmpty()){
             int size = treeQ.size();
             int sum = 0;
@@ -31,9 +32,12 @@ class Solution {
                 sum+=top.val;
             }
             // System.out.println("level is " + level + " sum is " + sum);
-            maxLevelSum = Math.max(maxLevelSum, sum);
-            if(!sumLevel.containsKey(sum)) sumLevel.put(sum, level++);
+            if(sum > maxLevelSum){
+                maxLevelSum = sum;
+                maxLevel = level;
+            }
+            level++;
         }
-        return sumLevel.get(maxLevelSum);
+        return maxLevel;
     }
 }
