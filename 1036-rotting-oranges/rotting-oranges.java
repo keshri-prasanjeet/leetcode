@@ -16,7 +16,6 @@ class Solution {
 
         if(freshO==0) return 0;
 
-
         int[][] directions = {
             {-1, 0}, // up
             {1, 0},  // down
