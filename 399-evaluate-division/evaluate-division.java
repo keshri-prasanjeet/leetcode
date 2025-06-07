@@ -1,53 +1,50 @@
 class Solution {
     public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
-        Map<String, List<List<Object>>> adj = new HashMap<>();
-        //build the adjacency list first
-        for(int i=0;i<equations.size();i++){
-            String num = equations.get(i).get(0);
-            String den = equations.get(i).get(1);
-            double value = values[i];
+        Map<String, List<List<Object>>> adjList = new HashMap<>();
+        for (int i = 0; i < equations.size(); i++) {
+            String numerator = equations.get(i).get(0);
+            String denominator = equations.get(i).get(1);
+            double val = values[i];
 
-            adj.putIfAbsent(num, new ArrayList<>());
-            adj.putIfAbsent(den, new ArrayList<>());
-            adj.get(num).add(List.of(den, value));
-            adj.get(den).add(List.of(num, 1.0/value));
+            adjList.putIfAbsent(numerator, new ArrayList<>());
+            adjList.putIfAbsent(denominator, new ArrayList<>());
+
+            adjList.get(numerator).add(List.of(denominator, val));
+            adjList.get(denominator).add(List.of(numerator, 1.0 / val));
         }
 
-        //define the answer
+        //do dfs to find the values for queries
         double[] answer = new double[queries.size()];
-        for(int i=0;i<queries.size();i++){
-            answer[i] = bfs(queries.get(i).get(0), queries.get(i).get(1), adj);
+        for (int i = 0; i < queries.size(); i++) {
+            answer[i] = bfs(queries.get(i).get(0), queries.get(i).get(1), adjList);
         }
         return answer;
     }
 
-    private double bfs(String src, String target, Map<String, List<List<Object>>> adj){
-        if(!adj.containsKey(src) || !adj.containsKey(target)) return -1.0;
-        Queue<Object[]> q = new ArrayDeque<>();//why not linkedlist??
+    private double bfs(String src, String target, Map<String, List<List<Object>>> graph) {
+        if (!graph.containsKey(src) || !graph.containsKey(target))
+            return -1.0;
         Set<String> visited = new HashSet<>();
-
-        q.offer(new Object[]{src, 1.0});
+        Queue<Object[]> q = new ArrayDeque<>();
+        q.offer(new Object[] { src, 1.0 });
         visited.add(src);
-
-        while(!q.isEmpty()){
+        while (!q.isEmpty()) {
             Object[] top = q.poll();
-            String nodeKey = (String) top[0];
-            double nodeVal = (double) top[1];
+            String ex = (String) top[0];
+            double val = (double) top[1];
 
-            if(nodeKey.equals(target)) return nodeVal;
+            if (ex.equals(target))
+                return val;
 
-            for(List<Object> neighbor: adj.get(nodeKey)){
-                String neighborKey = (String) neighbor.get(0);
-                if(!visited.contains(neighborKey)){
-                    double neighborVal = (double) neighbor.get(1);
-                    double newVal = nodeVal * neighborVal;
-                    q.offer(new Object[]{neighborKey, newVal});
-                    visited.add(neighborKey);
+            for (List<Object> neighbours : graph.get(ex)) {
+                String neighbourKey = (String) neighbours.get(0);
+                if (!visited.contains(neighbourKey)) {
+                    double neighbourVal = (double) neighbours.get(1);
+                    q.offer(new Object[] { neighbourKey, neighbourVal * val });
+                    visited.add(neighbourKey);
                 }
             }
         }
-
         return -1.0;
-
     }
 }
