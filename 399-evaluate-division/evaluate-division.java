@@ -1,49 +1,46 @@
 class Solution {
     public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
-        //the centrepoint of this problem, the adjancency list
-        Map<String, List<List<Object>>> adjList = new HashMap<>();
-
-        for(int i=0;i<equations.size();i++){
+        Map<String, List<Object[]>> adjMatrix = new HashMap<>();
+        int len = equations.size();
+        for(int i=0;i<len;i++){
             String numerator = equations.get(i).get(0);
-            String denominator=equations.get(i).get(1);
-            double value = values[i];
+            String denominator = equations.get(i).get(1);
+            adjMatrix.putIfAbsent(numerator, new ArrayList<>());
+            adjMatrix.putIfAbsent(denominator, new ArrayList<>());
 
-            adjList.putIfAbsent(numerator, new ArrayList<>());
-            adjList.putIfAbsent(denominator, new ArrayList<>());
-
-            adjList.get(numerator).add(List.of(denominator, value));
-            adjList.get(denominator).add(List.of(numerator, 1.0/value));
+            adjMatrix.get(numerator).add(new Object[]{denominator, values[i]});
+            adjMatrix.get(denominator).add(new Object[]{numerator, 1.0/values[i]});
         }
-
-        double[] answer = new double[queries.size()];
-
-        for(int i=0;i<queries.size();i++){
-            answer[i] = bfs(queries.get(i).get(0), queries.get(i).get(1), adjList);
+        int Qlen = queries.size();
+        double[] answer = new double[Qlen];
+        for(int i=0;i<Qlen;i++){
+            String start = queries.get(i).get(0);
+            String end = queries.get(i).get(1);
+            answer[i] = solve(adjMatrix, start, end);
         }
-
         return answer;
     }
 
-    private double bfs(String src, String target, Map<String, List<List<Object>>> adjList){
-        if(!adjList.containsKey(src) || !adjList.containsKey(target)) return -1.0;
-        Queue<Object[]> q = new ArrayDeque<>();
+    private double solve(Map<String, List<Object[]>> adjMatrix, String start, String end){
+        if(!adjMatrix.containsKey(start) || !adjMatrix.containsKey(end)){
+            return -1.0;
+        }
+        Queue<Object[]> equationQ = new ArrayDeque<>();
         Set<String> visited = new HashSet<>();
-        q.offer(new Object[]{src, 1.0});
-        visited.add(src);
-        while(!q.isEmpty()){
-            Object[] top = q.poll();
-            String exKey = (String) top[0];
-            double exVal = (double) top[1];
+        equationQ.offer(new Object[]{start, 1.0});
+        visited.add(start);
+        while(!equationQ.isEmpty()){
+            Object[] top = equationQ.poll();
+            String key = (String) top[0];
+            double val = (double) top[1];
 
-            if(exKey.equals(target)) return exVal;
-            //this key is not the target, explore the neighbors
-
-            for(List<Object> neighbour: adjList.get(exKey)){
-                String neighbourKey = (String) neighbour.get(0);
-                if(!visited.contains(neighbourKey)){
-                    double neighbourVal = (double) neighbour.get(1);
-                    q.offer(new Object[]{neighbourKey, neighbourVal * exVal});
-                    visited.add(neighbourKey);
+            if(key.equals(end)) return val;
+            for(Object[] neighbourAndVal: adjMatrix.get(key)){
+                String neighbour = (String) neighbourAndVal[0];
+                if(!visited.contains(neighbour)){
+                    double neighbourVal = (double) neighbourAndVal[1];
+                    equationQ.offer(new Object[]{neighbour, neighbourVal*val});
+                    visited.add(neighbour);
                 }
             }
         }
