@@ -29,7 +29,8 @@ class Solution {
             }
 
             if(minHeap.size() == k){
-                maxSubsequenceScore = Math.max(maxSubsequenceScore, (long) sum * minVal);
+                long maxVal = sum * minVal;
+                maxSubsequenceScore = Math.max(maxSubsequenceScore, maxVal);
             }
         }
         return maxSubsequenceScore;
