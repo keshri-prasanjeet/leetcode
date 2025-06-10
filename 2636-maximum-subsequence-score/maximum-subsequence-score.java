@@ -18,18 +18,18 @@ class Solution {
         long maxSubsequenceScore = 0;
         long sum = 0;
         for(int i = 0;i<n;i++){
-            int num = combinedArr[i][0];
-            int minVal = combinedArr[i][1];
+            int nums1Val = combinedArr[i][0];
+            int nums2Val = combinedArr[i][1];
 
-            sum+=num;
-            minHeap.add(num);
+            sum+=nums1Val;
+            minHeap.add(nums1Val);
 
             if(minHeap.size() > k){
                 sum-=minHeap.poll();
             }
 
             if(minHeap.size() == k){
-                long maxVal = sum * minVal;
+                long maxVal = sum * nums2Val;
                 maxSubsequenceScore = Math.max(maxSubsequenceScore, maxVal);
             }
         }
