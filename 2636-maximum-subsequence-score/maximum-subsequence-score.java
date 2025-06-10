@@ -1,38 +1,37 @@
 class Solution {
     public long maxScore(int[] nums1, int[] nums2, int k) {
-        //need to combine the two arrays together into one
-        //then sort them based on nums2
+        //consolidate the two arrays into one so that we cant sort them together
         int n = nums1.length;
-        int[][] combinedArr = new int[n][2];
+        int[][] nums = new int[n][2];
         for(int i=0;i<n;i++){
-            combinedArr[i][0] = nums1[i];
-            combinedArr[i][1] = nums2[i];
+            nums[i][0] = nums1[i];
+            nums[i][1] = nums2[i];
         }
 
-        //0th index is the sum array
-        //1st index is the multiply array
+        //sort the nums array based on nums2 val in decending order
 
-        Arrays.sort(combinedArr, (a,b) -> b[1] - a[1]); //sorting the array based on the nums2 arr
+        Arrays.sort(nums, (a,b) -> b[1] - a[1]);//sorted in decending order
 
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-        long maxSubsequenceScore = 0;
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();//pq to store only least k nums in queue
+
         long sum = 0;
-        for(int i = 0;i<n;i++){
-            int nums1Val = combinedArr[i][0];
-            int nums2Val = combinedArr[i][1];
+        long maxScore = 0;
+        for(int i=0;i<n;i++){
+            int nums1Val = nums[i][0];
+            int nums2Val = nums[i][1];
 
             sum+=nums1Val;
-            minHeap.add(nums1Val);
+            minHeap.offer(nums1Val);
 
             if(minHeap.size() > k){
                 sum-=minHeap.poll();
             }
 
             if(minHeap.size() == k){
-                long maxVal = sum * nums2Val;
-                maxSubsequenceScore = Math.max(maxSubsequenceScore, maxVal);
+                long score = sum * nums2Val;
+                maxScore = Math.max(maxScore, score);
             }
         }
-        return maxSubsequenceScore;
+        return maxScore;
     }
 }
