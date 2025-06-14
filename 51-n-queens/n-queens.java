@@ -1,58 +1,53 @@
 class Solution {
+    List<List<String>> answer;
     public List<List<String>> solveNQueens(int n) {
-        List<List<String>> allBoards = new ArrayList<>();
-        List<String> currBoard = new ArrayList<>();
+        answer = new ArrayList<>();
+        int temp = n;
+        String chessRow = "";
+        while(temp-- > 0){
+            chessRow+=".";
+        }
+        List<String> chessBoard = new ArrayList<>();
+        temp = n;
+        while(temp-- > 0){
+            chessBoard.add(chessRow);
+        }
         Set<Integer> cols = new HashSet<>();
         Set<Integer> posD = new HashSet<>();
         Set<Integer> negD = new HashSet<>();
+        solve(chessBoard, 0, cols, posD, negD);
 
-        String rowString = "";
-        for(int i=0;i<n;i++){
-            rowString+=".";
-        }
-        for(int i=0;i<n;i++){
-            currBoard.add(rowString);
-        }
-
-        solveNQueens(allBoards, currBoard, cols, posD, negD, 0);
-        return allBoards;
+        return answer;
     }
 
-    private void solveNQueens(List<List<String>> allBoards, List<String> currBoard, Set<Integer>cols, Set<Integer>posD, Set<Integer>negD, int row){
-        if(row == currBoard.size()){
-            allBoards.add(new ArrayList<>(currBoard));
+    private void solve(List<String> chessBoard, int row, Set<Integer> cols, Set<Integer> posD, Set<Integer> negD){
+        if(row == chessBoard.size()){
+            answer.add(new ArrayList<>(chessBoard));
             return;
         }
 
-        for(int i = 0; i<currBoard.size(); i++){
+        for(int i=0;i<chessBoard.size();i++){
             if(!cols.contains(i) && !posD.contains(i+row) && !negD.contains(i-row)){
-                //we can put a new queen here
-                String curRow = currBoard.get(row);
-                String rowWithQueen = placeQueen(curRow, i);//placing a queen
-                currBoard.set(row, rowWithQueen);
+                //if this cell is absolutely safe
+                String currentRow = chessBoard.get(row);
 
+                char[] currentRowArr = currentRow.toCharArray();
+                currentRowArr[i] = 'Q';
+                String updatedRow = new String(currentRowArr);
+
+                chessBoard.set(row, updatedRow);
                 cols.add(i);
                 posD.add(i+row);
                 negD.add(i-row);
+                solve(chessBoard, row+1, cols, posD, negD);
+                //now backtrack this
 
-                solveNQueens(allBoards, currBoard, cols, posD, negD, row+1);
-
-                //now we have fired the recursive call we need to backtrack/make choice to not put in this col
-
+                chessBoard.set(row, currentRow);
                 cols.remove(i);
                 posD.remove(i+row);
                 negD.remove(i-row);
-
-                currBoard.set(row, curRow);
-
-                //now that we have chose to not put a queen in this col, next iteration of this loop, next col will have chance
             }
         }
-    }
 
-    private String placeQueen(String rowString, int pos){
-        char[] rowArr = rowString.toCharArray();
-        rowArr[pos] = 'Q';
-        return new String(rowArr);
     }
 }
