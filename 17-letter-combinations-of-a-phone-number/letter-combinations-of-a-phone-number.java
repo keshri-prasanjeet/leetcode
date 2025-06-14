@@ -1,26 +1,26 @@
 class Solution {
-    String[] charMap = new String[]{"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    String[] keypadChars = new String[]{"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
     List<String> answer;
     public List<String> letterCombinations(String digits) {
         answer = new ArrayList<>();
         StringBuilder sb = new StringBuilder();
-        if(!digits.isEmpty()) doCombination(digits, sb, 0);
+        if(!digits.isEmpty())doCombinations(sb, digits, 0);
         return answer;
     }
 
-    private void doCombination(String digits, StringBuilder combination, int index){
-        if(index==digits.length()){
-            answer.add(combination.toString());
+    private void doCombinations(StringBuilder sb, String digits, int index){
+        if(index == digits.length()){
+            answer.add(sb.toString());
             return;
         }
 
-        int keyPadNum = digits.charAt(index) - '0' - 2;
-        String keyPadLetters = charMap[keyPadNum];
+        int buttonNum = digits.charAt(index) - '0' -2;
+        String buttonChars = keypadChars[buttonNum];
 
-        for(int i=0;i<keyPadLetters.length();i++){
-            combination.append(keyPadLetters.charAt(i));
-            doCombination(digits, combination, index+1);
-            combination.deleteCharAt(combination.length()-1);
+        for(int i=0;i<buttonChars.length();i++){
+            sb.append(buttonChars.charAt(i));
+            doCombinations(sb, digits, index+1);
+            sb.deleteCharAt(sb.length()-1);
         }
     }
 }
