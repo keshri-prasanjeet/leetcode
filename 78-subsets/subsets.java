@@ -1,20 +1,20 @@
 class Solution {
+    List<List<Integer>> answer;
     public List<List<Integer>> subsets(int[] nums) {
-        List<List<Integer>> allSubsets = new ArrayList<>();
+        answer = new ArrayList<>();
         List<Integer> subset = new ArrayList<>();
-        dfs(allSubsets, subset, 0, nums);
-        return allSubsets;
+        dfs(nums, subset, 0);
+        return answer;
     }
-    private void dfs(List<List<Integer>> allSubsets, List<Integer> subset, int index, int[] nums){
+    private void dfs(int[] nums, List<Integer> subset, int index){
         if(index == nums.length){
-            allSubsets.add(new ArrayList<>(subset));
+            answer.add(new ArrayList<>(subset));
             return;
         }
 
-        //do the choice of adding first
         subset.add(nums[index]);
-        dfs(allSubsets, subset, index+1, nums);
-        subset.remove(subset.size() -1);
-        dfs(allSubsets, subset, index+1, nums);
+        dfs(nums, subset, index+1);
+        subset.remove(subset.size()-1);
+        dfs(nums, subset, index+1);
     }
 }
