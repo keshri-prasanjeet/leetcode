@@ -3,18 +3,19 @@ class Solution {
     public List<List<Integer>> subsets(int[] nums) {
         answer = new ArrayList<>();
         List<Integer> subset = new ArrayList<>();
-        dfs(nums, subset, 0);
+        doSubset(nums, subset, 0);
         return answer;
     }
-    private void dfs(int[] nums, List<Integer> subset, int index){
+
+    private void doSubset(int[] nums, List<Integer> subset, int index){
         if(index == nums.length){
             answer.add(new ArrayList<>(subset));
             return;
         }
 
         subset.add(nums[index]);
-        dfs(nums, subset, index+1);
+        doSubset(nums, subset, index+1);
         subset.remove(subset.size()-1);
-        dfs(nums, subset, index+1);
+        doSubset(nums, subset, index+1);
     }
 }
