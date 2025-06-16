@@ -9,15 +9,20 @@ class Solution {
                 nBoard[i][j] = '.';
             }
         }
+        boolean[] cols = new boolean[n];
+        boolean[] posD = new boolean[(2*n)-1];
+        boolean[] negD = new boolean[(2*n)-1];
 
-        Set<Integer> cols = new HashSet<>();
-        Set<Integer> posD = new HashSet<>();
-        Set<Integer> negD = new HashSet<>();
+
+
+        // Set<Integer> cols = new HashSet<>();
+        // Set<Integer> posD = new HashSet<>();
+        // Set<Integer> negD = new HashSet<>();
         solveNQueens(nBoard, n, 0, cols, posD, negD);
         return allBoards;
     }
 
-    private void solveNQueens(char[][] nBoard, int n, int row, Set<Integer> cols, Set<Integer> posD, Set<Integer> negD){
+    private void solveNQueens(char[][] nBoard, int n, int row, boolean[] cols, boolean[] posD, boolean[] negD){
         if(row == n){
             //we have placed all the queens
 
@@ -31,20 +36,20 @@ class Solution {
         }
 
         for(int i=0;i<n;i++){
-            if(!cols.contains(i) && !posD.contains(i+row) && !negD.contains(i-row)){
+            if(cols[i] == false && posD[i+row] == false && negD[i-row + (n-1)] == false){
                 //this cell is safe from other queens
 
                 nBoard[row][i] = 'Q';
-                cols.add(i);
-                posD.add(i+row);
-                negD.add(i-row);
+                cols[i] = true;
+                posD[i+row] = true;
+                negD[i-row + (n-1)] = true;
 
                 solveNQueens(nBoard, n, row+1, cols, posD, negD);
 
                 nBoard[row][i] = '.';
-                cols.remove(i);
-                posD.remove(i+row);
-                negD.remove(i-row);
+                cols[i] = false;
+                posD[i+row] = false;
+                negD[i-row + (n-1)] = false;
             }
         }
     }
