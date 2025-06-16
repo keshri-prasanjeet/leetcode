@@ -1,21 +1,16 @@
 class Solution {
     public int rob(int[] nums) {
-        int[] robTable = new int[nums.length];
-        for(int i=0;i<nums.length;i++){
-            robTable[i] = -1;
+        int len = nums.length;
+        int[] robTable = new int[len+1];
+        if(len==1) return nums[0];
+        if(len==2) return nums[0] > nums[1] ? nums[0] : nums[1];
+
+        robTable[0] = nums[0];
+        robTable[1] = nums[0] > nums[1] ? nums[0] : nums[1];
+
+        for(int i=2;i<len;i++){
+            robTable[i] = Math.max(robTable[i-1], (robTable[i-2]+nums[i]));
         }
-
-        return doRobbery(nums, robTable, 0);
-    }
-
-    private int doRobbery(int[] nums, int[] robTable, int index){
-        if(index >= nums.length) return 0;
-        if(robTable[index] != -1) return robTable[index];
-
-        int robNext = doRobbery(nums, robTable, index+1);
-        int skipNext = nums[index] + doRobbery(nums, robTable, index+2);
-
-        robTable[index] = Math.max(robNext, skipNext);
-        return robTable[index];
+        return Math.max(robTable[len-1], robTable[len-2]);
     }
 }
