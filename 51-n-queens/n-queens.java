@@ -11,17 +11,31 @@ class Solution {
         for(int i=0;i<n;i++){
             board.add(row);
         }
+
+        char[][] nBoard = new char[n][n];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                nBoard[i][j] = '.';
+            }
+        }
+
         Set<Integer> cols = new HashSet<>();
         Set<Integer> posD = new HashSet<>();
         Set<Integer> negD = new HashSet<>();
-        solveNQueens(board, n, 0, cols, posD, negD);
+        solveNQueens(board, nBoard, n, 0, cols, posD, negD);
         return allBoards;
     }
 
-    private void solveNQueens(List<String> board, int n, int row, Set<Integer> cols, Set<Integer> posD, Set<Integer> negD){
+    private void solveNQueens(List<String> board, char[][] nBoard, int n, int row, Set<Integer> cols, Set<Integer> posD, Set<Integer> negD){
         if(row == n){
             //we have placed all the queens
-            allBoards.add(new ArrayList<>(board));
+
+            List<String> result = new ArrayList<>();
+
+            for(char[] cRow: nBoard){
+                result.add(new String(cRow));
+            }
+            allBoards.add(result);
             return;
         }
 
@@ -31,11 +45,15 @@ class Solution {
                 String currentRow = board.get(row);
                 char[] currentRowArr = currentRow.toCharArray();
                 currentRowArr[i] = 'Q';
+
+                nBoard[row][i] = 'Q';
                 board.set(row, new String(currentRowArr));
                 cols.add(i);
                 posD.add(i+row);
                 negD.add(i-row);
-                solveNQueens(board, n, row+1, cols, posD, negD);
+                solveNQueens(board, nBoard, n, row+1, cols, posD, negD);
+
+                nBoard[row][i] = '.';
                 board.set(row, currentRow);
                 cols.remove(i);
                 posD.remove(i+row);
