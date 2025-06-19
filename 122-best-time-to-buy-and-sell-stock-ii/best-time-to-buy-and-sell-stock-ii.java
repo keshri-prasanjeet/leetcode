@@ -1,16 +1,31 @@
 class Solution {
+    Integer [][] dp;
     public int maxProfit(int[] prices) {
-        int n = prices.length;
-        int[][] dp = new int[n][2];
-        dp[0][0] = 0;
-        dp[0][1] = -prices[0];
+        if(prices.length <=1) return 0;
+        dp = new Integer[prices.length][2];
+        return calculateProfit(prices, 0, 0);
+    }
 
-        for(int i=1;i<n;i++){
-            dp[i][0] = Math.max(dp[i-1][0], dp[i-1][1] + prices[i]); 
-            //max between continue to not hold a stock and sell the current held stock and become not holding a stock
-            dp[i][1] = Math.max(dp[i-1][1], dp[i-1][0] - prices[i]);
-            //max between continue to hold the stock and getting the profit until last point without holding stock and buying a stock today
+    private int calculateProfit(int[] prices, int holdingStatus, int stockIndex){
+        if(stockIndex == prices.length) return 0;
+
+        if(dp[stockIndex][holdingStatus] != null) return dp[stockIndex][holdingStatus];
+        //if just hold on this index then
+
+        int doNothing = calculateProfit(prices, holdingStatus, stockIndex+1);
+
+        //if i want to buy or sell
+
+        int doSomething = 0;
+
+        if(holdingStatus == 0){
+            //holding is false so buy
+            doSomething = -prices[stockIndex] + calculateProfit(prices, 1, stockIndex+1);
         }
-        return dp[n-1][0];
+        else{
+            //holding is true so sell
+            doSomething = prices[stockIndex] + calculateProfit(prices, 0, stockIndex+1);
+        }
+        return dp[stockIndex][holdingStatus] = Math.max(doSomething, doNothing);
     }
 }
