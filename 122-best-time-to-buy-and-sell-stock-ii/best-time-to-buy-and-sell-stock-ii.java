@@ -1,31 +1,26 @@
 class Solution {
-    Integer [][] dp;
+    Integer[][] dp;
     public int maxProfit(int[] prices) {
-        if(prices.length <=1) return 0;
         dp = new Integer[prices.length][2];
-        return calculateProfit(prices, 0, 0);
+        return calculateMaxProfit(prices, 0, 0);
     }
 
-    private int calculateProfit(int[] prices, int holdingStatus, int stockIndex){
-        if(stockIndex == prices.length) return 0;
-
-        if(dp[stockIndex][holdingStatus] != null) return dp[stockIndex][holdingStatus];
-        //if just hold on this index then
-
-        int doNothing = calculateProfit(prices, holdingStatus, stockIndex+1);
-
-        //if i want to buy or sell
+    private int calculateMaxProfit(int[] prices, int index, int holdingStatus){
+        if(index == prices.length) return 0;
+        if(dp[index][holdingStatus]!=null) return dp[index][holdingStatus];
+        int doNothing = calculateMaxProfit(prices, index+1, holdingStatus);
 
         int doSomething = 0;
 
         if(holdingStatus == 0){
-            //holding is false so buy
-            doSomething = -prices[stockIndex] + calculateProfit(prices, 1, stockIndex+1);
+            //holding nothing, lets hold a stock
+            doSomething = -prices[index] + calculateMaxProfit(prices, index+1, 1);
         }
         else{
-            //holding is true so sell
-            doSomething = prices[stockIndex] + calculateProfit(prices, 0, stockIndex+1);
+            //holding a stock, let try to sell it
+            doSomething = prices[index] + calculateMaxProfit(prices, index+1, 0);
         }
-        return dp[stockIndex][holdingStatus] = Math.max(doSomething, doNothing);
+
+        return dp[index][holdingStatus] = Math.max(doSomething, doNothing);
     }
 }
