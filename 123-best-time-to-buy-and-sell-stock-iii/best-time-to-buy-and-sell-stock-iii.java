@@ -1,25 +1,25 @@
 class Solution {
+    Integer[][][] dp;
     public int maxProfit(int[] prices) {
-        int sz = prices.length;
-        int[] rightProfit= new int[sz];
-        int[] leftProfit = new int[sz];
-        
-        int lMin = prices[0];
-        for(int i=1;i<sz;i++){
-            lMin = Math.min(lMin, prices[i]);
-            leftProfit[i] = Math.max(leftProfit[i-1], prices[i]-lMin);
-        }
+        dp = new Integer[prices.length][2][2];
+        return calculateProfit(prices, 0, 0, 1);
+    }
 
-        int rMax = prices[sz-1];
-        for(int i=sz-2;i>=0;i--){
-            rMax= Math.max(rMax, prices[i]);
-            rightProfit[i] = Math.max(rightProfit[i+1], rMax-prices[i]);
+    private int calculateProfit(int[] prices, int day, int holdingStatus, int remTransactions){
+        if(day==prices.length || remTransactions < 0) return 0;
+        
+        if (dp[day][holdingStatus][remTransactions]!= null) return dp[day][holdingStatus][remTransactions];
+
+        int skip = calculateProfit(prices, day+1, holdingStatus, remTransactions);
+
+        int doSomething = 0;
+        if(holdingStatus == 0){
+            //not holding anything
+            doSomething = -prices[day] + calculateProfit(prices, day+1, 1, remTransactions);
         }
-        int maxProfit = 0;
-        for(int i=0;i<sz;i++){
-            int left = i==0 ? 0 : leftProfit[i-1];
-            maxProfit = Math.max(maxProfit, left+rightProfit[i]);
+        else{
+            doSomething = prices[day] + calculateProfit(prices, day+1, 0, remTransactions-1);
         }
-        return maxProfit;
+        return dp[day][holdingStatus][remTransactions] = Math.max(doSomething, skip); 
     }
 }
