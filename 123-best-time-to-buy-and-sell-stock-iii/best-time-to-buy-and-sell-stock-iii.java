@@ -1,26 +1,25 @@
 class Solution {
-    int[][][] dp;
+    Integer[][][] dp;
     public int maxProfit(int[] prices) {
         int n = prices.length;
-        dp = new int[n+1][2][3];
-        for(int day=n-1;day>-1;day--){
-            for(int holding=0;holding<2;holding++){
-                for(int transaction=1;transaction<=2;transaction++){
-                    if(holding == 0){
-                        dp[day][0][transaction] = Math.max(
-                            -prices[day] + dp[day+1][1][transaction],
-                            dp[day+1][0][transaction]
-                        );
-                    }
-                    else{
-                        dp[day][1][transaction] = Math.max(
-                            prices[day] + dp[day+1][0][transaction-1],
-                            dp[day+1][1][transaction]
-                        );
-                    }
-                }
-            }
+        dp = new Integer[n][2][2];
+        return calculateProfit(prices, 0, 0, 1);
+    }
+
+    private int calculateProfit(int[] prices, int index, int holdingStatus, int transactions){
+        if(index == prices.length || transactions == -1) return 0;
+
+        if(dp[index][holdingStatus][transactions]!=null) return dp[index][holdingStatus][transactions];
+        int doNothing = calculateProfit(prices, index+1, holdingStatus, transactions);
+        int doSomething = 0;
+        if(holdingStatus == 0){
+            //if we are not holding stocks
+            doSomething = -prices[index] + calculateProfit(prices, index+1, 1, transactions);
         }
-        return dp[0][0][2];
+        else{
+            doSomething = prices[index] + calculateProfit(prices, index+1, 0, transactions-1);
+        }
+
+        return dp[index][holdingStatus][transactions] = Math.max(doSomething, doNothing);
     }
 }
