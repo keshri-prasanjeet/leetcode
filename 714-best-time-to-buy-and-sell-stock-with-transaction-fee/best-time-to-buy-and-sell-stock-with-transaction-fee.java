@@ -11,12 +11,12 @@ class Solution {
         int doNothing = calculateMaximumProfit(prices, day+1, holdingStatus, fee);
         int doSomething;
         if(holdingStatus == 0){
-            //we are not holding any stock
+            //we are not buying a stock
             doSomething = -prices[day] + calculateMaximumProfit(prices, day+1, 1, fee);
         }
         else{
             doSomething = prices[day] + calculateMaximumProfit(prices, day+1, 0, fee) -fee;
-            //we are holding a stock
+            //we are selling a stock
         }
         return dp[day][holdingStatus] = Math.max(doSomething, doNothing);
     }
