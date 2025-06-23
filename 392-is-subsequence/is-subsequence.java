@@ -1,17 +1,20 @@
 class Solution {
-    Boolean[][] dp;
+    
     public boolean isSubsequence(String s, String t) {
-        int l = s.length();
-        int l2= t.length();
-        dp = new Boolean[l][l2];
-        return isSubsequence(l-1, l2-1, s, t);
+        int len1 = s.length();
+        int len2 = t.length();
+        return isSub(s, t, len1-1, len2-1);
     }
 
-    private boolean isSubsequence(int i, int j, String s, String t){
-        if(i<0 ) return true;
+    private boolean isSub(String s, String t, int i, int j){
+        if(i<0) return true;
         if(j<0) return false;
-        if(dp[i][j]!=null) return dp[i][j];
-        if(s.charAt(i) == t.charAt(j)) return dp[i][j] = isSubsequence(i-1, j-1, s, t);
-        return dp[i][j] = isSubsequence(i, j-1, s, t);
+        
+        if(s.charAt(i) == t.charAt(j)){
+            return isSub(s, t, i-1, j-1);
+        }
+        else{
+            return isSub(s, t, i, j-1);
+        }
     }
 }
