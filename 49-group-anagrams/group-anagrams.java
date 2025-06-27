@@ -1,30 +1,21 @@
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
-        // i can make a map of string list<String>
-        // the key will be the sorted string
-        Map<String, List<String>> groupMap = new HashMap<>();
-        for(String word: strs){
-            String sortedWord = stringSort(word);
-            if(groupMap.containsKey(sortedWord)){
-                groupMap.get(sortedWord).add(word);
+        Map<String, List<String>> anagramMap = new HashMap<>();
+        for(String str: strs){
+            char[] strArr = str.toCharArray();
+            Arrays.sort(strArr);
+            String sortedStr = new String(strArr);
+            if(anagramMap.containsKey(sortedStr)){
+                anagramMap.get(sortedStr).add(str);
             }
             else{
-                List<String> valueList = new ArrayList<>();
-                valueList.add(word);
-                groupMap.put(sortedWord, valueList);
+                anagramMap.put(sortedStr, new ArrayList<>(List.of(str)));
             }
         }
         List<List<String>> answer = new ArrayList<>();
-
-        for(Map.Entry<String, List<String>> entry: groupMap.entrySet()){
+        for(Map.Entry<String, List<String>> entry: anagramMap.entrySet()){
             answer.add(entry.getValue());
         }
         return answer;
-    }
-
-    private String stringSort(String word){
-        char[] wordArray = word.toCharArray();
-        Arrays.sort(wordArray);
-        return new String(wordArray);
     }
 }
