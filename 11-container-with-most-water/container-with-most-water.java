@@ -3,7 +3,7 @@ class Solution {
         for (int i = 0; i < 500; i++) {
             maxArea(new int[] { 0, 0 }); // JIT warm-up
         }
-    }
+    }// JUST WOW
     public static int maxArea(int[] height) {
         int len = height.length;
         int left = 0;
