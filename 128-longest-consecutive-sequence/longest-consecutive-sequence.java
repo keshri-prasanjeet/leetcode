@@ -5,9 +5,9 @@ class Solution {
             numSet.add(num);
         }
         int count = 0;
-        int maxCount = Integer.MIN_VALUE;
+        int maxCount = 0;
         for(int num: numSet){
-            count = 0;
+            count = 1;
             if(!numSet.contains(num-1)){
                 while(numSet.contains(num+1)) {
                     count++;
@@ -16,6 +16,6 @@ class Solution {
             }
             maxCount=Math.max(maxCount, count);
         }
-        return maxCount == Integer.MIN_VALUE ? 0: maxCount+1;
+        return maxCount;
     }
 }
