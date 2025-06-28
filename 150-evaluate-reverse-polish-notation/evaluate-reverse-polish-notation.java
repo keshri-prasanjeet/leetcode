@@ -2,7 +2,7 @@ class Solution {
     public int evalRPN(String[] tokens) {
         Stack<Integer> st = new Stack<>();
         for(String token: tokens){
-            if(Set.of("+","-","*","/").contains(token)){
+            if(token.equals("*") || token.equals("+") || token.equals("-") || token.equals("/")){
                 int first = st.pop();
                 int second= st.pop();
                 System.out.println(first + " " + second);
