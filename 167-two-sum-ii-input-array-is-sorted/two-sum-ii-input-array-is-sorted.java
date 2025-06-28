@@ -1,18 +1,15 @@
 class Solution {
     public int[] twoSum(int[] numbers, int target) {
-        int left=0;
-        int right = numbers.length-1;
-        int curSum = 0;
-        while(left<right){
-            curSum = numbers[left] + numbers[right];
-            if(curSum > target){
-                right--;
-            }
-            else if(curSum < target){
-                left++;
-            }
-            else return new int[]{left+1, right+1};
+        int len = numbers.length;
+        int left = 0;
+        int right = len-1;
+        int sum = 0;
+        while(left < right){
+            sum = numbers[left] + numbers[right];
+            if(sum == target) return new int[]{left+1, right+1};
+            if(sum > target) right--;
+            else left++;
         }
-        return new int[]{-1, -1};
+        return new int[2];
     }
 }
