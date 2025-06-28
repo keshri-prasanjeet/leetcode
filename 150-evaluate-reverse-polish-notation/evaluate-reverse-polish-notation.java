@@ -11,7 +11,7 @@ class Solution {
                 else if(token.equals("*")) st.push(second * first);
                 else st.push(second/first);
             }
-            else st.push(Integer.parseInt(token));
+            else st.push(Integer.valueOf(token));
         }
         return st.pop();
     }
