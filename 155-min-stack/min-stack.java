@@ -1,27 +1,18 @@
-class Pair {
-    int val;
-    int curMin;
-    Pair(int val, int curMin){
-        this.val = val;
-        this.curMin = curMin;
-    }
-}
-
 class MinStack {
 
     Stack<Pair> st;
 
     public MinStack() {
-        st = new Stack<>();
+        st = new Stack<Pair>();
     }
     
     public void push(int val) {
         if(st.isEmpty()){
-            st.push(new Pair(val,val));
+            st.push(new Pair(val, val));
         }
         else{
-            int curMin = st.peek().curMin;
-            curMin = curMin<=val?curMin:val;
+            int curMin = st.peek().minVal;
+            curMin = Math.min(curMin, val);
             st.push(new Pair(val, curMin));
         }
     }
@@ -35,8 +26,17 @@ class MinStack {
     }
     
     public int getMin() {
-        // if(st.isEmpty()) return 0;
-        return st.peek().curMin;
+        return st.peek().minVal;
+    }
+}
+
+class Pair{
+    int val;
+    int minVal;
+
+    public Pair(int val, int minVal){
+        this.val = val;
+        this.minVal = minVal;
     }
 }
 
