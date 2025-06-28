@@ -1,19 +1,17 @@
 class Solution {
     public int[] productExceptSelf(int[] nums) {
-        //keep an aux that will store the sum before that point
-        //do it from left side and right side
-        int aux = 1;
         int len = nums.length;
-        int[] arr = new int[len];
-        for(int i=0;i<len;i++){
-            arr[i] = aux;
-            aux*=nums[i];
+        int [] aux = new int[len];
+        aux[0] = 1;
+        for(int i=1;i<len;i++){
+            aux[i] = aux[i-1] * nums[i-1];
         }
-        aux = 1;
-        for(int i=len-1;i>=0;i--){
-            arr[i] *= aux;
-            aux*=nums[i];
+        
+        int mul = 1;
+        for(int i=len-2;i>=0;i--){
+            mul = mul * nums[i+1];
+            aux[i] = aux[i] * mul;
         }
-        return arr;
+        return aux;
     }
 }
