@@ -5,11 +5,17 @@ class Solution {
         int right = len-1;
         int maxArea = Integer.MIN_VALUE;
         while(left < right){
-            maxArea = Math.max(maxArea, (Math.min(height[left], height[right]) * (right - left)));
-            if(height[left] <= height[right]){
-                left++;
+            int curHeight = Math.min(height[left], height[right]);
+            maxArea = Math.max(maxArea, (curHeight) * (right - left));
+
+            if(height[left] < height[right]){
+                // System.out.println("left is " + left + " right is " + right);
+                while(left < right && height[left] <= curHeight){left++;}
             }
-            else right--;
+            else {
+                // System.out.println(" §§§§ left is " + left + " right is " + right);
+                while(left < right && height[right] <= curHeight){right--;}
+            }
         }
         return maxArea;
     }
