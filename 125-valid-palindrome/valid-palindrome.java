@@ -6,7 +6,6 @@ class Solution {
                 stripped.append(Character.toLowerCase(a));
             }
         }
-        // String straight = stripped.toString();
         return stripped.toString().equals(stripped.reverse().toString());
     }
 }
