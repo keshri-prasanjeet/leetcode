@@ -1,24 +1,32 @@
 class Solution {
     public int minEatingSpeed(int[] piles, int h) {
-        int maxK  = 0;
-        for(int pile: piles) maxK = Math.max(maxK, pile);
+        int maxSpeed = 0;
+        for(int pile: piles){
+            maxSpeed = Math.max(maxSpeed, pile);
+        }
 
-        int minK = 1;
-        int bestK = maxK;
-        while(minK <= maxK){
-            int midK = minK + (maxK - minK) / 2;
-            long totalBananaEatingTime = 0;
-            for(int pile: piles){
-                totalBananaEatingTime += (pile + midK -1)/ midK;
-            }
-            if(totalBananaEatingTime <= h){
-                bestK = midK;
-                maxK = midK-1;
+        int left = 0;
+        int right = maxSpeed;
+        int minSpeed = Integer.MAX_VALUE;
+        while(left <= right){
+            int mid = left + (right-left)/2;
+            int timeTakenToEat = timeTakenToEat(mid, piles);
+            if(timeTakenToEat <= h){
+                minSpeed = Math.min(minSpeed, mid);
+                right = mid-1;
             }
             else{
-                minK = midK +1;
+                left = mid+1;
             }
         }
-        return bestK;
+        return minSpeed;
+    }
+
+    private int timeTakenToEat(int mid, int[] piles){
+        int totalTime = 0;
+        for(int pile: piles){
+            totalTime += Math.ceil((double)pile / (double)mid);
+        }
+        return totalTime;
     }
 }
