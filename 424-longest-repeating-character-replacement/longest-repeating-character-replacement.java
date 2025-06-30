@@ -5,8 +5,9 @@ class Solution {
         int maxWindow = 0;
         int maxAppearedChar = 0;
         for(int r = 0;r<s.length();r++){
-            freqCount.put(s.charAt(r), freqCount.getOrDefault(s.charAt(r),0) +1);
-            maxAppearedChar = Math.max(maxAppearedChar, freqCount.get(s.charAt(r)));
+            char chR = s.charAt(r);
+            freqCount.put(chR, freqCount.getOrDefault(chR,0) +1);
+            maxAppearedChar = Math.max(maxAppearedChar, freqCount.get(chR));
             while((r-l+1)-maxAppearedChar > k){
                 freqCount.put(s.charAt(l), freqCount.get(s.charAt(l))-1);
                 l++;
