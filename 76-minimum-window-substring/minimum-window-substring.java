@@ -1,37 +1,48 @@
 class Solution {
     public String minWindow(String s, String t) {
         if(s.length() < t.length()) return "";
-        Map<Character, Integer> tMap = new HashMap<>();
-        for(char c:t.toCharArray()){
-            tMap.put(c, tMap.getOrDefault(c,0)+1);
+        int[] tMap = new int[128];
+        for (char a : t.toCharArray()) {
+            tMap[a]++;
         }
-        int left=0;
-        int right=0;
+
+        int totalMatches = 0;
+        for (int i : tMap)
+            if (i > 0)
+                totalMatches++;
+
+        int left = 0;
+        int right = 0;
+        int matchFound = 0;
+        int[] windowMap = new int[128];
         int minLen = Integer.MAX_VALUE;
-        int windowStart = left;
-        int required = tMap.size();
-        int found = 0;
-        Map<Character, Integer> windowMap = new HashMap<>();
-        while(right < s.length()){
+        int startLen = left;
+        while (right < s.length()) {
             char rightChar = s.charAt(right);
-            windowMap.put(rightChar, windowMap.getOrDefault(rightChar, 0)+1);
-            if(tMap.containsKey(rightChar) && tMap.get(rightChar).equals(windowMap.get(rightChar))){
-                found++;
-            }
-            while(found==required){
-                if(minLen > right-left+1){
+            windowMap[rightChar]++;
+
+            if (tMap[rightChar] > 0 &&
+                    tMap[rightChar] == windowMap[rightChar])
+                matchFound++;
+            while (matchFound == totalMatches) {
+                //calculate the min
+                if(right-left+1 < minLen){
                     minLen = right-left+1;
-                    windowStart = left;
+                    startLen = left;
                 }
-                char leftChar = s.charAt(left);
-                windowMap.put(leftChar, windowMap.get(leftChar)-1);
-                if(tMap.containsKey(leftChar) && tMap.get(leftChar) > windowMap.get(leftChar)){
-                    found--;
+
+                //remove the left and see what happens
+                char leftChar=s.charAt(left);
+                windowMap[s.charAt(left)]--;
+                if(tMap[s.charAt(left)] > 0 && tMap[s.charAt(left)] > windowMap[s.charAt(left)]){
+                    matchFound--;
                 }
                 left++;
             }
             right++;
         }
-        return minLen == Integer.MAX_VALUE ? "" : s.substring(windowStart, windowStart+minLen);
+
+        return minLen == Integer.MAX_VALUE ? "" : s.substring(startLen, startLen + minLen);
+
     }
 }
