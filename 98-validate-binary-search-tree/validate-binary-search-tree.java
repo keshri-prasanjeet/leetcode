@@ -28,7 +28,7 @@ class Solution {
         if(prev == null || prev < node.val) prev = node.val;
         else {
             answer = false;
-            return;
+            return;// not neccesary
         }
         doInorder(node.right);
     }
