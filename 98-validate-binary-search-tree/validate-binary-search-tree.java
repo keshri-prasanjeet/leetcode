@@ -14,21 +14,21 @@
  * }
  */
 class Solution {
-    boolean answer = true;
-    TreeNode prev = null;
+    Integer prev;
+    boolean answer;
     public boolean isValidBST(TreeNode root) {
+        answer = true;
         doInorder(root);
         return answer;
     }
+
     private void doInorder(TreeNode node){
         if(node == null) return;
         doInorder(node.left);
-        if(prev == null || prev.val < node.val){
-            prev = node;
+        if(prev == null || prev < node.val){
+            prev = node.val;
         }
-        else{
-            if(prev.val >= node.val) answer = false;
-        }
+        else answer = false;
         doInorder(node.right);
     }
 }
