@@ -21,7 +21,6 @@ class Solution {
         if(root==null && subRoot == null) return true;
         if(root==null || subRoot==null) return false;
         if(root.val == subRoot.val){
-            System.out.println("found");
             boolean ans = sameTree(root, subRoot);
             if(ans == true) return true;
         }
@@ -32,7 +31,6 @@ class Solution {
     private boolean sameTree(TreeNode node1, TreeNode node2){
         if(node1 == null && node2 == null) return true;
         if(node1 == null || node2 == null) return false;
-        System.out.println(node1.val + " " + node2.val);
         if(node1.val != node2.val) return false;
         return sameTree(node1.left, node2.left) && sameTree(node1.right, node2.right);
     }
