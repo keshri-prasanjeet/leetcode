@@ -14,19 +14,23 @@
  * }
  */
 class Solution {
-    List<List<Integer>> levelOrderList;
     public List<List<Integer>> levelOrder(TreeNode root) {
-        this.levelOrderList = new ArrayList<>();
-        if(root == null) return levelOrderList;
-        helper(0, root);
-        return levelOrderList;
-    }
-    
-    private void helper(int depth, TreeNode node){
-        if(node == null) return;
-        if(depth >= levelOrderList.size()) levelOrderList.add(new ArrayList<>());
-        levelOrderList.get(depth).add(node.val);
-        helper(depth+1, node.left);
-        helper(depth+1, node.right);
+        List<List<Integer>> answerLiqueue = new ArrayList<>();
+        if(root == null) return answerLiqueue;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            List<Integer> levelLiqueue = new ArrayList<>();
+            while(size!=0){
+                TreeNode top = queue.poll();
+                if(top.left!=null) queue.offer(top.left);
+                if(top.right!=null) queue.offer(top.right);
+                levelLiqueue.add(top.val);
+                size--;
+            }
+            answerLiqueue.add((levelLiqueue));
+        }
+        return answerLiqueue;
     }
 }
