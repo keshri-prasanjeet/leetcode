@@ -25,10 +25,11 @@ class Solution {
     private void doInorder(TreeNode node){
         if(node == null) return;
         doInorder(node.left);
-        if(prev == null || prev < node.val){
-            prev = node.val;
+        if(prev == null || prev < node.val) prev = node.val;
+        else {
+            answer = false;
+            return;
         }
-        else answer = false;
         doInorder(node.right);
     }
 }
