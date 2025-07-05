@@ -14,17 +14,23 @@
  * }
  */
 class Solution {
-    int answer;
-    int count = 0;
+    int gK;
+    int ksm;
+    boolean set = false;
     public int kthSmallest(TreeNode root, int k) {
-        if(root!=null) doInorder(root, k);
-        return answer;
+        gK = k;
+        ksm = -1;
+        findKth(root);
+        return ksm;
     }
-    private void doInorder(TreeNode root, int k){
-        if(root == null) return;
-        doInorder(root.left, k);
-        count++;
-        if(count == k) answer = root.val;
-        doInorder(root.right,k);
+
+    private void findKth(TreeNode node){
+        if(node == null) return;
+        findKth(node.left);
+        gK--;
+        if(gK == 0){
+            ksm = node.val;
+        }
+        findKth(node.right);
     }
 }
