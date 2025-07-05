@@ -1,17 +1,22 @@
 class Solution {
+    int len;
+    List<List<Integer>> answer;
     public List<List<Integer>> subsets(int[] nums) {
-        List<List<Integer>> answer = new ArrayList<>();
+        len = nums.length;
+        answer = new ArrayList<>();
         List<Integer> subset = new ArrayList<>();
-        doSubset(subset, 0, nums, answer);
+        findSubsets(nums, 0, subset);
         return answer;
     }
 
-    private void doSubset(List<Integer> subset, int index, int[] nums, List<List<Integer>> answer){
-        answer.add(new ArrayList<>(subset));
-        for(int i=index;i<nums.length;i++){
-            subset.add(nums[i]);
-            doSubset(subset, i+1, nums, answer);
-            subset.remove(subset.size()-1);
+    private void findSubsets(int[] nums, int index, List<Integer> subset){
+        if(index == len){
+            answer.add(new ArrayList<>(subset));
+            return;
         }
+        subset.add(nums[index]);
+        findSubsets(nums,index+1, subset);
+        subset.remove(subset.size()-1);
+        findSubsets(nums, index+1, subset);
     }
 }
