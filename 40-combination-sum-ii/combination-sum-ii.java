@@ -17,7 +17,7 @@ class Solution {
             if(i > startIndex && i < candidates.length && candidates[i] == candidates[i-1]) continue;
             // if i > startIndex  and i am same as previous then skip me becasue the previous was already added recursed, removed and i was added again
             // you already added 1 ... did the recursion and got all possible now again 1 at the start is double
-            if(i == candidates.length) break;
+            if(candidates[i] > target) break;
             combination.add(candidates[i]);
             findCombination(candidates, target - candidates[i], combination, i+1);
             combination.remove(combination.size()-1);
