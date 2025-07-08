@@ -14,9 +14,10 @@ class Solution {
             answer.add(new ArrayList<>(subset));
             return;
         }
+        findSubsets(nums, index+1, subset);
         subset.add(nums[index]);
         findSubsets(nums,index+1, subset);
         subset.remove(subset.size()-1);
-        findSubsets(nums, index+1, subset);
+        
     }
 }
