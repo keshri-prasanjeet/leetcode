@@ -5,8 +5,7 @@ class Solution {
         // aab -> [a, a, b], [aa, b]
 
         answer = new ArrayList<>();
-        List<String> substrings = new ArrayList<>();
-        fps(s, substrings, 0);
+        fps(s, new ArrayList<>(), 0);
         return answer;
     }
 
@@ -15,21 +14,16 @@ class Solution {
             answer.add(new ArrayList<>(substrings));
             return;
         }
-        StringBuilder sb = new StringBuilder();
         for(int i=index;i<s.length();i++){
-            sb.append(s.charAt(i));
-            String curr = sb.toString();
-            if(isPalindrome(curr)){
-                substrings.add(curr);
+            if(isPalindrome(s, index, i)){
+                substrings.add(s.substring(index, i+1));
                 fps(s, substrings, i+1);
                 substrings.remove(substrings.size()-1);
             }
         }
     }
 
-    private boolean isPalindrome(String str){
-        int l = 0;
-        int r = str.length()-1;
+    private boolean isPalindrome(String str, int l, int r){
         while(l <= r){
             if(str.charAt(l++) != str.charAt(r--)) return false;
         }
