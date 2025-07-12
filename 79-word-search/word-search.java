@@ -12,7 +12,7 @@ class Solution {
     public boolean exist(char[][] board, String word) {
         //keep a visited map to remember which cell you visited
         // make a direction list to direct in four directions
-        // do not keep the terminating condition at the end keep truthness / correctness as. you try to find the word
+        // if recursion keeps going and even wordIndex at last is okay that means word found
 
         m = board.length;
         n = board[0].length;
@@ -32,19 +32,18 @@ class Solution {
     private boolean findWord(char[][] board, int i, int j, String word, int wordIndex){
         if(word.charAt(wordIndex)!=board[i][j]) return false;
         if(wordIndex + 1 == word.length()) return true; // head first check
-
+        visited[i][j] = true;
         for(int[] direction: directions){
             int x = direction[0] + i;
             int y = direction[1] + j;
 
             if(x < m && x >= 0 && y < n && y >=0 && visited[x][y] == false){
                 if(wordIndex + 1 <= word.length()){
-                    visited[i][j] = true;
                     if(findWord(board, x, y, word, wordIndex+1)) return true;
-                    visited[i][j] = false;
                 }
             }
         }
+        visited[i][j] = false;
         return false;
     }
 }
