@@ -1,25 +1,36 @@
 class Solution {
-    String[] keypadChars = new String[]{"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    List<List<String>> mapping = new ArrayList<>
+    (
+        List.of(
+            List.of("a","b","c"), 
+            List.of("d","e","f"),
+            List.of("g","h","i"),
+            List.of("j","k","l"),
+            List.of("m","n","o"),
+            List.of("p","q","r","s"),
+            List.of("t","u","v"),
+            List.of("w","x","y","z")
+        )
+    );
     List<String> answer;
     public List<String> letterCombinations(String digits) {
         answer = new ArrayList<>();
-        StringBuilder sb = new StringBuilder();
-        if(!digits.isEmpty())doCombinations(sb, digits, 0);
+        if(digits.length()==0) return answer;
+        makeCombination(digits, new StringBuilder(), 0);
         return answer;
     }
 
-    private void doCombinations(StringBuilder sb, String digits, int index){
-        if(index == digits.length()){
+    private void makeCombination(String digits, StringBuilder sb, int index){
+        if(sb.length() == digits.length()){
             answer.add(sb.toString());
             return;
         }
 
-        int buttonNum = digits.charAt(index) - '0' -2;
-        String buttonChars = keypadChars[buttonNum];
-
-        for(int i=0;i<buttonChars.length();i++){
-            sb.append(buttonChars.charAt(i));
-            doCombinations(sb, digits, index+1);
+        int num = digits.charAt(index) - '0' - 2;
+        List<String> numList = mapping.get(num);
+        for(int i=0;i<numList.size();i++){
+            sb.append(numList.get(i));
+            makeCombination(digits, sb, index+1);
             sb.deleteCharAt(sb.length()-1);
         }
     }
