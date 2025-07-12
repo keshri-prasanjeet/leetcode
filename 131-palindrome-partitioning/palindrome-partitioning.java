@@ -1,9 +1,6 @@
 class Solution {
     List<List<String>> answer;
     public List<List<String>> partition(String s) {
-        //partition a string into a group of substrings such that each substring in that group is a palindrome
-        // aab -> [a, a, b], [aa, b]
-
         answer = new ArrayList<>();
         fps(s, new ArrayList<>(), 0);
         return answer;
