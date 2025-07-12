@@ -24,23 +24,17 @@ class Solution {
 
     private void findPaths(TreeNode root, StringBuilder path){
         if(root == null) return;
+        int lenBeforeAddingCurrent = path.length();
+        path.append(root.val);
+
         if(root.left == null && root.right == null){
-            path.append(root.val);
             answer.add(path.toString());
-            return;
         }
-
-        if(root.left != null){
-            StringBuilder sb = new StringBuilder(path);
-            sb.append(root.val).append("->");
-            findPaths(root.left, sb);
+        else{
+            path.append("->");
+            findPaths(root.left, path);
+            findPaths(root.right,path);
         }
-
-        if(root.right != null){
-            StringBuilder sb = new StringBuilder(path);
-            sb.append(root.val).append("->");
-            findPaths(root.right, sb);
-        }
-
+        path.setLength(lenBeforeAddingCurrent);
     }
 }
