@@ -21,18 +21,18 @@ class Node {
 class Solution {
     public Node cloneGraph(Node node) {
         if(node == null) return node;
-        Queue<Node> nodeQ = new LinkedList<>();
+        Queue<Node> q = new LinkedList<>();
         Map<Node, Node> oldNew = new HashMap<>();
-        nodeQ.offer(node);
+        q.offer(node);
         oldNew.put(node, new Node(node.val));
-        while(!nodeQ.isEmpty()){
-            Node top = nodeQ.poll();
-            for(Node neighbor: top.neighbors){
+        while(!q.isEmpty()){
+            Node poll = q.poll();
+            for(Node neighbor: poll.neighbors){
                 if(!oldNew.containsKey(neighbor)){
                     oldNew.put(neighbor, new Node(neighbor.val));
-                    nodeQ.add(neighbor);
+                    q.offer(neighbor);
                 }
-                oldNew.get(top).neighbors.add(oldNew.get(neighbor));
+                oldNew.get(poll).neighbors.add(oldNew.get(neighbor));
             }
         }
         return oldNew.get(node);
