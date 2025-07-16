@@ -1,40 +1,43 @@
 class Solution {
     public int orangesRotting(int[][] grid) {
-        int m = grid.length;
-        int n = grid[0].length;
-
-        int freshOranges = 0;
-        Queue<int[]> rottenQ = new ArrayDeque<>();
-        for(int i=0;i<m;i++){
-            for(int j=0;j<n;j++){
-                if(grid[i][j]==1) freshOranges++;
-                if(grid[i][j]==2){
-                    rottenQ.offer(new int[]{i,j});
+        Queue<int[]> q = new LinkedList<>();
+        int totalOranges = 0;
+        int rottenOranges = 0;
+        for(int i=0; i<grid.length; i++){
+            for(int j=0; j<grid[0].length; j++){
+                if(grid[i][j] != 0){
+                    totalOranges++;
+                }
+                if(grid[i][j] == 2){
+                    q.offer(new int[]{i,j});
+                    rottenOranges++;
                 }
             }
-        }if(freshOranges == 0) return 0;
-        //counted all the fresh oranges & rotten to compare with later
-        int minutesElapsed = 0;
-        int[][] directions = {{0,1}, {1,0}, {-1,0}, {0,-1}};
-        while(!rottenQ.isEmpty()){
-            int currentRotten = rottenQ.size();
-            for(int i=0;i<currentRotten;i++){
-                int[] rottenOrange = rottenQ.poll();
-                for(int[] direction:directions){
-                    int row = direction[0]+rottenOrange[0];
-                    int col = direction[1]+rottenOrange[1];
-                    if(row >=0 && row<m && col >=0 && col<n){
-                        //cell within bounds
-                        if(grid[row][col] == 1){
-                            grid[row][col] = 2;
-                            rottenQ.offer(new int[]{row,col});
-                            freshOranges--;
+        }
+        if(rottenOranges == totalOranges) return 0;
+        if(rottenOranges == 0) return -1;
+        // i have now total oranges and queue of rotten oranges
+
+        int timeElapsed = 0;
+        while(!q.isEmpty()){
+            int size = q.size();
+            while(size-- > 0){
+                int[] top = q.poll();
+                for(int[] direction: new int[][]{{1,0}, {0,1}, {-1,0}, {0,-1}}){
+                    int x = top[0] + direction[0];
+                    int y = top[1] + direction[1];
+                    if(x >= 0 && x < grid.length && y >=0 && y < grid[0].length){
+                        if(grid[x][y] == 1){
+                            //found a fresh orange next a rotten orange
+                            grid[x][y] = 2;
+                            q.offer(new int[]{x,y});
+                            rottenOranges++;
                         }
                     }
                 }
             }
-            minutesElapsed++;
-            if(freshOranges == 0) return minutesElapsed;
+            timeElapsed++;
+            if(rottenOranges == totalOranges) return timeElapsed;
         }
         return -1;
     }
