@@ -1,16 +1,10 @@
 class Solution {
-    boolean[][] visited;
     public boolean exist(char[][] board, String word) {
-        //need to maintain a visited map so that i dont go back on the same path again and again
-        //go in four directinos
-        //early check so that my check condition is not only on out of bounds
+        //backtracking way
 
-        int m = board.length;
-        int n = board[0].length;
-        visited = new boolean[m][n];
-        for(int i=0;i<m;i++){
-            for(int j=0;j<n;j++){
-                if(board[i][j] == word.charAt(0)){
+        for(int i=0;i<board.length;i++){
+            for(int j=0;j<board[0].length;j++){
+                if(word.charAt(0) == board[i][j]){
                     if(findWord(i, j, word, board, 0) == true) return true;
                 }
             }
@@ -19,20 +13,19 @@ class Solution {
     }
 
     private boolean findWord(int i, int j, String word, char[][] board, int index){
-        if(word.charAt(index)!=board[i][j]) return false;
-        if(index + 1 == word.length()) return true; // means i am at the last point and this also matches
-        visited[i][j] = true;
+        if(index == word.length()) return true;
 
-        for(int[] direction : new int[][]{{0,1}, {1,0}, {-1,0}, {0,-1}}){
-            int x = direction[0]+i;
-            int y = direction[1]+j;
-            if(x >= 0 && x < board.length && y >= 0 && y < board[0].length && visited[x][y] == false){
-                if(index + 1 < word.length()){
-                    if(findWord(x, y, word, board, index+1) == true) return true;
-                }
-            }
-        }
-        visited[i][j] = false;
-        return false;
+        if(i < 0 || i == board.length || j < 0 || j == board[0].length || board[i][j] != word.charAt(index)) return false;
+
+        char curr = board[i][j];
+
+        board[i][j] = '$';
+
+        boolean ans = findWord(i+1, j, word, board, index+1) || 
+                findWord(i-1, j, word, board, index+1) || 
+                findWord(i, j+1, word, board, index+1) || 
+                findWord(i, j-1, word, board, index+1);
+        board[i][j] = curr;
+        return ans;
     }
 }
