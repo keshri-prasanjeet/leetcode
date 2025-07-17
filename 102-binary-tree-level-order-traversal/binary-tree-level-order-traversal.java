@@ -14,19 +14,19 @@
  * }
  */
 class Solution {
-    List<List<Integer>> answerList;
+    List<List<Integer>> answer;
     public List<List<Integer>> levelOrder(TreeNode root) {
-        answerList = new ArrayList<>();
-        if(root == null) return answerList;
-        helper(0, root);
-        return answerList;
+        answer=new ArrayList<>();
+        if(root == null) return answer;
+        helper(root, 0);
+        return answer;
     }
 
-    private void helper(int level, TreeNode node){
-        if(node == null) return;
-        if(level >= answerList.size()) answerList.add(new ArrayList<Integer>());
-        answerList.get(level).add(node.val);
-        helper(level+1, node.left);
-        helper(level+1, node.right);
+    private void helper(TreeNode root, int level){
+        if(root == null) return;
+        if(answer.size() <= level) answer.add(new ArrayList<>());
+        answer.get(level).add(root.val);
+        helper(root.left, level+1);
+        helper(root.right,level+1);
     }
 }
