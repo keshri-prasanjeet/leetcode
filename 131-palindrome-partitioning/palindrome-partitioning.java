@@ -2,28 +2,28 @@ class Solution {
     List<List<String>> answer;
     public List<List<String>> partition(String s) {
         answer = new ArrayList<>();
-        fps(s, new ArrayList<>(), 0);
+        doPartition(s, 0, new ArrayList<>());
         return answer;
     }
 
-    private void fps(String s, List<String> substrings, int index){
-        if(index == s.length()){
+    private void doPartition(String s, int startIndex, List<String> substrings){
+        if(startIndex==s.length()){
             answer.add(new ArrayList<>(substrings));
             return;
         }
-        for(int i=index;i<s.length();i++){
-            if(isPalindrome(s, index, i)){
-                substrings.add(s.substring(index, i+1));
-                fps(s, substrings, i+1);
+
+        for(int i=startIndex;i<s.length();i++){
+            if(isPalin(s, startIndex, i) == true){
+                substrings.add(s.substring(startIndex, startIndex + i-startIndex+1));
+                doPartition(s, i+1, substrings);
                 substrings.remove(substrings.size()-1);
             }
         }
     }
 
-    private boolean isPalindrome(String str, int l, int r){
-        while(l <= r){
-            if(str.charAt(l++) != str.charAt(r--)) return false;
-        }
-        return true;
+    private boolean isPalin(String s, int start, int end){
+        if(start >= end) return true;
+        if(s.charAt(start) != s.charAt(end)) return false;
+        return isPalin(s, start+1, end-1);
     }
 }
