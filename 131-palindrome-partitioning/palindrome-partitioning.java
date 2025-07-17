@@ -1,7 +1,10 @@
 class Solution {
     List<List<String>> answer;
+    Boolean[][] palinMap;
     public List<List<String>> partition(String s) {
         answer = new ArrayList<>();
+        int len = s.length();
+        palinMap = new Boolean[len][len];
         doPartition(s, 0, new ArrayList<>());
         return answer;
     }
@@ -23,7 +26,8 @@ class Solution {
 
     private boolean isPalin(String s, int start, int end){
         if(start >= end) return true;
-        if(s.charAt(start) != s.charAt(end)) return false;
-        return isPalin(s, start+1, end-1);
+        if(palinMap[start][end]!=null) return palinMap[start][end];
+        if(s.charAt(start) != s.charAt(end)) return palinMap[start][end] = false;
+        return palinMap[start][end] = isPalin(s, start+1, end-1);
     }
 }
