@@ -1,22 +1,24 @@
 class Solution {
-    Integer dp[];
+    Integer[] minCoinsMap;
     public int coinChange(int[] coins, int amount) {
-        dp = new Integer[amount+1];
-        int res = helper(coins, amount);
-        return res == Integer.MAX_VALUE ? -1 : res;
+        minCoinsMap = new Integer[amount+1];
+        int ans = helper(coins, amount);
+        return ans == Integer.MAX_VALUE ? -1 : ans;
     }
 
-    public int helper(int[] coins, int amount){
+    private int helper(int[] coins, int amount){
         if(amount == 0) return 0;
-        if(amount < 0) return Integer.MAX_VALUE;
-        if(dp[amount]!=null) return dp[amount];
+        if(minCoinsMap[amount]!=null) return minCoinsMap[amount];
         int minCoins = Integer.MAX_VALUE;
         for(int coin: coins){
-            int result = helper(coins, amount - coin);
-            if(result != Integer.MAX_VALUE){
-                minCoins = Math.min(minCoins, result+1);
+            if(amount - coin >= 0){
+                int resp = helper(coins, amount-coin);
+                if(resp!=Integer.MAX_VALUE){
+                    int ans = 1 + helper(coins, amount-coin);
+                    minCoins = Math.min(ans, minCoins);
+                }
             }
         }
-        return dp[amount] = minCoins;
+        return minCoinsMap[amount] = minCoins;
     }
 }
