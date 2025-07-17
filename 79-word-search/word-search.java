@@ -1,47 +1,34 @@
 class Solution {
-
-    int[][] directions = {
-        {1,0},
-        {0,1},
-        {-1, 0},
-        {0, -1}
-    };
     boolean[][] visited;
-    int m;
-    int n;
     public boolean exist(char[][] board, String word) {
-        //keep a visited map to remember which cell you visited
-        // make a direction list to direct in four directions
-        // if recursion keeps going and even wordIndex at last is okay that means word found
+        //need to maintain a visited map so that i dont go back on the same path again and again
+        //go in four directinos
+        //early check so that my check condition is not only on out of bounds
 
-        m = board.length;
-        n = board[0].length;
-
+        int m = board.length;
+        int n = board[0].length;
         visited = new boolean[m][n];
-
         for(int i=0;i<m;i++){
             for(int j=0;j<n;j++){
-                if(word.charAt(0)== board[i][j]){
-                    if(findWord(board, i, j, word, 0)){
-                        return true;
-                    }
-                } 
+                if(board[i][j] == word.charAt(0)){
+                    if(findWord(i, j, word, board, 0) == true) return true;
+                }
             }
         }
         return false;
     }
 
-    private boolean findWord(char[][] board, int i, int j, String word, int wordIndex){
-        if(word.charAt(wordIndex)!=board[i][j]) return false;
-        if(wordIndex + 1 == word.length()) return true; // head first check
+    private boolean findWord(int i, int j, String word, char[][] board, int index){
+        if(word.charAt(index)!=board[i][j]) return false;
+        if(index + 1 == word.length()) return true; // means i am at the last point and this also matches
         visited[i][j] = true;
-        for(int[] direction: directions){
-            int x = direction[0] + i;
-            int y = direction[1] + j;
 
-            if(x < m && x >= 0 && y < n && y >=0 && visited[x][y] == false){
-                if(wordIndex + 1 <= word.length()){
-                    if(findWord(board, x, y, word, wordIndex+1)) return true;
+        for(int[] direction : new int[][]{{0,1}, {1,0}, {-1,0}, {0,-1}}){
+            int x = direction[0]+i;
+            int y = direction[1]+j;
+            if(x >= 0 && x < board.length && y >= 0 && y < board[0].length && visited[x][y] == false){
+                if(index + 1 < word.length()){
+                    if(findWord(x, y, word, board, index+1) == true) return true;
                 }
             }
         }
