@@ -22,7 +22,6 @@ class Solution {
     }
 
     private int findDepth(TreeNode root){
-        if(answer == false) return 0;
         if(root == null) return 0;
         int leftDepth = findDepth(root.left);
         int rightDepth = findDepth(root.right);
