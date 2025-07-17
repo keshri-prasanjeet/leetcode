@@ -1,10 +1,18 @@
 class Solution {
-    Map<Integer, Integer> climbMap = new HashMap<>();
+    int[] map;
     public int climbStairs(int n) {
-        if(climbMap.containsKey(n)) return climbMap.get(n);
-        if(n == 0 || n==1) return 1;
-        int ways = climbStairs(n-1) + climbStairs(n-2);
-        climbMap.put(n, ways);
-        return ways;
+        map = new int[n+1];
+        Arrays.fill(map, -1);
+        return findWays(n);
+        // return map[n];
     }
+
+    private int findWays(int n){
+        if(n<0) return 0;
+        if(n==0) return 1;
+        if(map[n]!=-1) return map[n];
+        int ways = findWays(n-1) + findWays(n-2);
+        map[n] = ways;
+        return ways;
+    } 
 }
