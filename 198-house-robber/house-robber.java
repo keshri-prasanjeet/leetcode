@@ -1,16 +1,20 @@
 class Solution {
+    Integer[] robMap;
     public int rob(int[] nums) {
-        int len = nums.length;
-        int[] robTable = new int[len+1];
-        if(len==1) return nums[0];
-        if(len==2) return nums[0] > nums[1] ? nums[0] : nums[1];
+        //at each point of time i have two options skip this or rob this
+        robMap = new Integer[nums.length];
+        return doRobbery(nums, 0);
+    }
 
-        robTable[0] = nums[0];
-        robTable[1] = nums[0] > nums[1] ? nums[0] : nums[1];
+    private int doRobbery(int[] nums, int index){
+        if(index >= nums.length) return 0;
+        if(robMap[index] != null) return robMap[index];
+        int skipThis = 0;
+        int robThis = 0;
 
-        for(int i=2;i<len;i++){
-            robTable[i] = Math.max(robTable[i-1], (robTable[i-2]+nums[i]));
-        }
-        return Math.max(robTable[len-1], robTable[len-2]);
+        skipThis = doRobbery(nums, index+1);
+        robThis = nums[index] + doRobbery(nums, index+2);
+
+        return robMap[index] = Math.max(skipThis, robThis);
     }
 }
