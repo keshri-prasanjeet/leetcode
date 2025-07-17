@@ -1,20 +1,20 @@
 class Solution {
-    Integer[] dp;
+    Integer dp[];
     public int coinChange(int[] coins, int amount) {
         dp = new Integer[amount+1];
-        int minCoins = findMinCoins(coins, amount);
-        return minCoins == Integer.MAX_VALUE ? -1 : minCoins;
+        int res = helper(coins, amount);
+        return res == Integer.MAX_VALUE ? -1 : res;
     }
 
-    private int findMinCoins(int[] coins, int amount){
-        if(amount < 0) return Integer.MAX_VALUE;
+    public int helper(int[] coins, int amount){
         if(amount == 0) return 0;
+        if(amount < 0) return Integer.MAX_VALUE;
         if(dp[amount]!=null) return dp[amount];
         int minCoins = Integer.MAX_VALUE;
         for(int coin: coins){
-            int res = findMinCoins(coins, amount-coin);
-            if(res!=Integer.MAX_VALUE){
-                minCoins = Math.min(minCoins, res+1);
+            int result = helper(coins, amount - coin);
+            if(result != Integer.MAX_VALUE){
+                minCoins = Math.min(minCoins, result+1);
             }
         }
         return dp[amount] = minCoins;
