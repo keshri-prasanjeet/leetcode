@@ -6,13 +6,13 @@ class Solution {
         while(readIndex < len){
             char current = chars[readIndex++];
             int count = 1;
-            while(readIndex < len && current==chars[readIndex]){
+            while(readIndex < len && current == chars[readIndex]){
                 count++;
                 readIndex++;
             }
             chars[writeIndex++] = current;
             if(count > 1){
-                for(char a: Integer.toString(count).toCharArray()){
+                for(char a: String.valueOf(count).toCharArray()){
                     chars[writeIndex++] = a;
                 }
             }
