@@ -21,9 +21,11 @@ class Solution {
 
     private boolean isPalindrome(int start, int end, String s){
         if(start >= end) return true;
+        if(dp[start][end] != null) return dp[start][end];
         if(s.charAt(start)!=s.charAt(end)){
+            dp[start][end] = false;
             return false;
         }
-        return isPalindrome(start+1, end-1, s);
+        return dp[start][end] = isPalindrome(start+1, end-1, s);
     }
 }
