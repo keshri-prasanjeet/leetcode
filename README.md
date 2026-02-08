@@ -8,6 +8,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0051-n-queens](https://github.com/keshri-prasanjeet/leetcode/tree/master/0051-n-queens) |
+| [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/keshri-prasanjeet/leetcode/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
 ## Backtracking
 |  |
 | ------- |
@@ -30,6 +31,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
+| [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/keshri-prasanjeet/leetcode/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/keshri-prasanjeet/leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
 ## Counting
 |  |
