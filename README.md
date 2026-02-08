@@ -19,6 +19,7 @@ This repository contains my solutions to LeetCode problems.
 | ------- |
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/keshri-prasanjeet/leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
+| [3349-maximum-length-substring-with-two-occurrences](https://github.com/keshri-prasanjeet/leetcode/tree/master/3349-maximum-length-substring-with-two-occurrences) |
 ## Two Pointers
 |  |
 | ------- |
@@ -28,6 +29,7 @@ This repository contains my solutions to LeetCode problems.
 | ------- |
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/keshri-prasanjeet/leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
+| [3349-maximum-length-substring-with-two-occurrences](https://github.com/keshri-prasanjeet/leetcode/tree/master/3349-maximum-length-substring-with-two-occurrences) |
 ## Sliding Window
 |  |
 | ------- |
@@ -35,6 +37,7 @@ This repository contains my solutions to LeetCode problems.
 | [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/keshri-prasanjeet/leetcode/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
 | [1755-defuse-the-bomb](https://github.com/keshri-prasanjeet/leetcode/tree/master/1755-defuse-the-bomb) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/keshri-prasanjeet/leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
+| [3349-maximum-length-substring-with-two-occurrences](https://github.com/keshri-prasanjeet/leetcode/tree/master/3349-maximum-length-substring-with-two-occurrences) |
 ## Counting
 |  |
 | ------- |
