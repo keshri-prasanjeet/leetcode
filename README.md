@@ -8,6 +8,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0051-n-queens](https://github.com/keshri-prasanjeet/leetcode/tree/master/0051-n-queens) |
+| [0209-minimum-size-subarray-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0209-minimum-size-subarray-sum) |
 | [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/keshri-prasanjeet/leetcode/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
 | [1755-defuse-the-bomb](https://github.com/keshri-prasanjeet/leetcode/tree/master/1755-defuse-the-bomb) |
 ## Backtracking
@@ -33,6 +34,7 @@ This repository contains my solutions to LeetCode problems.
 ## Sliding Window
 |  |
 | ------- |
+| [0209-minimum-size-subarray-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0209-minimum-size-subarray-sum) |
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
 | [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/keshri-prasanjeet/leetcode/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
 | [1755-defuse-the-bomb](https://github.com/keshri-prasanjeet/leetcode/tree/master/1755-defuse-the-bomb) |
@@ -42,4 +44,12 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/keshri-prasanjeet/leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
+## Binary Search
+|  |
+| ------- |
+| [0209-minimum-size-subarray-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0209-minimum-size-subarray-sum) |
+## Prefix Sum
+|  |
+| ------- |
+| [0209-minimum-size-subarray-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0209-minimum-size-subarray-sum) |
 <!---LeetCode Topics End-->
