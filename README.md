@@ -68,10 +68,12 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0100-same-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0100-same-tree) |
+| [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 ## Depth-First Search
 |  |
 | ------- |
 | [0100-same-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0100-same-tree) |
+| [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -80,4 +82,9 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0100-same-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0100-same-tree) |
+| [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 <!---LeetCode Topics End-->
