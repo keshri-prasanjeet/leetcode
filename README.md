@@ -30,6 +30,7 @@ This repository contains my solutions to LeetCode problems.
 ## String
 |  |
 | ------- |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/keshri-prasanjeet/leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
 | [3349-maximum-length-substring-with-two-occurrences](https://github.com/keshri-prasanjeet/leetcode/tree/master/3349-maximum-length-substring-with-two-occurrences) |
@@ -69,22 +70,30 @@ This repository contains my solutions to LeetCode problems.
 | ------- |
 | [0100-same-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0100-same-tree) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 ## Depth-First Search
 |  |
 | ------- |
 | [0100-same-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0100-same-tree) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 ## Breadth-First Search
 |  |
 | ------- |
 | [0100-same-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0100-same-tree) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 ## Binary Tree
 |  |
 | ------- |
 | [0100-same-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0100-same-tree) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 ## Dynamic Programming
 |  |
 | ------- |
 | [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
+## Design
+|  |
+| ------- |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 <!---LeetCode Topics End-->
