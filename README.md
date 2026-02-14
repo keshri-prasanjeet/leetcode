@@ -71,6 +71,7 @@ This repository contains my solutions to LeetCode problems.
 | [0100-same-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0100-same-tree) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
+| [0784-insert-into-a-binary-search-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0784-insert-into-a-binary-search-tree) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -88,6 +89,7 @@ This repository contains my solutions to LeetCode problems.
 | [0100-same-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0100-same-tree) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
+| [0784-insert-into-a-binary-search-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0784-insert-into-a-binary-search-tree) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -96,4 +98,8 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
+## Binary Search Tree
+|  |
+| ------- |
+| [0784-insert-into-a-binary-search-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0784-insert-into-a-binary-search-tree) |
 <!---LeetCode Topics End-->
