@@ -8,26 +8,31 @@
  * }
  */
 public class Codec {
-    private int index;
+
+    int index;
+
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
-        List<String> serializedTree = new ArrayList<>();
-        preOrderSerializer(root, serializedTree);
-        return String.join(",",serializedTree);
+        if(root == null) return "";
+        List<String> serializedData = new ArrayList<>();
+        serializer(root, serializedData);
+        return String.join(",", serializedData);
     }
 
-    private void preOrderSerializer(TreeNode root, List<String> serializedTree){
+    private void serializer(TreeNode root, List<String> serializedData){
         if(root == null){
-            serializedTree.add("NULL");
+            serializedData.add("NULL");
             return;
         }
-        serializedTree.add(String.valueOf(root.val));
-        preOrderSerializer(root.left, serializedTree);
-        preOrderSerializer(root.right, serializedTree);
+        serializedData.add(String.valueOf(root.val));
+        serializer(root.left, serializedData);
+        serializer(root.right, serializedData);
+        return;
     }
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
+        if(data.length()==0) return null;
         String[] splitData = data.split(",");
         index = 0;
         return deserializer(splitData);
@@ -38,10 +43,10 @@ public class Codec {
             index++;
             return null;
         }
-        TreeNode node = new TreeNode(Integer.parseInt(data[index++]));
-        node.left = deserializer(data);
-        node.right = deserializer(data);
-        return node;
+        TreeNode newNode = new TreeNode(Integer.parseInt(data[index++]));
+        newNode.left  = deserializer(data);
+        newNode.right = deserializer(data);
+        return newNode;
     }
 }
 
