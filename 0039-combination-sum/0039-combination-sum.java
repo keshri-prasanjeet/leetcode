@@ -18,9 +18,11 @@ class Solution {
             return;
         }
         if(index == candidates.length) return;
-        combination.add(candidates[index]);
-        findCombination(candidates, target - candidates[index], index, combination);
-        combination.remove(combination.size()-1);
+        if(candidates[index] <= target){
+            combination.add(candidates[index]);
+            findCombination(candidates, target - candidates[index], index, combination);
+            combination.remove(combination.size()-1);
+        }
         findCombination(candidates, target, index+1, combination);
     }
 }
