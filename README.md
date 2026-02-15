@@ -8,6 +8,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0051-n-queens](https://github.com/keshri-prasanjeet/leetcode/tree/master/0051-n-queens) |
+| [0078-subsets](https://github.com/keshri-prasanjeet/leetcode/tree/master/0078-subsets) |
 | [0209-minimum-size-subarray-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0209-minimum-size-subarray-sum) |
 | [0658-find-k-closest-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0658-find-k-closest-elements) |
 | [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/keshri-prasanjeet/leetcode/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
@@ -16,6 +17,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0051-n-queens](https://github.com/keshri-prasanjeet/leetcode/tree/master/0051-n-queens) |
+| [0078-subsets](https://github.com/keshri-prasanjeet/leetcode/tree/master/0078-subsets) |
 ## Hash Table
 |  |
 | ------- |
@@ -102,4 +104,8 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0784-insert-into-a-binary-search-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0784-insert-into-a-binary-search-tree) |
+## Bit Manipulation
+|  |
+| ------- |
+| [0078-subsets](https://github.com/keshri-prasanjeet/leetcode/tree/master/0078-subsets) |
 <!---LeetCode Topics End-->
