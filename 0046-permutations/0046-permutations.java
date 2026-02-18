@@ -6,18 +6,18 @@ class Solution {
         return answer;
     }
 
-    private void findPermutations(int[] nums, List<Integer> permutation, boolean[] usedNums){
+    private void findPermutations(int[] nums, List<Integer> permutation, boolean[] numSet){
         if(permutation.size() == nums.length){
             answer.add(new ArrayList<>(permutation));
             return;
         }
 
         for(int i=0;i<nums.length;i++){
-            if(usedNums[i]==false){
+            if(numSet[i] == false){
                 permutation.add(nums[i]);
-                usedNums[i] = true;
-                findPermutations(nums, permutation, usedNums);
-                usedNums[i] = false;
+                numSet[i] = true;
+                findPermutations(nums, permutation, numSet);
+                numSet[i] = false;
                 permutation.remove(permutation.size()-1);
             }
         }
