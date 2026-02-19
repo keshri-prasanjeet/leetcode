@@ -14,22 +14,18 @@
  * }
  */
 class Solution {
+    List<Integer> answer;
     public List<Integer> rightSideView(TreeNode root) {
-        List<Integer> answer = new ArrayList<>();
-        if(root == null) return answer;
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
-        while(!queue.isEmpty()){
-            int size = queue.size();
-            TreeNode rightMost = null;
-            while(size>0){
-                rightMost = queue.poll();
-                if(rightMost.left != null) queue.offer(rightMost.left );
-                if(rightMost.right!= null) queue.offer(rightMost.right);
-                size--;
-            }
-            answer.add(rightMost.val);
-        }
+        answer = new ArrayList<>();
+        findRightMost(root, 1);
         return answer;
+    }
+
+    private void findRightMost(TreeNode root, int level){
+        if(root == null) return;
+        if(level > answer.size()) answer.add(root.val);
+        answer.set(level-1, root.val);
+        findRightMost(root.left, level+1);
+        findRightMost(root.right,level+1);
     }
 }
