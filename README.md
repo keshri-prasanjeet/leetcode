@@ -88,6 +88,7 @@ This repository contains my solutions to LeetCode problems.
 | [0230-kth-smallest-element-in-a-bst](https://github.com/keshri-prasanjeet/leetcode/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0775-n-ary-tree-preorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0775-n-ary-tree-preorder-traversal) |
+| [0776-n-ary-tree-postorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0776-n-ary-tree-postorder-traversal) |
 | [0784-insert-into-a-binary-search-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0784-insert-into-a-binary-search-tree) |
 | [1544-count-good-nodes-in-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/1544-count-good-nodes-in-binary-tree) |
 ## Depth-First Search
@@ -99,6 +100,7 @@ This repository contains my solutions to LeetCode problems.
 | [0230-kth-smallest-element-in-a-bst](https://github.com/keshri-prasanjeet/leetcode/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0775-n-ary-tree-preorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0775-n-ary-tree-preorder-traversal) |
+| [0776-n-ary-tree-postorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0776-n-ary-tree-postorder-traversal) |
 | [1544-count-good-nodes-in-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/1544-count-good-nodes-in-binary-tree) |
 ## Breadth-First Search
 |  |
@@ -141,4 +143,5 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0775-n-ary-tree-preorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0775-n-ary-tree-preorder-traversal) |
+| [0776-n-ary-tree-postorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0776-n-ary-tree-postorder-traversal) |
 <!---LeetCode Topics End-->
