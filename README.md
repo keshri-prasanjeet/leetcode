@@ -11,6 +11,7 @@ This repository contains my solutions to LeetCode problems.
 | [0039-combination-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0040-combination-sum-ii) |
 | [0046-permutations](https://github.com/keshri-prasanjeet/leetcode/tree/master/0046-permutations) |
+| [0047-permutations-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0047-permutations-ii) |
 | [0051-n-queens](https://github.com/keshri-prasanjeet/leetcode/tree/master/0051-n-queens) |
 | [0078-subsets](https://github.com/keshri-prasanjeet/leetcode/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0090-subsets-ii) |
@@ -24,6 +25,7 @@ This repository contains my solutions to LeetCode problems.
 | [0039-combination-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0040-combination-sum-ii) |
 | [0046-permutations](https://github.com/keshri-prasanjeet/leetcode/tree/master/0046-permutations) |
+| [0047-permutations-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0047-permutations-ii) |
 | [0051-n-queens](https://github.com/keshri-prasanjeet/leetcode/tree/master/0051-n-queens) |
 | [0078-subsets](https://github.com/keshri-prasanjeet/leetcode/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0090-subsets-ii) |
@@ -74,6 +76,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0018-4sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0018-4sum) |
+| [0047-permutations-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0047-permutations-ii) |
 | [0658-find-k-closest-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0658-find-k-closest-elements) |
 ## Heap (Priority Queue)
 |  |
