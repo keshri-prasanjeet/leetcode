@@ -12,9 +12,9 @@ class Solution {
             answer.add(new ArrayList<>(combination));
             return;
         }
-        if(target < 0) return;
         for(int i=startIdx;i<candidates.length;i++){
             if(i>startIdx && candidates[i] == candidates[i-1]) continue;
+            if(candidates[i] > target) break;
             combination.add(candidates[i]);
             findCombinations(candidates, combination, target - candidates[i], i+1);
             combination.remove(combination.size()-1);
