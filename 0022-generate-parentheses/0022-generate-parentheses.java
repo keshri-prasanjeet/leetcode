@@ -12,14 +12,14 @@ class Solution {
             return;
         }
         if(open > 0){
-            StringBuilder nsb = new StringBuilder(sb);
-            nsb.append("(");
-            generate(open-1,close,nsb);
+            sb.append("(");
+            generate(open-1,close,sb);
+            sb.deleteCharAt(sb.length()-1);
         }
-        if(close > open && close > 0){
-            StringBuilder nsb = new StringBuilder(sb);
-            nsb.append(")");
-            generate(open, close-1, nsb);
+        if(close > open){
+            sb.append(")");
+            generate(open, close-1, sb);
+            sb.deleteCharAt(sb.length()-1);
         }
     }
 }
