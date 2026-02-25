@@ -22,6 +22,7 @@ This repository contains my solutions to LeetCode problems.
 ## Backtracking
 |  |
 | ------- |
+| [0022-generate-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0022-generate-parentheses) |
 | [0039-combination-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0040-combination-sum-ii) |
 | [0046-permutations](https://github.com/keshri-prasanjeet/leetcode/tree/master/0046-permutations) |
@@ -44,6 +45,7 @@ This repository contains my solutions to LeetCode problems.
 ## String
 |  |
 | ------- |
+| [0022-generate-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0022-generate-parentheses) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/keshri-prasanjeet/leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
@@ -134,6 +136,7 @@ This repository contains my solutions to LeetCode problems.
 ## Dynamic Programming
 |  |
 | ------- |
+| [0022-generate-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0022-generate-parentheses) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 ## Design
 |  |
