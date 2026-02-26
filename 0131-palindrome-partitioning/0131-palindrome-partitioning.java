@@ -13,8 +13,8 @@ class Solution {
         }
 
         for(int i=start;i<s.length();i++){
-            String subStr = s.substring(start, i+1);
-            if(isPalindrome(subStr)){
+            if(isPalindrome(s, start, i)){
+                String subStr = s.substring(start, i+1);
                 palindrome.add(subStr);
                 findPalindromes(s, i+1, palindrome);
                 palindrome.remove(palindrome.size()-1);
@@ -22,9 +22,9 @@ class Solution {
         }
     }
 
-    private boolean isPalindrome(String s){
-        int left = 0;
-        int right=s.length()-1;
+    private boolean isPalindrome(String s, int start, int end){
+        int left = start;
+        int right=end;
         while(left <= right){
             if(s.charAt(left) != s.charAt(right)) return false;
             left++;
