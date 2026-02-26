@@ -14,21 +14,21 @@ class Solution {
                 }
             }
         }
-        findPalindromes(s, 0, new ArrayList<>());
+        findPalindromes(s, 0, new ArrayList<>(), len);
         return palindromes;
     }
 
-    private void findPalindromes(String s, int start, List<String> palindrome){
+    private void findPalindromes(String s, int start, List<String> palindrome, int len){
         if(start == s.length()){
             palindromes.add(new ArrayList<>(palindrome));
             return;
         }
 
-        for(int i=start;i<s.length();i++){
-            if(dp[start][i] == true){
+        for(int i=start;i<len;i++){
+            if(dp[start][i]){
                 String subStr = s.substring(start, i+1);
                 palindrome.add(subStr);
-                findPalindromes(s, i+1, palindrome);
+                findPalindromes(s, i+1, palindrome, len);
                 palindrome.remove(palindrome.size()-1);
             }
         }
