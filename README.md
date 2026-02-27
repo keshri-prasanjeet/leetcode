@@ -10,6 +10,7 @@ This repository contains my solutions to LeetCode problems.
 | [0018-4sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0018-4sum) |
 | [0039-combination-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0040-combination-sum-ii) |
+| [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
 | [0046-permutations](https://github.com/keshri-prasanjeet/leetcode/tree/master/0046-permutations) |
 | [0047-permutations-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0047-permutations-ii) |
 | [0051-n-queens](https://github.com/keshri-prasanjeet/leetcode/tree/master/0051-n-queens) |
@@ -44,6 +45,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0018-4sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0018-4sum) |
+| [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
 | [0658-find-k-closest-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0658-find-k-closest-elements) |
 ## String
@@ -146,6 +148,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0022-generate-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0022-generate-parentheses) |
+| [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/keshri-prasanjeet/leetcode/tree/master/0131-palindrome-partitioning) |
 ## Design
@@ -165,10 +168,15 @@ This repository contains my solutions to LeetCode problems.
 ## Stack
 |  |
 | ------- |
+| [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
 | [0775-n-ary-tree-preorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0775-n-ary-tree-preorder-traversal) |
 | [0776-n-ary-tree-postorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0776-n-ary-tree-postorder-traversal) |
 ## Matrix
 |  |
 | ------- |
 | [0079-word-search](https://github.com/keshri-prasanjeet/leetcode/tree/master/0079-word-search) |
+## Monotonic Stack
+|  |
+| ------- |
+| [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
 <!---LeetCode Topics End-->
