@@ -17,18 +17,15 @@ class Solution {
     public String getDirections(TreeNode root, int startValue, int destValue) {
         TreeNode lcaNode = LCA(root, startValue, destValue);
         if(lcaNode == null) return "";
-        StringBuilder rightPath = new StringBuilder();
-        StringBuilder leftPath =  new StringBuilder();
-        StringBuilder finalPath = new StringBuilder();
-        buildPath(lcaNode, rightPath, startValue);
-        int rightLen = rightPath.length();
-        rightPath.setLength(0);
+        StringBuilder path = new StringBuilder();
+        buildPath(lcaNode, path, startValue);
+        int rightLen = path.length();
+        path.setLength(0);
         for(int i=0;i<rightLen;i++){
-            rightPath.append("U");
+            path.append("U");
         }
-        buildPath(lcaNode, leftPath, destValue);
-        rightPath.append(leftPath);
-        return rightPath.toString();
+        buildPath(lcaNode, path, destValue);
+        return path.toString();
     }
 
     private TreeNode LCA (TreeNode node, int startVal, int destVal){
