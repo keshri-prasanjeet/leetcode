@@ -14,20 +14,40 @@
  * }
  */
 class Solution {
-    List<Integer> answer;
     public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
-        //do in order in both and then sort
-        answer = new ArrayList<>();
-        inorder(root1);
-        inorder(root2);
-        Collections.sort(answer);
-        return answer;
+
+        List<Integer> list1 = new ArrayList<>();
+        List<Integer> list2 = new ArrayList<>();
+
+        inorder(root1, list1);
+        inorder(root2, list2);
+
+        return merge(list1, list2);
     }
 
-    private void inorder(TreeNode root){
-        if(root == null) return;
-        inorder(root.left);
-        answer.add(root.val);
-        inorder(root.right);
+    private void inorder(TreeNode node, List<Integer> list) {
+        if (node == null) return;
+
+        inorder(node.left, list);
+        list.add(node.val);
+        inorder(node.right, list);
+    }
+
+    private List<Integer> merge(List<Integer> a, List<Integer> b) {
+        List<Integer> result = new ArrayList<>();
+
+        int i = 0, j = 0;
+
+        while (i < a.size() && j < b.size()) {
+            if (a.get(i) <= b.get(j))
+                result.add(a.get(i++));
+            else
+                result.add(b.get(j++));
+        }
+
+        while (i < a.size()) result.add(a.get(i++));
+        while (j < b.size()) result.add(b.get(j++));
+
+        return result;
     }
 }
