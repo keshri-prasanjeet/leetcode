@@ -90,6 +90,7 @@ This repository contains my solutions to LeetCode problems.
 | [0018-4sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0018-4sum) |
 | [0047-permutations-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0047-permutations-ii) |
 | [0658-find-k-closest-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0658-find-k-closest-elements) |
+| [1427-all-elements-in-two-binary-search-trees](https://github.com/keshri-prasanjeet/leetcode/tree/master/1427-all-elements-in-two-binary-search-trees) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
@@ -107,6 +108,7 @@ This repository contains my solutions to LeetCode problems.
 | [0775-n-ary-tree-preorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0775-n-ary-tree-preorder-traversal) |
 | [0776-n-ary-tree-postorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0776-n-ary-tree-postorder-traversal) |
 | [0784-insert-into-a-binary-search-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0784-insert-into-a-binary-search-tree) |
+| [1427-all-elements-in-two-binary-search-trees](https://github.com/keshri-prasanjeet/leetcode/tree/master/1427-all-elements-in-two-binary-search-trees) |
 | [1544-count-good-nodes-in-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/1544-count-good-nodes-in-binary-tree) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/keshri-prasanjeet/leetcode/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
 ## Depth-First Search
@@ -121,6 +123,7 @@ This repository contains my solutions to LeetCode problems.
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0775-n-ary-tree-preorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0775-n-ary-tree-preorder-traversal) |
 | [0776-n-ary-tree-postorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0776-n-ary-tree-postorder-traversal) |
+| [1427-all-elements-in-two-binary-search-trees](https://github.com/keshri-prasanjeet/leetcode/tree/master/1427-all-elements-in-two-binary-search-trees) |
 | [1544-count-good-nodes-in-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/1544-count-good-nodes-in-binary-tree) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/keshri-prasanjeet/leetcode/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
 ## Breadth-First Search
@@ -142,6 +145,7 @@ This repository contains my solutions to LeetCode problems.
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0784-insert-into-a-binary-search-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0784-insert-into-a-binary-search-tree) |
+| [1427-all-elements-in-two-binary-search-trees](https://github.com/keshri-prasanjeet/leetcode/tree/master/1427-all-elements-in-two-binary-search-trees) |
 | [1544-count-good-nodes-in-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/1544-count-good-nodes-in-binary-tree) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/keshri-prasanjeet/leetcode/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
 ## Dynamic Programming
@@ -160,6 +164,7 @@ This repository contains my solutions to LeetCode problems.
 | ------- |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/keshri-prasanjeet/leetcode/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0784-insert-into-a-binary-search-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0784-insert-into-a-binary-search-tree) |
+| [1427-all-elements-in-two-binary-search-trees](https://github.com/keshri-prasanjeet/leetcode/tree/master/1427-all-elements-in-two-binary-search-trees) |
 ## Bit Manipulation
 |  |
 | ------- |
