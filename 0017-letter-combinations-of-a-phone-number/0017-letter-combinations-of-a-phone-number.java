@@ -1,40 +1,36 @@
 class Solution {
-List<List<String>> charMap = new ArrayList<>
-    (
-        List.of(
-            List.of("a","b","c"), 
-            List.of("d","e","f"),
-            List.of("g","h","i"),
-            List.of("j","k","l"),
-            List.of("m","n","o"),
-            List.of("p","q","r","s"),
-            List.of("t","u","v"),
-            List.of("w","x","y","z")
-        )
-    );    
+    List<List<Character>> keyMappings = List.of(
+        List.of('a','b','c'),
+        List.of('d','e','f'),
+        List.of('g','h','i'),
+        List.of('j','k','l'),
+        List.of('m','n','o'),
+        List.of('p','q','r','s'),
+        List.of('t','u','v'),
+        List.of('w','x','y','z')
+    );
+    int digLen;
     List<String> answer;
-    int strLen;
     public List<String> letterCombinations(String digits) {
-
-        strLen = digits.length();
+        digLen = digits.length();
         answer = new ArrayList<>();
-        if(strLen == 0) return answer;
-
-        findCombinations(digits, new StringBuilder(), 0);
+        if(digLen == 0) return answer;
+        findLetterCombinations(digits.toCharArray(), 0, new StringBuilder());
         return answer;
     }
 
-    private void findCombinations(String digits, StringBuilder sb, int index){
-        if(sb.length() == strLen){
+    private void findLetterCombinations(char[] digits, int index, StringBuilder sb){
+        if(index == digits.length){
             answer.add(sb.toString());
             return;
         }
 
-        int num = digits.charAt(index) - '0' -2;
-        for(int i=0;i<charMap.get(num).size();i++){
-            sb.append(charMap.get(num).get(i));
-            findCombinations(digits, sb, index+1);
-            sb.deleteCharAt(sb.length()-1);
+        List<Character> keySpace = keyMappings.get(digits[index]-'0' -2);
+        for(int i=0;i<keySpace.size();i++){
+            char press = keySpace.get(i);
+            sb.append(press);
+            findLetterCombinations(digits, index+1, sb);
+            sb.setLength(sb.length()-1);
         }
     }
 }
