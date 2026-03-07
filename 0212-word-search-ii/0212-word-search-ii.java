@@ -2,56 +2,56 @@ class Solution {
 
     class TrieNode {
         TrieNode[] children = new TrieNode[26];
-        String word;
+        String word = null;
     }
-    List<String> result = new ArrayList<>();
+    List<String> answer = new ArrayList<>();
     public List<String> findWords(char[][] board, String[] words) {
+        
         TrieNode root = buildTrie(words);
-
-        for(int i = 0;i < board.length; i++){
-            for(int j = 0;j < board[0].length;j++){
-                findWord2(board, i, j, root);
+        for(int i=0;i<board.length;i++){
+            for(int j=0;j<board[0].length;j++){
+                wordSearch(board, root, i, j);
             }
         }
-        return result;
+        
+        return answer;
     }
 
-    private void findWord2(char[][] board, int x, int y, TrieNode node){
-        if(x < 0 || x == board.length || y < 0 || y == board[0].length) return;
+    private void wordSearch(char[][] board, TrieNode node, int x, int y){
+        if(x < 0 || y < 0 || x == board.length || y == board[0].length) return;
 
-        char c = board[x][y];
+        char cur = board[x][y];
 
-        if(c == '*' || node.children[c-'a'] == null) return;
+        if(cur == '*' || node.children[cur - 'a'] == null) return;
 
-        node = node.children[c - 'a'];
-
+        node = node.children[cur - 'a'];
         if(node.word != null){
-            result.add(node.word);
-            node.word = null;//avoid duplicates
+            answer.add(node.word);
+            node.word = null;
         }
+
+        //go all four directions
 
         board[x][y] = '*';
 
-        findWord2(board, x + 1, y, node);
-        findWord2(board, x - 1, y, node);
-        findWord2(board, x, y + 1, node);
-        findWord2(board, x, y - 1, node);
+        wordSearch(board, node, x-1, y);
+        wordSearch(board, node, x+1, y);
+        wordSearch(board, node, x, y-1);
+        wordSearch(board, node, x, y+1);
 
-        board[x][y] = c;
+        board[x][y] = cur;
     }
 
     private TrieNode buildTrie(String[] words){
         TrieNode root = new TrieNode();
-
         for(String word: words){
             TrieNode node = root;
-            for(char c: word.toCharArray()){
-                int index = c - 'a';
-                if(node.children[index] == null){
-                    node.children[index] = new TrieNode();
+            for(char a : word.toCharArray()){
+                if(node.children[a-'a'] == null){
+                    TrieNode newNode = new TrieNode();
+                    node.children[a-'a'] = newNode;
                 }
-
-                node = node.children[index];
+                node = node.children[a-'a'];
             }
             node.word = word;
         }
