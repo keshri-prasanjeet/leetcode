@@ -1,19 +1,24 @@
 class Solution {
-    List<List<Integer>> combinations = new ArrayList<>();
+    int globalN;
+    int globalK;
+    List<List<Integer>> answer;
     public List<List<Integer>> combine(int n, int k) {
-        findCombinations(1, n, k, new ArrayList<>());
-        return combinations;
+        globalN = n;
+        globalK = k;
+        answer = new ArrayList<>();
+        findCombinations(new ArrayList<>(), 1);
+        return answer;
     }
 
-    private void findCombinations(int startNum, int n, int k, List<Integer> combination){
-        if(combination.size() == k){
-            combinations.add(new ArrayList<>(combination));
+    private void findCombinations(List<Integer> combination, int startNum){
+        if(combination.size() == globalK){
+            answer.add(new ArrayList<>(combination));
             return;
         }
 
-        for(int i = startNum; i<=n; i++){
+        for(int i=startNum; i<=globalN; i++){
             combination.add(i);
-            findCombinations(i+1,n,k,combination);
+            findCombinations(combination, i+1);
             combination.remove(combination.size()-1);
         }
     }
