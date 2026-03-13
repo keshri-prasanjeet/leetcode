@@ -1,4 +1,5 @@
 class WordDictionary {
+
     TrieNode root;
     public WordDictionary() {
         root = new TrieNode();
@@ -7,7 +8,7 @@ class WordDictionary {
     public void addWord(String word) {
         TrieNode cur = root;
         for(char a: word.toCharArray()){
-            if(cur.children[a-'a']==null){
+            if(cur.children[a-'a'] == null){
                 cur.children[a-'a'] = new TrieNode();
             }
             cur = cur.children[a-'a'];
@@ -23,27 +24,27 @@ class WordDictionary {
         if(node == null) return false;
 
         if(idx == word.length()) return node.isWord;
-        
-        if(word.charAt(idx)!= '.'){
-            return dfs(word, idx+1, node.children[word.charAt(idx)-'a']);
+        char c = word.charAt(idx);
+        if(c != '.'){
+            return dfs(word, idx+1, node.children[c-'a']);
         }
-
-        else{
-            for(TrieNode child: node.children){
-                if(child != null){
-                    if(dfs(word, idx+1, child) == true) return true;
-                }
+        
+        for(TrieNode child: node.children){
+            if(child != null){
+                if(dfs(word, idx+1, child) == true) return true;
             }
         }
+
         return false;
     }
 }
 
-class TrieNode {
+class TrieNode{
     boolean isWord;
     TrieNode[] children;
+
     public TrieNode(){
-        isWord = false;
+        isWord=false;
         children = new TrieNode[26];
     }
 }
