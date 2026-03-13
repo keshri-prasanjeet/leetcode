@@ -65,6 +65,7 @@ This repository contains my solutions to LeetCode problems.
 | [0093-restore-ip-addresses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0093-restore-ip-addresses) |
 | [0131-palindrome-partitioning](https://github.com/keshri-prasanjeet/leetcode/tree/master/0131-palindrome-partitioning) |
 | [0208-implement-trie-prefix-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0208-implement-trie-prefix-tree) |
+| [0211-design-add-and-search-words-data-structure](https://github.com/keshri-prasanjeet/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0212-word-search-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0212-word-search-ii) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
@@ -129,6 +130,7 @@ This repository contains my solutions to LeetCode problems.
 | [0100-same-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0100-same-tree) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0199-binary-tree-right-side-view](https://github.com/keshri-prasanjeet/leetcode/tree/master/0199-binary-tree-right-side-view) |
+| [0211-design-add-and-search-words-data-structure](https://github.com/keshri-prasanjeet/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/keshri-prasanjeet/leetcode/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
@@ -170,6 +172,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0208-implement-trie-prefix-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0208-implement-trie-prefix-tree) |
+| [0211-design-add-and-search-words-data-structure](https://github.com/keshri-prasanjeet/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 ## Binary Search Tree
 |  |
@@ -201,5 +204,6 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0208-implement-trie-prefix-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0208-implement-trie-prefix-tree) |
+| [0211-design-add-and-search-words-data-structure](https://github.com/keshri-prasanjeet/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0212-word-search-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0212-word-search-ii) |
 <!---LeetCode Topics End-->
