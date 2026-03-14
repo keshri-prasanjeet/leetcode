@@ -22,6 +22,7 @@ This repository contains my solutions to LeetCode problems.
 | [0658-find-k-closest-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0658-find-k-closest-elements) |
 | [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/keshri-prasanjeet/leetcode/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
 | [1755-defuse-the-bomb](https://github.com/keshri-prasanjeet/leetcode/tree/master/1755-defuse-the-bomb) |
+| [2755-extra-characters-in-a-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/2755-extra-characters-in-a-string) |
 ## Backtracking
 |  |
 | ------- |
@@ -47,6 +48,7 @@ This repository contains my solutions to LeetCode problems.
 | [0208-implement-trie-prefix-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/keshri-prasanjeet/leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
+| [2755-extra-characters-in-a-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/2755-extra-characters-in-a-string) |
 | [3349-maximum-length-substring-with-two-occurrences](https://github.com/keshri-prasanjeet/leetcode/tree/master/3349-maximum-length-substring-with-two-occurrences) |
 ## Two Pointers
 |  |
@@ -71,6 +73,7 @@ This repository contains my solutions to LeetCode problems.
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/keshri-prasanjeet/leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/keshri-prasanjeet/leetcode/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
+| [2755-extra-characters-in-a-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/2755-extra-characters-in-a-string) |
 | [3349-maximum-length-substring-with-two-occurrences](https://github.com/keshri-prasanjeet/leetcode/tree/master/3349-maximum-length-substring-with-two-occurrences) |
 ## Sliding Window
 |  |
@@ -168,6 +171,7 @@ This repository contains my solutions to LeetCode problems.
 | [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/keshri-prasanjeet/leetcode/tree/master/0131-palindrome-partitioning) |
+| [2755-extra-characters-in-a-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/2755-extra-characters-in-a-string) |
 ## Design
 |  |
 | ------- |
@@ -206,4 +210,5 @@ This repository contains my solutions to LeetCode problems.
 | [0208-implement-trie-prefix-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/keshri-prasanjeet/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0212-word-search-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0212-word-search-ii) |
+| [2755-extra-characters-in-a-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/2755-extra-characters-in-a-string) |
 <!---LeetCode Topics End-->
