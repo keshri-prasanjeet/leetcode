@@ -1,47 +1,42 @@
 class Solution {
-    int minExtra;
-    Integer[] memo;
     public int minExtraChar(String s, String[] dictionary) {
         TrieNode root = new TrieNode();
         buildTree(dictionary, root);
-        memo = new Integer[s.length()];
-        return findMinExtra(s, root, 0);
+        Integer[] memo = new Integer[s.length()];
+        return findMinExtraChar(s, root, 0, memo);
     }
 
-    private int findMinExtra(String s, TrieNode node, int index){
-        if(index == s.length()) return 0;
+    private int findMinExtraChar(String s, TrieNode node, int idx, Integer[] memo){
+        if(idx == s.length()) return 0;
+        if(memo[idx]!=null) return memo[idx];
 
-        if(memo[index]!=null) return memo[index];
-        
-        //skip
-        int min = 1 + findMinExtra(s, node, index+1);
+        //skip this letter and find matches from next
+        int min = 1 + findMinExtraChar(s, node, idx+1, memo);
 
-        //take if match
+        //find matches from this index
         TrieNode cur = node;
-        for(int i=index;i<s.length();i++){
-            char c = s.charAt(i);
-            if(cur.children[c-'a'] == null) break;
-
-            cur = cur.children[c-'a'];
+        for(int i=idx;i<s.length();i++){
+            char a = s.charAt(i);
+            if(cur.children[a-'a'] == null) break;
+            cur = cur.children[a-'a'];
 
             if(cur.isWord){
-                min = Math.min(min, findMinExtra(s, node, i+1));
+                min = Math.min(min, findMinExtraChar(s, node, i+1, memo));
             }
         }
-        memo[index] = min;
-        return min;
+        memo[idx] = min;
+        return memo[idx];
     }
 
-    private void buildTree(String[] dictionary, TrieNode node){
-        if(node == null) return;
-
-        for(String word : dictionary){
-            TrieNode cur = node;
-            for(char a: word.toCharArray()){
-                if(cur.children[a-'a'] == null){
-                    cur.children[a-'a'] = new TrieNode();
+    private void buildTree(String[] words, TrieNode root){
+        
+        for(String word: words){
+            TrieNode cur = root;
+            for(char c: word.toCharArray()){
+                if(cur.children[c-'a'] == null){
+                    cur.children[c-'a'] = new TrieNode();
                 }
-                cur = cur.children[a-'a'];
+                cur = cur.children[c-'a'];
             }
             cur.isWord = true;
         }
@@ -53,7 +48,7 @@ class TrieNode{
     TrieNode[] children;
 
     public TrieNode(){
-        isWord = false;
+        this.isWord = false;
         children = new TrieNode[26];
     }
 }
