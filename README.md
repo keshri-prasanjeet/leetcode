@@ -211,4 +211,12 @@ This repository contains my solutions to LeetCode problems.
 | [0211-design-add-and-search-words-data-structure](https://github.com/keshri-prasanjeet/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0212-word-search-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0212-word-search-ii) |
 | [2755-extra-characters-in-a-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/2755-extra-characters-in-a-string) |
+## Linked List
+|  |
+| ------- |
+| [0021-merge-two-sorted-lists](https://github.com/keshri-prasanjeet/leetcode/tree/master/0021-merge-two-sorted-lists) |
+## Recursion
+|  |
+| ------- |
+| [0021-merge-two-sorted-lists](https://github.com/keshri-prasanjeet/leetcode/tree/master/0021-merge-two-sorted-lists) |
 <!---LeetCode Topics End-->
