@@ -19,6 +19,7 @@ This repository contains my solutions to LeetCode problems.
 | [0090-subsets-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0090-subsets-ii) |
 | [0209-minimum-size-subarray-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0209-minimum-size-subarray-sum) |
 | [0212-word-search-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0212-word-search-ii) |
+| [0473-matchsticks-to-square](https://github.com/keshri-prasanjeet/leetcode/tree/master/0473-matchsticks-to-square) |
 | [0658-find-k-closest-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0658-find-k-closest-elements) |
 | [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/keshri-prasanjeet/leetcode/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
 | [1755-defuse-the-bomb](https://github.com/keshri-prasanjeet/leetcode/tree/master/1755-defuse-the-bomb) |
@@ -40,6 +41,7 @@ This repository contains my solutions to LeetCode problems.
 | [0093-restore-ip-addresses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0093-restore-ip-addresses) |
 | [0131-palindrome-partitioning](https://github.com/keshri-prasanjeet/leetcode/tree/master/0131-palindrome-partitioning) |
 | [0212-word-search-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0212-word-search-ii) |
+| [0473-matchsticks-to-square](https://github.com/keshri-prasanjeet/leetcode/tree/master/0473-matchsticks-to-square) |
 ## Hash Table
 |  |
 | ------- |
@@ -171,6 +173,7 @@ This repository contains my solutions to LeetCode problems.
 | [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/keshri-prasanjeet/leetcode/tree/master/0131-palindrome-partitioning) |
+| [0473-matchsticks-to-square](https://github.com/keshri-prasanjeet/leetcode/tree/master/0473-matchsticks-to-square) |
 | [2755-extra-characters-in-a-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/2755-extra-characters-in-a-string) |
 ## Design
 |  |
@@ -189,6 +192,7 @@ This repository contains my solutions to LeetCode problems.
 | ------- |
 | [0078-subsets](https://github.com/keshri-prasanjeet/leetcode/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0090-subsets-ii) |
+| [0473-matchsticks-to-square](https://github.com/keshri-prasanjeet/leetcode/tree/master/0473-matchsticks-to-square) |
 ## Stack
 |  |
 | ------- |
@@ -219,4 +223,8 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0021-merge-two-sorted-lists](https://github.com/keshri-prasanjeet/leetcode/tree/master/0021-merge-two-sorted-lists) |
+## Bitmask
+|  |
+| ------- |
+| [0473-matchsticks-to-square](https://github.com/keshri-prasanjeet/leetcode/tree/master/0473-matchsticks-to-square) |
 <!---LeetCode Topics End-->
