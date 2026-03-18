@@ -1,45 +1,49 @@
 class Solution {
+    Integer[] memo;
     public int minExtraChar(String s, String[] dictionary) {
-        TrieNode root = new TrieNode();
-        buildTree(dictionary, root);
-        Integer[] memo = new Integer[s.length()];
-        return findMinExtraChar(s, root, 0, memo);
+        TrieNode root = buildTrie(dictionary);
+        memo = new Integer[s.length()];
+        return findMinExtraChars(0, s, root);
     }
 
-    private int findMinExtraChar(String s, TrieNode node, int idx, Integer[] memo){
-        if(idx == s.length()) return 0;
-        if(memo[idx]!=null) return memo[idx];
+    private int findMinExtraChars(int startIdx, String s, TrieNode node){
+        if(startIdx == s.length()) return 0;
+        if(memo[startIdx]!=null) return memo[startIdx];
 
-        //skip this letter and find matches from next
-        int min = 1 + findMinExtraChar(s, node, idx+1, memo);
+        int min = 0;
 
-        //find matches from this index
+        //skip and start from the next index
+        min = 1 + findMinExtraChars(startIdx+1, s, node);
+
+        //try taking the current index
         TrieNode cur = node;
-        for(int i=idx;i<s.length();i++){
+        for(int i=startIdx;i<s.length();i++){
             char a = s.charAt(i);
             if(cur.children[a-'a'] == null) break;
             cur = cur.children[a-'a'];
-
             if(cur.isWord){
-                min = Math.min(min, findMinExtraChar(s, node, i+1, memo));
+                //we have found a word
+                min = Math.min(min, findMinExtraChars(i+1, s, node));
             }
         }
-        memo[idx] = min;
-        return memo[idx];
+        memo[startIdx] = min;
+        return min;
     }
 
-    private void buildTree(String[] words, TrieNode root){
-        
-        for(String word: words){
+    private TrieNode buildTrie(String[] dictionary){
+        TrieNode root = new TrieNode();
+
+        for(String word: dictionary){
             TrieNode cur = root;
-            for(char c: word.toCharArray()){
-                if(cur.children[c-'a'] == null){
-                    cur.children[c-'a'] = new TrieNode();
+            for(char a : word.toCharArray()){
+                if(cur.children[a-'a']==null){
+                    cur.children[a-'a'] = new TrieNode();
                 }
-                cur = cur.children[c-'a'];
+                cur = cur.children[a-'a'];
             }
             cur.isWord = true;
         }
+        return root;
     }
 }
 
@@ -48,7 +52,7 @@ class TrieNode{
     TrieNode[] children;
 
     public TrieNode(){
-        this.isWord = false;
+        isWord = false;
         children = new TrieNode[26];
     }
 }
