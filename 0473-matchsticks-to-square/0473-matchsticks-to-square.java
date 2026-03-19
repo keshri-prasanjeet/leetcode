@@ -33,7 +33,8 @@ class Solution {
                 sides[i]+=match;
                 if(dfsSquare(sideLen, matchsticks, index+1, sides)) return true;
                 sides[i]-=match;
-                if(sides[i] == 0) break;
+                // if(sides[i] == 0) break;
+                if (i > 0 && sides[i] == sides[i-1]) continue;
             }
         }
 
