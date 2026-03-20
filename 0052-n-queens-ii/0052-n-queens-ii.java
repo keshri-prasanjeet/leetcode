@@ -4,7 +4,6 @@ class Solution {
         boolean[] col = new boolean[n];
         boolean[] pDia = new boolean[2 * n];
         boolean[] nDia = new boolean[2 * n];
-        // solution = new ArrayList<>();
 
         char[][] chessboard = new char[n][n];
         for (int i = 0; i < n; i++) {
@@ -19,12 +18,6 @@ class Solution {
 
     private void dfsPlaceQueens(boolean[] col, boolean[] pDia, boolean[] nDia, char[][] chessboard, int row) {
         if (row == chessboard.length) {
-            // //gether the answer and put it in the solution list
-            // List<String> solutionString = new ArrayList<>();
-            // for (char[] solutionRow : chessboard) {
-            //     solutionString.add(new String(solutionRow));
-            // }
-            // solution.add(solutionString);
             solution++;
             return;
         }
