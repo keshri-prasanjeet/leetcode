@@ -176,6 +176,7 @@ This repository contains my solutions to LeetCode problems.
 | ------- |
 | [0022-generate-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0022-generate-parentheses) |
 | [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
+| [0070-climbing-stairs](https://github.com/keshri-prasanjeet/leetcode/tree/master/0070-climbing-stairs) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/keshri-prasanjeet/leetcode/tree/master/0131-palindrome-partitioning) |
 | [0473-matchsticks-to-square](https://github.com/keshri-prasanjeet/leetcode/tree/master/0473-matchsticks-to-square) |
@@ -239,10 +240,12 @@ This repository contains my solutions to LeetCode problems.
 ## Memoization
 |  |
 | ------- |
+| [0070-climbing-stairs](https://github.com/keshri-prasanjeet/leetcode/tree/master/0070-climbing-stairs) |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/keshri-prasanjeet/leetcode/tree/master/0698-partition-to-k-equal-sum-subsets) |
 ## Math
 |  |
 | ------- |
+| [0070-climbing-stairs](https://github.com/keshri-prasanjeet/leetcode/tree/master/0070-climbing-stairs) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/keshri-prasanjeet/leetcode/tree/master/1993-sum-of-all-subset-xor-totals) |
 ## Combinatorics
 |  |
