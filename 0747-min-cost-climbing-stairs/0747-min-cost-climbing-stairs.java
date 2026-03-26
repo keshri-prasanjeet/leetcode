@@ -1,25 +1,16 @@
 class Solution {
-    int[] memo;
-    boolean[] seen;
     public int minCostClimbingStairs(int[] cost) {
-        memo = new int[cost.length+1];
-        seen = new boolean[cost.length+1];
-        return Math.min(findMinCost(cost, 0), findMinCost(cost, 1));
-    }
+        int len = cost.length;
+        int[] dp = new int[len+1];
 
-    private int findMinCost(int[] cost, int index){
-        if(index >= cost.length){
-            return 0;
+        dp[0] = cost[0];
+        dp[1] = cost[1];
+
+        for(int i=2;i<len;i++){
+            dp[i] = Math.min(dp[i-1],dp[i-2]);
+            dp[i]+=cost[i];
         }
 
-        if(seen[index]==true){
-            return memo[index];
-        }
-
-        int cur = cost[index];
-        cur+=(Math.min(findMinCost(cost, index+1), findMinCost(cost, index+2)));
-        memo[index] = cur;
-        seen[index] = true;
-        return cur;
+        return Math.min(dp[len-1], dp[len-2]);
     }
 }
