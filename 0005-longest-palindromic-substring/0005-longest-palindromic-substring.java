@@ -26,7 +26,11 @@ class Solution {
     private boolean isPalindrome(int start, int end, String s){
         if(start >= end) return true;
         if(seen[start][end]==true) return dp[start][end];
-        if(s.charAt(start)!=s.charAt(end)) return false;
+        if(s.charAt(start)!=s.charAt(end)) {
+            seen[start][end] = true;
+            dp[start][end] = false;
+            return false;
+        }
         dp[start][end] = isPalindrome(start+1,end-1,s);
         seen[start][end] = true;
         return dp[start][end];
