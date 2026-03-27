@@ -4,23 +4,21 @@ class Solution {
     public String longestPalindrome(String s) {
         int len = s.length();
         if(len == 1) return s;
-        int maxLen = Integer.MIN_VALUE;
-        int subStart = -1;
-        int subEnd = -1;
+        int maxLen = 1;
+        int subStart = 0;
         dp = new boolean[len][len];
         seen = new boolean[len][len];
         for(int i=0;i<len;i++){
-            for(int j=i;j<len;j++){
+            for(int j=i+maxLen;j<len;j++){
                 if(isPalindrome(i, j, s)){
                     if(maxLen < (j-i+1)){
                         subStart = i;
-                        subEnd = j;
                         maxLen = j-i+1;
                     }
                 }
             }
         }
-        return s.substring(subStart, subEnd+1);
+        return s.substring(subStart, subStart+maxLen);
     }
 
     private boolean isPalindrome(int start, int end, String s){
