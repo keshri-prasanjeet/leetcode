@@ -6,16 +6,12 @@ class Solution {
         return answer;
     }
 
-    private void findSubsets(int[] nums, int index, List<Integer> subset){
-        if(index == nums.length){
-            answer.add(new ArrayList<>(subset));
-            return;
+    private void findSubsets(int[] nums, int idx, List<Integer> subset){
+        answer.add(new ArrayList<>(subset));
+        for(int i=idx;i<nums.length;i++){
+            subset.add(nums[i]);
+            findSubsets(nums, i+1, subset);
+            subset.remove(subset.size()-1);
         }
-        //dont take
-        findSubsets(nums, index+1, subset);
-        //take
-        subset.add(nums[index]);
-        findSubsets(nums, index+1, subset);
-        subset.remove(subset.size()-1);
     }
 }
