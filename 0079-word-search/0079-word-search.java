@@ -1,31 +1,30 @@
 class Solution {
     public boolean exist(char[][] board, String word) {
-        char[] wordArr = word.toCharArray();
-        //visited array must be tracked
-        for(int i=0;i<board.length;i++){
+        for(int i =0;i<board.length;i++){
             for(int j=0;j<board[0].length;j++){
-                if(board[i][j] == wordArr[0]){
-                    if(findWord(i, j, board, wordArr, 0) == true) return true;
+                if(board[i][j] == word.charAt(0)){
+                    if(findWord(board, word, i, j, 0)) return true;
                 }
             }
         }
         return false;
     }
 
-    private boolean findWord(int i, int j, char[][] board, char[] wordArr, int idx){
-        if(idx == wordArr.length) return true;
-        if(i<0 || i == board.length || j<0 || j == board[0].length || board[i][j] != wordArr[idx]) return false;
-
-        char temp = board[i][j];
-        board[i][j] = '$';
-
-        boolean ans =  
-            findWord(i-1,j,board,wordArr,idx+1) || 
-            findWord(i+1,j,board,wordArr,idx+1) || 
-            findWord(i,j+1,board,wordArr,idx+1) ||
-            findWord(i,j-1,board,wordArr,idx+1); 
-
-        board[i][j] = temp;
-        return ans;
+    private boolean findWord(char[][] board, String word, int i, int j, int idx){
+        if(idx == word.length()) return true;
+        if(i < 0 || j < 0 || i == board.length || j == board[0].length || board[i][j] == '$') return false;
+        
+        if(board[i][j] == word.charAt(idx)){
+            char temp = board[i][j];
+            board[i][j] = '$';
+            if(
+                findWord(board, word, i+1, j, idx+1) ||
+                findWord(board, word, i-1, j, idx+1) ||
+                findWord(board, word, i, j+1, idx+1) ||
+                findWord(board, word, i, j-1, idx+1)
+            ) return true;
+            board[i][j] = temp;
+        }
+        return false;
     }
 }
