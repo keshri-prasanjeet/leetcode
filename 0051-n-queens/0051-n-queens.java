@@ -1,46 +1,52 @@
 class Solution {
-    List<List<String>> solution;
-
+    boolean[] column;
+    boolean[] posDia;
+    boolean[] negDia;
+    List<List<String>> nQueens;
     public List<List<String>> solveNQueens(int n) {
-        boolean[] col = new boolean[n];
-        boolean[] pDia = new boolean[2 * n];
-        boolean[] nDia = new boolean[2 * n];
-        solution = new ArrayList<>();
+        //there have to be three hash sets
+        // one to check if there are two queens in one column
+        // one to check if there are two queens in one pos Diagonal
+        // one to check if there are two queens in one neg Diagonal
 
-        char[][] chessboard = new char[n][n];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                chessboard[i][j] = '.';
+        // loop throuhg the chess board and find 
+        column = new boolean[n];
+        posDia = new boolean[n+n];
+        negDia = new boolean[n+n];
+        nQueens = new ArrayList<>();
+        char[][] chessBoard = new char[n][n];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                chessBoard[i][j] = '.';
             }
         }
-
-        dfsPlaceQueens(col, pDia, nDia, chessboard, 0);
-        return solution;
+        placeNQueens(n, 0, chessBoard);
+        return nQueens;
     }
 
-    private void dfsPlaceQueens(boolean[] col, boolean[] pDia, boolean[] nDia, char[][] chessboard, int row) {
-        if (row == chessboard.length) {
-            //gether the answer and put it in the solution list
-            List<String> solutionString = new ArrayList<>();
-            for (char[] solutionRow : chessboard) {
-                solutionString.add(new String(solutionRow));
+    private void placeNQueens(int n, int row, char[][] chessBoard){
+        if(row == n){
+            List<String> answer = new ArrayList<>();
+            for(char[] boardRow:chessBoard){
+                answer.add(new String(boardRow));
             }
-            solution.add(solutionString);
+            nQueens.add(answer);
             return;
         }
-        int n = chessboard.length;
-        for (int i = 0; i < n; i++) {
-            if (col[i] == false && pDia[i + row] == false && nDia[(i - row) + (n - 1)] == false) {
-                chessboard[row][i] = 'Q';
-                col[i] = true;
-                pDia[i + row] = true;
-                nDia[(i - row) + (n - 1)] = true;
-                dfsPlaceQueens(col, pDia, nDia, chessboard, row + 1);
-                chessboard[row][i] = '.';
-                col[i] = false;
-                pDia[i + row] = false;
-                nDia[(i - row) + (n - 1)] = false;
+
+        for(int i=0;i<n;i++){
+            if(column[i] == false && posDia[i+row] == false && negDia[i-row + (n-1)] == false){
+                chessBoard[row][i] = 'Q';
+                column[i] = true;
+                posDia[i+row] = true;
+                negDia[i-row + (n-1)] = true;
+                placeNQueens(n, row+1, chessBoard);
+                chessBoard[row][i] = '.';
+                column[i] = false;
+                posDia[i+row] = false;
+                negDia[i-row + (n-1)] = false;
             }
         }
     }
+
 }
