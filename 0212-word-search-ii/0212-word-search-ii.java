@@ -1,61 +1,65 @@
 class Solution {
-    List<String> answer = new ArrayList<>();
-
-    class TrieNode {
-        String word;
-        TrieNode[] children = new TrieNode[26];
-    }
+    TrieNode root;
+    List<String> allWords;
     public List<String> findWords(char[][] board, String[] words) {
-        
-        TrieNode root = buildTrie(words);
-
+        //make a trie of the words and then do word search by the words
+        root = new TrieNode();
+        populateTrie(words);
+        allWords = new ArrayList<>();
         for(int i=0;i<board.length;i++){
             for(int j=0;j<board[0].length;j++){
-                if(root.children[board[i][j] - 'a'] != null){
-                    wordSearch(board, root, i, j);
+                char cur = board[i][j];
+                if(root.children[cur-'a']!=null){
+                    findWords(board,i,j,root);
                 }
             }
         }
-
-        return answer;
+        return allWords;
     }
 
-    private void wordSearch(char[][] board, TrieNode root, int x, int y){
-        if(x < 0 || x == board.length || y < 0 || y == board[0].length || board[x][y] == '$') return;
+    private void findWords(char[][] board, int i, int j, TrieNode node){
+        if(i < 0 || j < 0 || i == board.length || j == board[0].length || board[i][j] == 'â' ) return;
 
-        if(root.children[board[x][y] - 'a'] == null) return;
+        char a = board[i][j];
+        if(node.children[a-'a'] == null) return;
 
-        root = root.children[board[x][y] - 'a'];
+        node = node.children[a-'a'];
 
-        if(root.word != null){
-            answer.add(root.word);
-            root.word = null;
+        if(node.isWord == true){
+            allWords.add(node.word);
+            node.isWord = false;
         }
-
-        char cur = board[x][y];
-        board[x][y] = '$';
-
-        wordSearch(board, root, x - 1, y);
-        wordSearch(board, root, x + 1, y);
-        wordSearch(board, root, x, y - 1);
-        wordSearch(board, root, x, y + 1);
-
-        board[x][y] = cur;
+        
+            
+        board[i][j] = 'â';
+        findWords(board, i+1, j, node);
+        findWords(board, i, j+1, node);
+        findWords(board, i-1, j, node);
+        findWords(board, i, j-1, node);
+        board[i][j] = a;
     }
 
-    private TrieNode buildTrie(String[] words){
-        TrieNode root = new TrieNode();
-        for(String word : words){
-            TrieNode node = root;
+    private void populateTrie(String[] words){
+        for(String word:words){
+            TrieNode cur = root;
             for(char a: word.toCharArray()){
-                if(node.children[a - 'a'] == null){
-                    node.children[a-'a'] = new TrieNode();
+                if(cur.children[a-'a']==null){
+                    cur.children[a-'a'] = new TrieNode();
                 }
-                node = node.children[a-'a'];
+                cur = cur.children[a-'a'];
             }
-            node.word = word;
+            cur.isWord = true;
+            cur.word = word;
         }
+    }
+}
 
-        return root;
+class TrieNode{
+    TrieNode[] children;
+    boolean isWord;
+    String word;
+    TrieNode(){
+        children = new TrieNode[26];
+        isWord = false;
     }
 }
