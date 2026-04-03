@@ -77,6 +77,7 @@ This repository contains my solutions to LeetCode problems.
 | [0022-generate-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0022-generate-parentheses) |
 | [0076-minimum-window-substring](https://github.com/keshri-prasanjeet/leetcode/tree/master/0076-minimum-window-substring) |
 | [0079-word-search](https://github.com/keshri-prasanjeet/leetcode/tree/master/0079-word-search) |
+| [0091-decode-ways](https://github.com/keshri-prasanjeet/leetcode/tree/master/0091-decode-ways) |
 | [0093-restore-ip-addresses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0093-restore-ip-addresses) |
 | [0131-palindrome-partitioning](https://github.com/keshri-prasanjeet/leetcode/tree/master/0131-palindrome-partitioning) |
 | [0208-implement-trie-prefix-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0208-implement-trie-prefix-tree) |
@@ -185,6 +186,7 @@ This repository contains my solutions to LeetCode problems.
 | [0022-generate-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0022-generate-parentheses) |
 | [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
 | [0070-climbing-stairs](https://github.com/keshri-prasanjeet/leetcode/tree/master/0070-climbing-stairs) |
+| [0091-decode-ways](https://github.com/keshri-prasanjeet/leetcode/tree/master/0091-decode-ways) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/keshri-prasanjeet/leetcode/tree/master/0131-palindrome-partitioning) |
 | [0198-house-robber](https://github.com/keshri-prasanjeet/leetcode/tree/master/0198-house-robber) |
