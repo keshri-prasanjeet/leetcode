@@ -1,29 +1,25 @@
 class Solution {
     Integer[] dp;
-
     public int mincostTickets(int[] days, int[] costs) {
-        dp = new Integer[days.length];
-        return dfs(days, costs, 0);
+        dp = new Integer[days.length+1];
+        return findMinCost(days, costs, 0);
     }
 
-    private int dfs(int[] days, int[] costs, int i) {
-        if (i >= days.length) return 0;
+    private int findMinCost(int[] days, int[] cost, int idx){
+        if(idx >= days.length) return 0;
+        if(dp[idx] != null) return dp[idx];
 
-        if (dp[i] != null) return dp[i];
+        int cost1 = cost[0] + findMinCost(days, cost, idx+1);
 
-        // 1-day pass
-        int cost1 = costs[0] + dfs(days, costs, i + 1);
+        int j = idx;
+        while(j < days.length && days[j] < days[idx]+7) j++;
+        int cost7 = cost[1] + findMinCost(days, cost, j);
 
-        // 7-day pass
-        int j = i;
-        while (j < days.length && days[j] < days[i] + 7) j++;
-        int cost7 = costs[1] + dfs(days, costs, j);
+        j = idx;
 
-        // 30-day pass
-        j = i;
-        while (j < days.length && days[j] < days[i] + 30) j++;
-        int cost30 = costs[2] + dfs(days, costs, j);
+        while(j < days.length && days[j] < days[idx]+30) j++;
+        int cost30 = cost[2] + findMinCost(days, cost, j);
 
-        return dp[i] = Math.min(cost1, Math.min(cost7, cost30));
+        return dp[idx] = Math.min(cost1, Math.min(cost7, cost30));
     }
 }
