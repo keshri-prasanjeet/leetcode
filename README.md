@@ -23,6 +23,7 @@ This repository contains my solutions to LeetCode problems.
 | [0209-minimum-size-subarray-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0209-minimum-size-subarray-sum) |
 | [0212-word-search-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0212-word-search-ii) |
 | [0213-house-robber-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0213-house-robber-ii) |
+| [0300-longest-increasing-subsequence](https://github.com/keshri-prasanjeet/leetcode/tree/master/0300-longest-increasing-subsequence) |
 | [0322-coin-change](https://github.com/keshri-prasanjeet/leetcode/tree/master/0322-coin-change) |
 | [0473-matchsticks-to-square](https://github.com/keshri-prasanjeet/leetcode/tree/master/0473-matchsticks-to-square) |
 | [0658-find-k-closest-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0658-find-k-closest-elements) |
@@ -115,6 +116,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0209-minimum-size-subarray-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0209-minimum-size-subarray-sum) |
+| [0300-longest-increasing-subsequence](https://github.com/keshri-prasanjeet/leetcode/tree/master/0300-longest-increasing-subsequence) |
 | [0658-find-k-closest-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0658-find-k-closest-elements) |
 ## Prefix Sum
 |  |
@@ -200,6 +202,7 @@ This repository contains my solutions to LeetCode problems.
 | [0152-maximum-product-subarray](https://github.com/keshri-prasanjeet/leetcode/tree/master/0152-maximum-product-subarray) |
 | [0198-house-robber](https://github.com/keshri-prasanjeet/leetcode/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0213-house-robber-ii) |
+| [0300-longest-increasing-subsequence](https://github.com/keshri-prasanjeet/leetcode/tree/master/0300-longest-increasing-subsequence) |
 | [0322-coin-change](https://github.com/keshri-prasanjeet/leetcode/tree/master/0322-coin-change) |
 | [0473-matchsticks-to-square](https://github.com/keshri-prasanjeet/leetcode/tree/master/0473-matchsticks-to-square) |
 | [0647-palindromic-substrings](https://github.com/keshri-prasanjeet/leetcode/tree/master/0647-palindromic-substrings) |
