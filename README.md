@@ -195,6 +195,7 @@ This repository contains my solutions to LeetCode problems.
 | [0005-longest-palindromic-substring](https://github.com/keshri-prasanjeet/leetcode/tree/master/0005-longest-palindromic-substring) |
 | [0022-generate-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0022-generate-parentheses) |
 | [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
+| [0062-unique-paths](https://github.com/keshri-prasanjeet/leetcode/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/keshri-prasanjeet/leetcode/tree/master/0070-climbing-stairs) |
 | [0091-decode-ways](https://github.com/keshri-prasanjeet/leetcode/tree/master/0091-decode-ways) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
@@ -280,12 +281,14 @@ This repository contains my solutions to LeetCode problems.
 ## Math
 |  |
 | ------- |
+| [0062-unique-paths](https://github.com/keshri-prasanjeet/leetcode/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/keshri-prasanjeet/leetcode/tree/master/0070-climbing-stairs) |
 | [1013-fibonacci-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/1013-fibonacci-number) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/keshri-prasanjeet/leetcode/tree/master/1993-sum-of-all-subset-xor-totals) |
 ## Combinatorics
 |  |
 | ------- |
+| [0062-unique-paths](https://github.com/keshri-prasanjeet/leetcode/tree/master/0062-unique-paths) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/keshri-prasanjeet/leetcode/tree/master/1993-sum-of-all-subset-xor-totals) |
 ## Enumeration
 |  |
