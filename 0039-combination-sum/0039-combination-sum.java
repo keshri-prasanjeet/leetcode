@@ -12,8 +12,8 @@ class Solution {
             answer.add(new ArrayList<>(combination));
             return;
         }
-        if(target < 0) return;
         for(int i=idx;i<candidates.length;i++){
+            if(candidates[i] > target) break;
             combination.add(candidates[i]);
             findCombinations(candidates, target - candidates[i], combination, i);
             combination.remove(combination.size()-1);
