@@ -1,22 +1,20 @@
 class Solution {
-    List<List<Integer>> answer;
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        answer = new ArrayList<>();
+        List<List<List<Integer>>> dp = new ArrayList<>();
         Arrays.sort(candidates);
-        findCombinations(candidates, target, new ArrayList<>(), 0);
-        return answer;
-    }
-
-    private void findCombinations(int[] candidates, int target, List<Integer> combination, int idx){
-        if(target == 0){
-            answer.add(new ArrayList<>(combination));
-            return;
+        for(int i=0;i<=target;i++){
+            dp.add(new ArrayList<>());
         }
-        for(int i=idx;i<candidates.length;i++){
-            if(candidates[i] > target) break;
-            combination.add(candidates[i]);
-            findCombinations(candidates, target - candidates[i], combination, i);
-            combination.remove(combination.size()-1);
+        dp.get(0).add(new ArrayList<>());
+        for(int candidate: candidates){
+            for(int i=candidate;i<=target;i++){
+                for(List<Integer> prev: dp.get(i-candidate)){
+                    List<Integer> newSum = new ArrayList<>(prev);
+                    newSum.add(candidate);
+                    dp.get(i).add(newSum);
+                }
+            }
         }
+        return dp.get(target);
     }
 }
