@@ -1,35 +1,33 @@
 class Solution {
-    List<String> answer;
-    Map<Integer, List<String>> wordsMap=new HashMap<>();
+    Map<Integer, List<String>> wordsMap = new HashMap<>();
     public List<String> wordBreak(String s, List<String> wordDict) {
-        answer = new ArrayList<>();
+        int len = s.length();
         return findSentences(s, wordDict, 0);
     }
 
-    private List<String> findSentences(String s, List<String> wordDict, int index){
-        if(wordsMap.containsKey(index)) return wordsMap.get(index);
+    private List<String> findSentences(String s, List<String> words, int idx){
+        if(wordsMap.containsKey(idx)) return wordsMap.get(idx);
         List<String> result = new ArrayList<>();
-        if(index == s.length()){
+        if(idx == s.length()){
             result.add("");
             return result;
         }
-
-        for(String word: wordDict){
-            int len = word.length();
-            if(index + len > s.length()) continue;
-            if(s.startsWith(word, index)){
-                List<String> suffix = findSentences(s, wordDict, index+len);
-                for(String sub: suffix){
+        for(String word:words){
+            int wordLen = word.length();
+            if(wordLen + idx > s.length()) continue;
+            if(s.startsWith(word, idx)){
+                List<String> subResult = findSentences(s, words, idx+wordLen);
+                for(String sub:subResult){
                     if(sub.isEmpty()){
                         result.add(word);
                     }
-                    else{
+                    else {
                         result.add(word + " " + sub);
                     }
                 }
             }
         }
-        wordsMap.put(index, result);
+        wordsMap.put(idx, result);
         return result;
     }
 }
