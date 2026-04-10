@@ -1,24 +1,18 @@
 class Solution {
-    //solution dp with memoization
-    Boolean[] charMap;
     public boolean wordBreak(String s, List<String> wordDict) {
-        charMap = new Boolean[s.length()+1];
-        return findWord(s, wordDict, 0);
-    }
-
-    private boolean findWord(String s, List<String> words, int startIdx){
-        if(startIdx == s.length()) return true;
-        if(charMap[startIdx]!=null) return charMap[startIdx];
-        
-        for(String word: words){
-            int len=word.length();
-            if(startIdx + len > s.length()) continue;
-            if(s.substring(startIdx, startIdx+len).equals(word)){
-                if(findWord(s, words, startIdx+len)) {
-                    return charMap[startIdx] = true;
+        int len = s.length();
+        boolean[] dp = new boolean[len+1];
+        dp[0] = true;
+        for(int i=0;i<len;i++){
+            if(dp[i] == true){
+                for(String word:wordDict){
+                    int wordLen = word.length();
+                    if(i+wordLen <= len && s.startsWith(word, i)){
+                        dp[i+wordLen] = true;
+                    }
                 }
             }
         }
-        return charMap[startIdx] = false;
+        return dp[len];
     }
 }
