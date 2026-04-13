@@ -1,15 +1,9 @@
 class Solution {
-    Integer[] memo;
+    Integer[] dp = new Integer[45];
     public int climbStairs(int n) {
-        memo = new Integer[n+1];
-        return dpClimb(n);
-    }
-
-    private int dpClimb(int n){
         if(n==0) return 1;
-        if(n< 0) return 0;
-        if(memo[n]!=null) return memo[n];
-        memo[n] = dpClimb(n-1) + dpClimb(n-2);
-        return memo[n];
+        if(n <0) return 0;
+        if(dp[n]!=null) return dp[n];
+        return dp[n] = climbStairs(n-2) + climbStairs(n-1);
     }
 }
