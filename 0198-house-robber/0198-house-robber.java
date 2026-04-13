@@ -1,14 +1,14 @@
 class Solution {
-    Integer[] memo;
+    Integer[] dp;
     public int rob(int[] nums) {
-        memo = new Integer[nums.length+1];
-        return Math.max(doRob(nums, 0), doRob(nums, 1));
+        dp = new Integer[nums.length];
+        return Math.max(robHouse(nums, 0), robHouse(nums, 1));
     }
-
-    private int doRob(int[] nums, int index){
+    private int robHouse(int[] nums, int index){
         if(index >= nums.length) return 0;
-        if(memo[index]!=null) return memo[index];
-        memo[index] = Math.max((doRob(nums, index+2) + nums[index]), (doRob(nums, index+1)));
-        return memo[index];
+        if(dp[index]!=null) return dp[index];
+        int robCur = nums[index] + robHouse(nums, index+2);
+        int skipCur = robHouse(nums, index+1);
+        return dp[index] = Math.max(robCur, skipCur);
     }
 }
