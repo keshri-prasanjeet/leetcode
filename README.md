@@ -218,6 +218,7 @@ This repository contains my solutions to LeetCode problems.
 | [0747-min-cost-climbing-stairs](https://github.com/keshri-prasanjeet/leetcode/tree/master/0747-min-cost-climbing-stairs) |
 | [1013-fibonacci-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/1013-fibonacci-number) |
 | [1025-minimum-cost-for-tickets](https://github.com/keshri-prasanjeet/leetcode/tree/master/1025-minimum-cost-for-tickets) |
+| [1236-n-th-tribonacci-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/1236-n-th-tribonacci-number) |
 | [2755-extra-characters-in-a-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/2755-extra-characters-in-a-string) |
 ## Design
 |  |
@@ -285,12 +286,14 @@ This repository contains my solutions to LeetCode problems.
 | [0140-word-break-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0140-word-break-ii) |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/keshri-prasanjeet/leetcode/tree/master/0698-partition-to-k-equal-sum-subsets) |
 | [1013-fibonacci-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/1013-fibonacci-number) |
+| [1236-n-th-tribonacci-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/1236-n-th-tribonacci-number) |
 ## Math
 |  |
 | ------- |
 | [0062-unique-paths](https://github.com/keshri-prasanjeet/leetcode/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/keshri-prasanjeet/leetcode/tree/master/0070-climbing-stairs) |
 | [1013-fibonacci-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/1013-fibonacci-number) |
+| [1236-n-th-tribonacci-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/1236-n-th-tribonacci-number) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/keshri-prasanjeet/leetcode/tree/master/1993-sum-of-all-subset-xor-totals) |
 ## Combinatorics
 |  |
