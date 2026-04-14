@@ -1,37 +1,30 @@
 class Solution {
     public String longestPalindrome(String s) {
         int len = s.length();
-        // we will expand for odd length and even lengths separately
-        // after exapnding to the maximum for each point
-        // we will check if E OR O gave us the larger length
-        // whichever has larger len select that and then divide / 2
-        // start would be i - half and end would be i + half
-
-        int start = 0;
-        int end = 0;
+        boolean[][] precompute = new boolean[len][len];
+        preComputePalindrome(s,precompute);
+        int longest = -1;
+        int startP = -1;
         for(int i=0;i<len;i++){
-            int len1 = expandPalindrome(i, i, s);
-            int len2 = expandPalindrome(i, i+1, s);
-            // System.out.println("len1 is " + len1 + " len2 is " + len2);
-            int maxLen = Math.max(len1, len2);
-
-            if(maxLen > end-start){
-                start = i - (maxLen-1)/2;
-                end = i + (maxLen/2);
+            for(int j=i;j<len;j++){
+                if(precompute[i][j] && (j-i+1) > longest){
+                    longest = j-i+1;
+                    startP = i;
+                }
             }
-            // System.out.println("start is " + start + " end is " + end);
         }
-
-        return s.substring(start, end+1);
+        return s.substring(startP, startP+longest);
     }
 
-    private int expandPalindrome(int start, int end, String s){
-        // System.out.println("started expand at " + start + " " + end);
-        while(start >= 0 && end < s.length() && s.charAt(start) == s.charAt(end)){
-            // System.out.println(" start and end matched " + start + " " + end);
-            start--;
-            end++;
+    private void preComputePalindrome(String s, boolean[][] p){
+
+        for(int i=s.length();i>=0;i--){
+            for(int j=i;j<s.length();j++){
+                if(s.charAt(i) == s.charAt(j)){
+                    if(j-i<=2) p[i][j] = true;
+                    else p[i][j] = p[i+1][j-1];
+                }
+            }
         }
-        return end-start-1;
     }
 }
