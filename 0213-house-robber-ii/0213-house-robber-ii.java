@@ -1,21 +1,22 @@
 class Solution {
-    Integer[] dp1;
-    Integer[] dp2;
     public int rob(int[] nums) {
         int len = nums.length;
         if(len == 1) return nums[0];
-        dp1 = new Integer[len];
-        dp2 = new Integer[len];
-        return Math.max(robHouses(nums, 0, len-2, dp1), robHouses(nums, 1, len-1, dp2));
+        return Math.max(robLinear(nums, 0, len-2), robLinear(nums, 1, len-1));
     }
 
-    private int robHouses(int[] nums, int idx, int end, Integer[] dp){
-        if(idx > end) return 0;
-        if(dp[idx]!=null) return dp[idx];
+    private int robLinear(int[] nums, int start, int end) {
+        int prev2 = 0; // dp[i-2]
+        int prev1 = 0; // dp[i-1]
 
-        int robCur = nums[idx] + robHouses(nums, idx+2, end, dp);
-        int skpCur = robHouses(nums, idx+1, end, dp);
+        for (int i = start; i <= end; i++) {
+            int take = nums[i] + prev2;
+            int skip = prev1;
+            int cur = Math.max(take, skip);
 
-        return dp[idx] = Math.max(robCur, skpCur);
+            prev2 = prev1;
+            prev1 = cur;
+        }
+        return prev1;
     }
 }
