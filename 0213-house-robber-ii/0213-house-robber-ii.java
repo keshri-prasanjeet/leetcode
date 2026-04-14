@@ -1,19 +1,21 @@
 class Solution {
-    Integer memo[];
+    Integer[] dp1;
+    Integer[] dp2;
     public int rob(int[] nums) {
-        int n = nums.length;
-        if(n==1) return nums[0];
-        memo = new Integer[n+1];
-        int first = houseRobber(nums, 0, n-2);
-        memo = new Integer[n+1];
-        return Math.max(first, houseRobber(nums, 1, n-1));
+        int len = nums.length;
+        if(len == 1) return nums[0];
+        dp1 = new Integer[len];
+        dp2 = new Integer[len];
+        return Math.max(robHouses(nums, 0, len-2, dp1), robHouses(nums, 1, len-1, dp2));
     }
 
-    private int houseRobber(int[] houses, int index, int endIdx){
-        if(index > endIdx) return 0;
-        if(memo[index]!=null) return memo[index];
-        int currentHouse = houses[index];
-        memo[index] = Math.max(houseRobber(houses, index+1, endIdx), (currentHouse + houseRobber(houses, index+2, endIdx)));
-        return memo[index];
+    private int robHouses(int[] nums, int idx, int end, Integer[] dp){
+        if(idx > end) return 0;
+        if(dp[idx]!=null) return dp[idx];
+
+        int robCur = nums[idx] + robHouses(nums, idx+2, end, dp);
+        int skpCur = robHouses(nums, idx+1, end, dp);
+
+        return dp[idx] = Math.max(robCur, skpCur);
     }
 }
