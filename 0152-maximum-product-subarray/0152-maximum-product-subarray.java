@@ -3,11 +3,11 @@ class Solution {
         int cMax = 1;
         int cMin = 1;
         int ans = Integer.MIN_VALUE;
-        for(int i=0;i<nums.length;i++){
-            int temp = nums[i] * cMax;
-            cMax = Math.max(nums[i] * cMax, Math.max(nums[i], cMin*nums[i]));
-            cMin = Math.min(temp, Math.min(nums[i], cMin*nums[i]));
-            ans = Math.max(ans, Math.max(cMin, cMax));
+        for(int num: nums){
+            int temp = cMax * num;
+            cMax = Math.max(num, Math.max(cMax*num, cMin*num));
+            cMin = Math.min(num, Math.min(temp, cMin*num));
+            ans = Math.max(ans, Math.max(cMax, cMin));
         }
         return ans;
     }
