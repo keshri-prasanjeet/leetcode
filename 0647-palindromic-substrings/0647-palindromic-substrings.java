@@ -1,23 +1,24 @@
 class Solution {
-
     public int countSubstrings(String s) {
+        //what if i precompute all the palindromes
+        //and then i do nested loop
+        //or a even odd expansion
         int len = s.length();
-        boolean[][] palindromeCompute = new boolean[len][len];
-        for(int i=len-1;i>=0;i--){
-            for(int j=i;j<len;j++){
-                if(s.charAt(i) == s.charAt(j)){
-                    if(j-i<=2) palindromeCompute[i][j] = true;
-                    else palindromeCompute[i][j] = palindromeCompute[i+1][j-1];
-                }
-            }
-        }
-        int count = 0;
+        int even = 0;
+        int odd = 0;
         for(int i=0;i<len;i++){
-            for(int j=i;j<len;j++){
-                if(palindromeCompute[i][j] == true){
-                    count++;
-                }
-            }
+            odd += expandPalindrome(s, i, i);
+            even+= expandPalindrome(s, i, i+1);
+        }
+        return odd+even;
+    }
+
+    private int expandPalindrome(String s, int left, int right){
+        int count = 0;
+        while(left >=0 && right < s.length() && s.charAt(left)==s.charAt(right)){
+            left--;
+            right++;
+            count++;
         }
         return count;
     }
