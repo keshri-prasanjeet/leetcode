@@ -1,25 +1,24 @@
 class Solution {
     Integer[] dp;
     public int numDecodings(String s) {
-        //multiple ways to decode
-        //there are rules to branching
-        //if we reach the end that means we have decoded
-        //so do decoded+1
+        //decode the message
         dp = new Integer[s.length()];
-        return countDecodings(s, 0, s.length());
+        return countAllDecodings(s, 0, s.length());
     }
-    private int countDecodings(String s, int idx, int len){
+
+    private int countAllDecodings(String s, int idx, int len){
+        // System.out.println("The idx is " + idx + " and the len is " + len);
         if(idx == len) return 1;
-        char a = s.charAt(idx);
-        if(a == '0') return 0;
+        if(idx > len) return 0;
+        if(s.charAt(idx) == '0') return 0;
         if(dp[idx]!=null) return dp[idx];
-        int takeOneCount = 0;
-        int takeTwoCount = 0;
-        takeOneCount = countDecodings(s, idx+1, len);
-        if(idx+1<len && (a == '1' || (a == '2' && (s.charAt(idx+1) - '0' < 7)))){
-            takeTwoCount = countDecodings(s, idx+2, len);
+        int totalDecodeWays = 0;
+        totalDecodeWays += countAllDecodings(s, idx+1, len);
+        // System.out.println("Took single char and idx is " + idx);
+        int cur = s.charAt(idx) - '0';
+        if(cur == 1 || (cur == 2 && idx+1<len && s.charAt(idx+1)-'0' < 7)){
+            totalDecodeWays += countAllDecodings(s, idx+2, len);
         }
-        dp[idx] = takeOneCount + takeTwoCount;
-        return dp[idx];
+        return dp[idx] = totalDecodeWays;
     }
 }
