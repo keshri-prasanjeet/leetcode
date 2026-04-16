@@ -1,16 +1,17 @@
 class Solution {
+    
     public boolean canPartition(int[] nums) {
-        //to partition it in two equal parts, the sum must be even
         int sum = Arrays.stream(nums).sum();
         if(sum%2!=0) return false;
+        int target = sum / 2;
         Arrays.sort(nums);
-        boolean[] targetSum = new boolean[(sum/2)+1];
-        targetSum[0] = true;
+        boolean[] dp = new boolean[target+1];
+        dp[0] = true;
         for(int num:nums){
-            for(int i=sum/2;i>=num;i--){
-                targetSum[i] = targetSum[i] || targetSum[i-num];
+            for(int i=target;i>=num;i--){
+                dp[i] = dp[i] || dp[i-num];
             }
         }
-        return targetSum[sum/2];
+        return dp[target];
     }
 }
