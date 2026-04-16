@@ -1,15 +1,16 @@
 class Solution {
     public int lengthOfLIS(int[] nums) {
-        int[] LIS = new int[nums.length];
-        int longestSubSeq = 0;
+        //longest increasing subsequence
+        int[] longestIncrS = new int[nums.length];
+        int ans = 0;
         for(int i=nums.length-2;i>=0;i--){
             for(int j=i+1;j<nums.length;j++){
                 if(nums[i]<nums[j]){
-                    LIS[i] = Math.max(LIS[i], LIS[j]+1);
+                    longestIncrS[i] = Math.max(longestIncrS[i], longestIncrS[j]+1);
                 }
             }
-            longestSubSeq = longestSubSeq > LIS[i] ? longestSubSeq : LIS[i];
+            ans = Math.max(ans, longestIncrS[i]);
         }
-        return longestSubSeq + 1;
+        return ans+1;
     }
 }
