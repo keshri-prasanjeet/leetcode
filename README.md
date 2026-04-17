@@ -177,6 +177,7 @@ This repository contains my solutions to LeetCode problems.
 | [0100-same-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0100-same-tree) |
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0103-binary-tree-zigzag-level-order-traversal) |
 | [0199-binary-tree-right-side-view](https://github.com/keshri-prasanjeet/leetcode/tree/master/0199-binary-tree-right-side-view) |
+| [0279-perfect-squares](https://github.com/keshri-prasanjeet/leetcode/tree/master/0279-perfect-squares) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0322-coin-change](https://github.com/keshri-prasanjeet/leetcode/tree/master/0322-coin-change) |
 | [1544-count-good-nodes-in-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/1544-count-good-nodes-in-binary-tree) |
@@ -210,6 +211,7 @@ This repository contains my solutions to LeetCode problems.
 | [0152-maximum-product-subarray](https://github.com/keshri-prasanjeet/leetcode/tree/master/0152-maximum-product-subarray) |
 | [0198-house-robber](https://github.com/keshri-prasanjeet/leetcode/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0213-house-robber-ii) |
+| [0279-perfect-squares](https://github.com/keshri-prasanjeet/leetcode/tree/master/0279-perfect-squares) |
 | [0300-longest-increasing-subsequence](https://github.com/keshri-prasanjeet/leetcode/tree/master/0300-longest-increasing-subsequence) |
 | [0322-coin-change](https://github.com/keshri-prasanjeet/leetcode/tree/master/0322-coin-change) |
 | [0377-combination-sum-iv](https://github.com/keshri-prasanjeet/leetcode/tree/master/0377-combination-sum-iv) |
@@ -294,6 +296,7 @@ This repository contains my solutions to LeetCode problems.
 | ------- |
 | [0062-unique-paths](https://github.com/keshri-prasanjeet/leetcode/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/keshri-prasanjeet/leetcode/tree/master/0070-climbing-stairs) |
+| [0279-perfect-squares](https://github.com/keshri-prasanjeet/leetcode/tree/master/0279-perfect-squares) |
 | [1013-fibonacci-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/1013-fibonacci-number) |
 | [1236-n-th-tribonacci-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/1236-n-th-tribonacci-number) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/keshri-prasanjeet/leetcode/tree/master/1993-sum-of-all-subset-xor-totals) |
