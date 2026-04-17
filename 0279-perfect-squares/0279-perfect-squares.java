@@ -1,28 +1,16 @@
 class Solution {
-    Integer[] dp;
+    Integer[] dp = new Integer[10001];
     public int numSquares(int n) {
-        dp = new Integer[n+1];
-        return countPerfectSquareSum(n, (int)Math.sqrt(n));
-    }
+        if(n==0) return 0;
+        if(dp[n]!=null) return dp[n];
 
-    private int countPerfectSquareSum(int target, int rootLimit){
-        // System.out.println("The target is " + target);
-        if(target == 0) return 0;
-        if(target <  0) return -1;
-        if(dp[target]!=null) return dp[target];
-        int minimumNumReq = Integer.MAX_VALUE;
-        for(int i=rootLimit;i>=1;i--){
-            int square = i*i;
-            int res = Integer.MAX_VALUE;
-            if(square <= target){
-                int newTarget = target-square;
-                res = countPerfectSquareSum(target - square, (int)Math.sqrt(newTarget));
-            }
-            if(res >= 0) {
-                minimumNumReq = Math.min(minimumNumReq, res+1);
-                dp[target] = minimumNumReq;
+        int min = Integer.MAX_VALUE;
+        for(int i=1;i<=n;i++){
+            if(n >= (i*i)){
+                min = Math.min(min, 1+numSquares(n - (i*i)));
             }
         }
-        return dp[target];
+
+        return dp[n] = min;
     }
 }
