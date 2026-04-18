@@ -214,6 +214,7 @@ This repository contains my solutions to LeetCode problems.
 | [0279-perfect-squares](https://github.com/keshri-prasanjeet/leetcode/tree/master/0279-perfect-squares) |
 | [0300-longest-increasing-subsequence](https://github.com/keshri-prasanjeet/leetcode/tree/master/0300-longest-increasing-subsequence) |
 | [0322-coin-change](https://github.com/keshri-prasanjeet/leetcode/tree/master/0322-coin-change) |
+| [0343-integer-break](https://github.com/keshri-prasanjeet/leetcode/tree/master/0343-integer-break) |
 | [0377-combination-sum-iv](https://github.com/keshri-prasanjeet/leetcode/tree/master/0377-combination-sum-iv) |
 | [0416-partition-equal-subset-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0416-partition-equal-subset-sum) |
 | [0473-matchsticks-to-square](https://github.com/keshri-prasanjeet/leetcode/tree/master/0473-matchsticks-to-square) |
@@ -297,6 +298,7 @@ This repository contains my solutions to LeetCode problems.
 | [0062-unique-paths](https://github.com/keshri-prasanjeet/leetcode/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/keshri-prasanjeet/leetcode/tree/master/0070-climbing-stairs) |
 | [0279-perfect-squares](https://github.com/keshri-prasanjeet/leetcode/tree/master/0279-perfect-squares) |
+| [0343-integer-break](https://github.com/keshri-prasanjeet/leetcode/tree/master/0343-integer-break) |
 | [1013-fibonacci-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/1013-fibonacci-number) |
 | [1236-n-th-tribonacci-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/1236-n-th-tribonacci-number) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/keshri-prasanjeet/leetcode/tree/master/1993-sum-of-all-subset-xor-totals) |
