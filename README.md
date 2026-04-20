@@ -34,6 +34,7 @@ This repository contains my solutions to LeetCode problems.
 | [0747-min-cost-climbing-stairs](https://github.com/keshri-prasanjeet/leetcode/tree/master/0747-min-cost-climbing-stairs) |
 | [0909-stone-game](https://github.com/keshri-prasanjeet/leetcode/tree/master/0909-stone-game) |
 | [1025-minimum-cost-for-tickets](https://github.com/keshri-prasanjeet/leetcode/tree/master/1025-minimum-cost-for-tickets) |
+| [1240-stone-game-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/1240-stone-game-ii) |
 | [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/keshri-prasanjeet/leetcode/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
 | [1755-defuse-the-bomb](https://github.com/keshri-prasanjeet/leetcode/tree/master/1755-defuse-the-bomb) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/keshri-prasanjeet/leetcode/tree/master/1993-sum-of-all-subset-xor-totals) |
@@ -129,6 +130,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0209-minimum-size-subarray-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0209-minimum-size-subarray-sum) |
+| [1240-stone-game-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/1240-stone-game-ii) |
 ## Sorting
 |  |
 | ------- |
@@ -226,6 +228,7 @@ This repository contains my solutions to LeetCode problems.
 | [1013-fibonacci-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/1013-fibonacci-number) |
 | [1025-minimum-cost-for-tickets](https://github.com/keshri-prasanjeet/leetcode/tree/master/1025-minimum-cost-for-tickets) |
 | [1236-n-th-tribonacci-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/1236-n-th-tribonacci-number) |
+| [1240-stone-game-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/1240-stone-game-ii) |
 | [2755-extra-characters-in-a-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/2755-extra-characters-in-a-string) |
 ## Design
 |  |
@@ -304,6 +307,7 @@ This repository contains my solutions to LeetCode problems.
 | [0909-stone-game](https://github.com/keshri-prasanjeet/leetcode/tree/master/0909-stone-game) |
 | [1013-fibonacci-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/1013-fibonacci-number) |
 | [1236-n-th-tribonacci-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/1236-n-th-tribonacci-number) |
+| [1240-stone-game-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/1240-stone-game-ii) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/keshri-prasanjeet/leetcode/tree/master/1993-sum-of-all-subset-xor-totals) |
 ## Combinatorics
 |  |
@@ -318,4 +322,5 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0909-stone-game](https://github.com/keshri-prasanjeet/leetcode/tree/master/0909-stone-game) |
+| [1240-stone-game-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/1240-stone-game-ii) |
 <!---LeetCode Topics End-->
