@@ -11,17 +11,14 @@ class Solution {
         if(start > end) return 0;
         if(start == end) return nums[start];
         if(dp[start][end]!=null) return dp[start][end];
-
         int diff = Integer.MIN_VALUE;
-        int score = 0;
-        int scoreStartEnd = nums[start];
-        int scoreLastEnd =  nums[end];
-
-        int opponentMax = findWinner(nums, start+1, end);
-        diff = Math.max(diff, scoreStartEnd - opponentMax);
-    
-        opponentMax = findWinner(nums, start, end-1);
-        diff = Math.max(diff, scoreLastEnd - opponentMax);
+        int opponentMaxGain = 0;
+        int startScore = nums[start];
+        opponentMaxGain = findWinner(nums, start+1, end);
+        diff = Math.max(diff, startScore - opponentMaxGain);
+        int endScore = nums[end];
+        opponentMaxGain = findWinner(nums, start, end-1);
+        diff = Math.max(diff, endScore - opponentMaxGain);
 
         return dp[start][end] = diff;
     }
