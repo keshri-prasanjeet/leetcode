@@ -1,19 +1,18 @@
 class Solution {
-    int[][] dp;
+    Integer[][] dp;
     public int uniquePaths(int m, int n) {
-        dp = new int[m][n];
-        for(int i=0;i<m;i++){
-            dp[i][n-1] = 1;
-        }
-        for(int i=0;i<n;i++){
-            dp[m-1][i] = 1;
-        }
-        // dp[m-1][n-1] = 0;
-        for(int i=m-2;i>=0;i--){
-            for(int j=n-2;j>=0;j--){
-                dp[i][j] = dp[i+1][j] + dp[i][j+1];
-            }
-        }
-        return dp[0][0];
+        // only way to reach the goal is to move either right or bottom
+        // at each grid we have two options, go down or go right
+        // never go out of bounds
+        // return total number of possible paths that can one take
+        dp = new Integer[m+1][n+1];
+        return findUniquePaths(m, n);
+    }
+
+    private int findUniquePaths(int m, int n){
+        if(m <= 0 || n <= 0) return 0;
+        if(m == 1 || n == 1) return 1;
+        if(dp[m][n]!=null) return dp[m][n];
+        return dp[m][n] = findUniquePaths(m-1, n) + findUniquePaths(m, n-1);
     }
 }
