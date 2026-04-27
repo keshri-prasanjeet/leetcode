@@ -103,6 +103,7 @@ This repository contains my solutions to LeetCode problems.
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
 | [0647-palindromic-substrings](https://github.com/keshri-prasanjeet/leetcode/tree/master/0647-palindromic-substrings) |
+| [1250-longest-common-subsequence](https://github.com/keshri-prasanjeet/leetcode/tree/master/1250-longest-common-subsequence) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/keshri-prasanjeet/leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/keshri-prasanjeet/leetcode/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
 | [2755-extra-characters-in-a-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/2755-extra-characters-in-a-string) |
@@ -232,6 +233,7 @@ This repository contains my solutions to LeetCode problems.
 | [1025-minimum-cost-for-tickets](https://github.com/keshri-prasanjeet/leetcode/tree/master/1025-minimum-cost-for-tickets) |
 | [1236-n-th-tribonacci-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/1236-n-th-tribonacci-number) |
 | [1240-stone-game-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/1240-stone-game-ii) |
+| [1250-longest-common-subsequence](https://github.com/keshri-prasanjeet/leetcode/tree/master/1250-longest-common-subsequence) |
 | [1522-stone-game-iii](https://github.com/keshri-prasanjeet/leetcode/tree/master/1522-stone-game-iii) |
 | [2755-extra-characters-in-a-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/2755-extra-characters-in-a-string) |
 ## Design
