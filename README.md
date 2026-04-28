@@ -17,6 +17,7 @@ This repository contains my solutions to LeetCode problems.
 | [0078-subsets](https://github.com/keshri-prasanjeet/leetcode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/keshri-prasanjeet/leetcode/tree/master/0079-word-search) |
 | [0090-subsets-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0090-subsets-ii) |
+| [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0139-word-break](https://github.com/keshri-prasanjeet/leetcode/tree/master/0139-word-break) |
 | [0140-word-break-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0140-word-break-ii) |
 | [0152-maximum-product-subarray](https://github.com/keshri-prasanjeet/leetcode/tree/master/0152-maximum-product-subarray) |
@@ -210,6 +211,7 @@ This repository contains my solutions to LeetCode problems.
 | [0062-unique-paths](https://github.com/keshri-prasanjeet/leetcode/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/keshri-prasanjeet/leetcode/tree/master/0070-climbing-stairs) |
 | [0091-decode-ways](https://github.com/keshri-prasanjeet/leetcode/tree/master/0091-decode-ways) |
+| [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/keshri-prasanjeet/leetcode/tree/master/0131-palindrome-partitioning) |
 | [0139-word-break](https://github.com/keshri-prasanjeet/leetcode/tree/master/0139-word-break) |
@@ -334,4 +336,8 @@ This repository contains my solutions to LeetCode problems.
 | [0909-stone-game](https://github.com/keshri-prasanjeet/leetcode/tree/master/0909-stone-game) |
 | [1240-stone-game-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/1240-stone-game-ii) |
 | [1522-stone-game-iii](https://github.com/keshri-prasanjeet/leetcode/tree/master/1522-stone-game-iii) |
+## Greedy
+|  |
+| ------- |
+| [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 <!---LeetCode Topics End-->
