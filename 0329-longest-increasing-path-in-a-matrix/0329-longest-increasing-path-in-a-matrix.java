@@ -10,9 +10,10 @@ class Solution {
         int max = 1;
         int m = matrix.length;
         int n = matrix[0].length;
+        dp = new Integer[m+1][n+1];
         for(int i=0;i<m;i++){
             for(int j=0;j<n;j++){
-                dp = new Integer[m+1][n+1];
+                
                 max = Math.max(max,findLIP(matrix, i, j, -1));
             }
         }
