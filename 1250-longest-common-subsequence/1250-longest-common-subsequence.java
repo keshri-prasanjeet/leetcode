@@ -1,21 +1,20 @@
 class Solution {
+    Integer[][] dp;
     public int longestCommonSubsequence(String text1, String text2) {
-        int len1 = text1.length();
-        int len2 = text2.length();
+        //break it into subproblem
+        //we got two choices go right or go down
+        //if our current cell is match we add 1 + Max(right, down) and return
+        dp = new Integer[text1.length()+1][text2.length()+1];
+        return findLCS(text1, text2, 0, 0);
+    }
 
-        int[][] dp = new int[len1+1][len2+1];
-        
-        for(int i=1;i<=len1;i++){
-            for(int j=1;j<=len2;j++){
-                char first = text1.charAt(i-1);
-                char second = text2.charAt(j-1);
-                if(first == second){
-                    dp[i][j] = 1 + dp[i-1][j-1];
-                } else {
-                    dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
-                }
-            }
-        }
-        return dp[len1][len2];
+    private int findLCS(String text1, String text2, int i, int j){
+        if(i == text1.length() || j == text2.length()) return 0;
+        if(dp[i][j]!=null) return dp[i][j];
+        int maxCommon = 0;
+        if(text1.charAt(i) == text2.charAt(j)) maxCommon = 1 + findLCS(text1, text2, i+1, j+1);
+        else maxCommon = Math.max(findLCS(text1, text2, i+1, j), findLCS(text1, text2, i, j+1));
+
+        return dp[i][j] = maxCommon;
     }
 }
