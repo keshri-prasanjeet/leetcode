@@ -79,6 +79,7 @@ This repository contains my solutions to LeetCode problems.
 | [0140-word-break-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0140-word-break-ii) |
 | [0208-implement-trie-prefix-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0217-contains-duplicate](https://github.com/keshri-prasanjeet/leetcode/tree/master/0217-contains-duplicate) |
+| [0242-valid-anagram](https://github.com/keshri-prasanjeet/leetcode/tree/master/0242-valid-anagram) |
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/keshri-prasanjeet/leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
 | [2755-extra-characters-in-a-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/2755-extra-characters-in-a-string) |
@@ -109,6 +110,7 @@ This repository contains my solutions to LeetCode problems.
 | [0208-implement-trie-prefix-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/keshri-prasanjeet/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0212-word-search-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0212-word-search-ii) |
+| [0242-valid-anagram](https://github.com/keshri-prasanjeet/leetcode/tree/master/0242-valid-anagram) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
 | [0647-palindromic-substrings](https://github.com/keshri-prasanjeet/leetcode/tree/master/0647-palindromic-substrings) |
@@ -149,6 +151,7 @@ This repository contains my solutions to LeetCode problems.
 | [0018-4sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0018-4sum) |
 | [0047-permutations-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0047-permutations-ii) |
 | [0217-contains-duplicate](https://github.com/keshri-prasanjeet/leetcode/tree/master/0217-contains-duplicate) |
+| [0242-valid-anagram](https://github.com/keshri-prasanjeet/leetcode/tree/master/0242-valid-anagram) |
 | [0658-find-k-closest-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0658-find-k-closest-elements) |
 | [1427-all-elements-in-two-binary-search-trees](https://github.com/keshri-prasanjeet/leetcode/tree/master/1427-all-elements-in-two-binary-search-trees) |
 ## Heap (Priority Queue)
