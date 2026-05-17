@@ -13,6 +13,7 @@ This repository contains my solutions to LeetCode problems.
 | [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
 | [0046-permutations](https://github.com/keshri-prasanjeet/leetcode/tree/master/0046-permutations) |
 | [0047-permutations-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0047-permutations-ii) |
+| [0049-group-anagrams](https://github.com/keshri-prasanjeet/leetcode/tree/master/0049-group-anagrams) |
 | [0051-n-queens](https://github.com/keshri-prasanjeet/leetcode/tree/master/0051-n-queens) |
 | [0078-subsets](https://github.com/keshri-prasanjeet/leetcode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/keshri-prasanjeet/leetcode/tree/master/0079-word-search) |
@@ -74,6 +75,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0049-group-anagrams](https://github.com/keshri-prasanjeet/leetcode/tree/master/0049-group-anagrams) |
 | [0076-minimum-window-substring](https://github.com/keshri-prasanjeet/leetcode/tree/master/0076-minimum-window-substring) |
 | [0139-word-break](https://github.com/keshri-prasanjeet/leetcode/tree/master/0139-word-break) |
 | [0140-word-break-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0140-word-break-ii) |
@@ -99,6 +101,7 @@ This repository contains my solutions to LeetCode problems.
 | [0005-longest-palindromic-substring](https://github.com/keshri-prasanjeet/leetcode/tree/master/0005-longest-palindromic-substring) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0022-generate-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0022-generate-parentheses) |
+| [0049-group-anagrams](https://github.com/keshri-prasanjeet/leetcode/tree/master/0049-group-anagrams) |
 | [0076-minimum-window-substring](https://github.com/keshri-prasanjeet/leetcode/tree/master/0076-minimum-window-substring) |
 | [0079-word-search](https://github.com/keshri-prasanjeet/leetcode/tree/master/0079-word-search) |
 | [0091-decode-ways](https://github.com/keshri-prasanjeet/leetcode/tree/master/0091-decode-ways) |
@@ -150,6 +153,7 @@ This repository contains my solutions to LeetCode problems.
 | ------- |
 | [0018-4sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0018-4sum) |
 | [0047-permutations-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0047-permutations-ii) |
+| [0049-group-anagrams](https://github.com/keshri-prasanjeet/leetcode/tree/master/0049-group-anagrams) |
 | [0217-contains-duplicate](https://github.com/keshri-prasanjeet/leetcode/tree/master/0217-contains-duplicate) |
 | [0242-valid-anagram](https://github.com/keshri-prasanjeet/leetcode/tree/master/0242-valid-anagram) |
 | [0658-find-k-closest-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0658-find-k-closest-elements) |
