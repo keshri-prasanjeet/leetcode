@@ -31,6 +31,7 @@ This repository contains my solutions to LeetCode problems.
 | [0309-best-time-to-buy-and-sell-stock-with-cooldown](https://github.com/keshri-prasanjeet/leetcode/tree/master/0309-best-time-to-buy-and-sell-stock-with-cooldown) |
 | [0322-coin-change](https://github.com/keshri-prasanjeet/leetcode/tree/master/0322-coin-change) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/keshri-prasanjeet/leetcode/tree/master/0329-longest-increasing-path-in-a-matrix) |
+| [0347-top-k-frequent-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0377-combination-sum-iv](https://github.com/keshri-prasanjeet/leetcode/tree/master/0377-combination-sum-iv) |
 | [0416-partition-equal-subset-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0416-partition-equal-subset-sum) |
 | [0473-matchsticks-to-square](https://github.com/keshri-prasanjeet/leetcode/tree/master/0473-matchsticks-to-square) |
@@ -82,6 +83,7 @@ This repository contains my solutions to LeetCode problems.
 | [0208-implement-trie-prefix-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0217-contains-duplicate](https://github.com/keshri-prasanjeet/leetcode/tree/master/0217-contains-duplicate) |
 | [0242-valid-anagram](https://github.com/keshri-prasanjeet/leetcode/tree/master/0242-valid-anagram) |
+| [0347-top-k-frequent-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/keshri-prasanjeet/leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
 | [2755-extra-characters-in-a-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/2755-extra-characters-in-a-string) |
@@ -136,6 +138,7 @@ This repository contains my solutions to LeetCode problems.
 ## Counting
 |  |
 | ------- |
+| [0347-top-k-frequent-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0347-top-k-frequent-elements) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/keshri-prasanjeet/leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
 ## Binary Search
 |  |
@@ -156,11 +159,13 @@ This repository contains my solutions to LeetCode problems.
 | [0049-group-anagrams](https://github.com/keshri-prasanjeet/leetcode/tree/master/0049-group-anagrams) |
 | [0217-contains-duplicate](https://github.com/keshri-prasanjeet/leetcode/tree/master/0217-contains-duplicate) |
 | [0242-valid-anagram](https://github.com/keshri-prasanjeet/leetcode/tree/master/0242-valid-anagram) |
+| [0347-top-k-frequent-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0658-find-k-closest-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0658-find-k-closest-elements) |
 | [1427-all-elements-in-two-binary-search-trees](https://github.com/keshri-prasanjeet/leetcode/tree/master/1427-all-elements-in-two-binary-search-trees) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
+| [0347-top-k-frequent-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0658-find-k-closest-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0658-find-k-closest-elements) |
 ## Tree
 |  |
@@ -373,4 +378,16 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/keshri-prasanjeet/leetcode/tree/master/0329-longest-increasing-path-in-a-matrix) |
+## Divide and Conquer
+|  |
+| ------- |
+| [0347-top-k-frequent-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0347-top-k-frequent-elements) |
+## Bucket Sort
+|  |
+| ------- |
+| [0347-top-k-frequent-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0347-top-k-frequent-elements) |
+## Quickselect
+|  |
+| ------- |
+| [0347-top-k-frequent-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0347-top-k-frequent-elements) |
 <!---LeetCode Topics End-->
