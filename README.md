@@ -19,6 +19,7 @@ This repository contains my solutions to LeetCode problems.
 | [0079-word-search](https://github.com/keshri-prasanjeet/leetcode/tree/master/0079-word-search) |
 | [0090-subsets-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0090-subsets-ii) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
+| [0128-longest-consecutive-sequence](https://github.com/keshri-prasanjeet/leetcode/tree/master/0128-longest-consecutive-sequence) |
 | [0139-word-break](https://github.com/keshri-prasanjeet/leetcode/tree/master/0139-word-break) |
 | [0140-word-break-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0140-word-break-ii) |
 | [0152-maximum-product-subarray](https://github.com/keshri-prasanjeet/leetcode/tree/master/0152-maximum-product-subarray) |
@@ -78,6 +79,7 @@ This repository contains my solutions to LeetCode problems.
 | [0017-letter-combinations-of-a-phone-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0049-group-anagrams](https://github.com/keshri-prasanjeet/leetcode/tree/master/0049-group-anagrams) |
 | [0076-minimum-window-substring](https://github.com/keshri-prasanjeet/leetcode/tree/master/0076-minimum-window-substring) |
+| [0128-longest-consecutive-sequence](https://github.com/keshri-prasanjeet/leetcode/tree/master/0128-longest-consecutive-sequence) |
 | [0139-word-break](https://github.com/keshri-prasanjeet/leetcode/tree/master/0139-word-break) |
 | [0140-word-break-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0140-word-break-ii) |
 | [0208-implement-trie-prefix-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0208-implement-trie-prefix-tree) |
@@ -390,4 +392,8 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0347-top-k-frequent-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0347-top-k-frequent-elements) |
+## Union-Find
+|  |
+| ------- |
+| [0128-longest-consecutive-sequence](https://github.com/keshri-prasanjeet/leetcode/tree/master/0128-longest-consecutive-sequence) |
 <!---LeetCode Topics End-->
