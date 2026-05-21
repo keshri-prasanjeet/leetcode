@@ -19,6 +19,7 @@ This repository contains my solutions to LeetCode problems.
 | [0078-subsets](https://github.com/keshri-prasanjeet/leetcode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/keshri-prasanjeet/leetcode/tree/master/0079-word-search) |
 | [0090-subsets-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0090-subsets-ii) |
+| [0121-best-time-to-buy-and-sell-stock](https://github.com/keshri-prasanjeet/leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0128-longest-consecutive-sequence](https://github.com/keshri-prasanjeet/leetcode/tree/master/0128-longest-consecutive-sequence) |
 | [0139-word-break](https://github.com/keshri-prasanjeet/leetcode/tree/master/0139-word-break) |
@@ -240,6 +241,7 @@ This repository contains my solutions to LeetCode problems.
 | [0070-climbing-stairs](https://github.com/keshri-prasanjeet/leetcode/tree/master/0070-climbing-stairs) |
 | [0091-decode-ways](https://github.com/keshri-prasanjeet/leetcode/tree/master/0091-decode-ways) |
 | [0097-interleaving-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0097-interleaving-string) |
+| [0121-best-time-to-buy-and-sell-stock](https://github.com/keshri-prasanjeet/leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/keshri-prasanjeet/leetcode/tree/master/0131-palindrome-partitioning) |
