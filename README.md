@@ -7,6 +7,7 @@ This repository contains my solutions to LeetCode problems.
 ## Array
 |  |
 | ------- |
+| [0015-3sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0018-4sum) |
 | [0039-combination-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0040-combination-sum-ii) |
@@ -94,6 +95,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/keshri-prasanjeet/leetcode/tree/master/0005-longest-palindromic-substring) |
+| [0015-3sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0018-4sum) |
 | [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
@@ -156,6 +158,7 @@ This repository contains my solutions to LeetCode problems.
 ## Sorting
 |  |
 | ------- |
+| [0015-3sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0018-4sum) |
 | [0047-permutations-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0047-permutations-ii) |
 | [0049-group-anagrams](https://github.com/keshri-prasanjeet/leetcode/tree/master/0049-group-anagrams) |
