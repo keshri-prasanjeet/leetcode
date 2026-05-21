@@ -12,10 +12,6 @@ class Solution {
         for(int i = len-2;i>=0;i--){
             maxR[i] = Math.max(maxR[i+1], height[i]);
         }
-
-        Arrays.stream(maxL).forEach(System.out::println);
-        System.out.println("---");
-        Arrays.stream(maxR).forEach(System.out::println);
         int trappedWater = 0;
         for(int i=0;i<len;i++){
             int water = Math.min(maxL[i], maxR[i]) - height[i];
