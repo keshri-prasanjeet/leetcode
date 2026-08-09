@@ -25,6 +25,7 @@ This repository contains my solutions to LeetCode problems.
 | [0128-longest-consecutive-sequence](https://github.com/keshri-prasanjeet/leetcode/tree/master/0128-longest-consecutive-sequence) |
 | [0139-word-break](https://github.com/keshri-prasanjeet/leetcode/tree/master/0139-word-break) |
 | [0140-word-break-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0140-word-break-ii) |
+| [0150-evaluate-reverse-polish-notation](https://github.com/keshri-prasanjeet/leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0152-maximum-product-subarray](https://github.com/keshri-prasanjeet/leetcode/tree/master/0152-maximum-product-subarray) |
 | [0198-house-robber](https://github.com/keshri-prasanjeet/leetcode/tree/master/0198-house-robber) |
 | [0209-minimum-size-subarray-sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0209-minimum-size-subarray-sum) |
@@ -305,6 +306,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
+| [0150-evaluate-reverse-polish-notation](https://github.com/keshri-prasanjeet/leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0775-n-ary-tree-preorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0775-n-ary-tree-preorder-traversal) |
 | [0776-n-ary-tree-postorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0776-n-ary-tree-postorder-traversal) |
 ## Matrix
@@ -357,6 +359,7 @@ This repository contains my solutions to LeetCode problems.
 | ------- |
 | [0062-unique-paths](https://github.com/keshri-prasanjeet/leetcode/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/keshri-prasanjeet/leetcode/tree/master/0070-climbing-stairs) |
+| [0150-evaluate-reverse-polish-notation](https://github.com/keshri-prasanjeet/leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0279-perfect-squares](https://github.com/keshri-prasanjeet/leetcode/tree/master/0279-perfect-squares) |
 | [0343-integer-break](https://github.com/keshri-prasanjeet/leetcode/tree/master/0343-integer-break) |
 | [0486-predict-the-winner](https://github.com/keshri-prasanjeet/leetcode/tree/master/0486-predict-the-winner) |
