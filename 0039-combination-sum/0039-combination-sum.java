@@ -1,20 +1,22 @@
 class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<List<Integer>>> dp = new ArrayList<>();
         Arrays.sort(candidates);
-        for(int i=0;i<=target;i++){
-            dp.add(new ArrayList<>());
+        List<List<Integer>> allCombinations = new ArrayList<>();
+        walkCombinations(candidates, 0, target, new ArrayList<>(), allCombinations);
+        return allCombinations;
+    }
+
+    private void walkCombinations(int[] candidates, int start, int target, List<Integer> combination, List<List<Integer>> allCombinations){
+        if(target == 0){
+            allCombinations.add(new ArrayList<>(combination));
+            return;
         }
-        dp.get(0).add(new ArrayList<>());
-        for(int candidate: candidates){
-            for(int i=candidate;i<=target;i++){
-                for(List<Integer> prev: dp.get(i-candidate)){
-                    List<Integer> newSum = new ArrayList<>(prev);
-                    newSum.add(candidate);
-                    dp.get(i).add(newSum);
-                }
-            }
+
+        for(int i=start;i<candidates.length;i++){
+            if(candidates[i] > target) break;
+            combination.add(candidates[i]);
+            walkCombinations(candidates, i, (target - candidates[i]), combination, allCombinations);
+            combination.remove(combination.size()-1);
         }
-        return dp.get(target);
     }
 }
