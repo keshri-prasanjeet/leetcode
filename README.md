@@ -107,6 +107,7 @@ This repository contains my solutions to LeetCode problems.
 | [0018-4sum](https://github.com/keshri-prasanjeet/leetcode/tree/master/0018-4sum) |
 | [0019-remove-nth-node-from-end-of-list](https://github.com/keshri-prasanjeet/leetcode/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
+| [0125-valid-palindrome](https://github.com/keshri-prasanjeet/leetcode/tree/master/0125-valid-palindrome) |
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
 | [0647-palindromic-substrings](https://github.com/keshri-prasanjeet/leetcode/tree/master/0647-palindromic-substrings) |
 | [0658-find-k-closest-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0658-find-k-closest-elements) |
@@ -123,6 +124,7 @@ This repository contains my solutions to LeetCode problems.
 | [0091-decode-ways](https://github.com/keshri-prasanjeet/leetcode/tree/master/0091-decode-ways) |
 | [0093-restore-ip-addresses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0093-restore-ip-addresses) |
 | [0097-interleaving-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0097-interleaving-string) |
+| [0125-valid-palindrome](https://github.com/keshri-prasanjeet/leetcode/tree/master/0125-valid-palindrome) |
 | [0131-palindrome-partitioning](https://github.com/keshri-prasanjeet/leetcode/tree/master/0131-palindrome-partitioning) |
 | [0139-word-break](https://github.com/keshri-prasanjeet/leetcode/tree/master/0139-word-break) |
 | [0140-word-break-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0140-word-break-ii) |
