@@ -20,6 +20,7 @@ This repository contains my solutions to LeetCode problems.
 | [0051-n-queens](https://github.com/keshri-prasanjeet/leetcode/tree/master/0051-n-queens) |
 | [0078-subsets](https://github.com/keshri-prasanjeet/leetcode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/keshri-prasanjeet/leetcode/tree/master/0079-word-search) |
+| [0084-largest-rectangle-in-histogram](https://github.com/keshri-prasanjeet/leetcode/tree/master/0084-largest-rectangle-in-histogram) |
 | [0090-subsets-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0090-subsets-ii) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/keshri-prasanjeet/leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
@@ -314,6 +315,7 @@ This repository contains my solutions to LeetCode problems.
 | ------- |
 | [0020-valid-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0020-valid-parentheses) |
 | [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
+| [0084-largest-rectangle-in-histogram](https://github.com/keshri-prasanjeet/leetcode/tree/master/0084-largest-rectangle-in-histogram) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/keshri-prasanjeet/leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0155-min-stack](https://github.com/keshri-prasanjeet/leetcode/tree/master/0155-min-stack) |
 | [0739-daily-temperatures](https://github.com/keshri-prasanjeet/leetcode/tree/master/0739-daily-temperatures) |
@@ -330,6 +332,7 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
+| [0084-largest-rectangle-in-histogram](https://github.com/keshri-prasanjeet/leetcode/tree/master/0084-largest-rectangle-in-histogram) |
 | [0739-daily-temperatures](https://github.com/keshri-prasanjeet/leetcode/tree/master/0739-daily-temperatures) |
 ## Trie
 |  |
@@ -431,4 +434,8 @@ This repository contains my solutions to LeetCode problems.
 | ------- |
 | [0020-valid-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0020-valid-parentheses) |
 | [0022-generate-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0022-generate-parentheses) |
+## Range Minimum/Maximum Query
+|  |
+| ------- |
+| [0084-largest-rectangle-in-histogram](https://github.com/keshri-prasanjeet/leetcode/tree/master/0084-largest-rectangle-in-histogram) |
 <!---LeetCode Topics End-->
