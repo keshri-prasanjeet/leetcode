@@ -290,6 +290,7 @@ This repository contains my solutions to LeetCode problems.
 ## Design
 |  |
 | ------- |
+| [0155-min-stack](https://github.com/keshri-prasanjeet/leetcode/tree/master/0155-min-stack) |
 | [0208-implement-trie-prefix-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/keshri-prasanjeet/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/keshri-prasanjeet/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
@@ -313,6 +314,7 @@ This repository contains my solutions to LeetCode problems.
 | [0020-valid-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0020-valid-parentheses) |
 | [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/keshri-prasanjeet/leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
+| [0155-min-stack](https://github.com/keshri-prasanjeet/leetcode/tree/master/0155-min-stack) |
 | [0775-n-ary-tree-preorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0775-n-ary-tree-preorder-traversal) |
 | [0776-n-ary-tree-postorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0776-n-ary-tree-postorder-traversal) |
 ## Matrix
