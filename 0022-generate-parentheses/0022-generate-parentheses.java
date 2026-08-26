@@ -1,26 +1,24 @@
 class Solution {
-    List<String> answer;
+    List<String> allParenthesis;
     public List<String> generateParenthesis(int n) {
-        answer = new ArrayList<>();
-        generateParenthesis(n, new StringBuilder(), n);
-        return answer;
+        allParenthesis = new ArrayList<>();
+        makeParenthesis(n,n,new StringBuilder());
+        return allParenthesis;
     }
 
-    private void generateParenthesis(int open, StringBuilder sb, int close){
-        if(open == 0 && close ==0){
-            answer.add(sb.toString());
-            return;
-        }
-
-        if(open > 0){
+    private void makeParenthesis(int open, int clos, StringBuilder sb){
+        if(open>0){
             sb.append("(");
-            generateParenthesis(open-1, sb, close);
+            makeParenthesis(open-1, clos, sb);
             sb.deleteCharAt(sb.length()-1);
         }
-        if(close > open){
+        if(clos > open && clos > 0){
             sb.append(")");
-            generateParenthesis(open, sb, close-1);
+            makeParenthesis(open, clos-1, sb);
             sb.deleteCharAt(sb.length()-1);
+        }
+        if(open == clos && clos == 0){
+            allParenthesis.add(sb.toString());
         }
     }
 }
