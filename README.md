@@ -117,6 +117,7 @@ This repository contains my solutions to LeetCode problems.
 | [0003-longest-substring-without-repeating-characters](https://github.com/keshri-prasanjeet/leetcode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0005-longest-palindromic-substring](https://github.com/keshri-prasanjeet/leetcode/tree/master/0005-longest-palindromic-substring) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/keshri-prasanjeet/leetcode/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0020-valid-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0020-valid-parentheses) |
 | [0022-generate-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0022-generate-parentheses) |
 | [0049-group-anagrams](https://github.com/keshri-prasanjeet/leetcode/tree/master/0049-group-anagrams) |
 | [0076-minimum-window-substring](https://github.com/keshri-prasanjeet/leetcode/tree/master/0076-minimum-window-substring) |
@@ -309,6 +310,7 @@ This repository contains my solutions to LeetCode problems.
 ## Stack
 |  |
 | ------- |
+| [0020-valid-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0020-valid-parentheses) |
 | [0042-trapping-rain-water](https://github.com/keshri-prasanjeet/leetcode/tree/master/0042-trapping-rain-water) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/keshri-prasanjeet/leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0775-n-ary-tree-preorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0775-n-ary-tree-preorder-traversal) |
@@ -419,4 +421,8 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/keshri-prasanjeet/leetcode/tree/master/0128-longest-consecutive-sequence) |
+## Bracket Sequences
+|  |
+| ------- |
+| [0020-valid-parentheses](https://github.com/keshri-prasanjeet/leetcode/tree/master/0020-valid-parentheses) |
 <!---LeetCode Topics End-->
