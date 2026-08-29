@@ -1,19 +1,22 @@
 class Solution {
     public int evalRPN(String[] tokens) {
-        Stack<Integer> tokenStack = new Stack<>();
-        for(String token: tokens){
-            if(token.length() == 1 && "+-*/".contains(token)){
-                int second = tokenStack.pop();
-                int first = tokenStack.pop();
-                switch(token){
-                    case "+" : tokenStack.push(first + second); break;
-                    case "-" : tokenStack.push(first - second); break;
-                    case "*" : tokenStack.push(first * second); break;
-                    case "/" : tokenStack.push(first / second); break;
+        Deque<Integer> numberStack = new ArrayDeque<>();
+        for(String token:tokens){
+            if(token.length()==1 && "+-*/".contains(token)){
+                //this is an operator
+                int first = numberStack.pop();
+                int second= numberStack.pop();
+                int answer = 0;
+                switch(token) {
+                    case "+" -> answer = first + second;
+                    case "-" -> answer = second - first;
+                    case "*" -> answer = first * second;
+                    case "/" -> answer = second / first;
                 }
+                numberStack.push(answer);
             }
-            else tokenStack.push(Integer.parseInt(token));
+            else numberStack.push(Integer.parseInt(token));
         }
-        return tokenStack.pop();
+        return numberStack.pop();
     }
 }
