@@ -355,6 +355,7 @@ This repository contains my solutions to LeetCode problems.
 ## Linked List
 |  |
 | ------- |
+| [0002-add-two-numbers](https://github.com/keshri-prasanjeet/leetcode/tree/master/0002-add-two-numbers) |
 | [0019-remove-nth-node-from-end-of-list](https://github.com/keshri-prasanjeet/leetcode/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0021-merge-two-sorted-lists](https://github.com/keshri-prasanjeet/leetcode/tree/master/0021-merge-two-sorted-lists) |
 | [0138-copy-list-with-random-pointer](https://github.com/keshri-prasanjeet/leetcode/tree/master/0138-copy-list-with-random-pointer) |
@@ -362,6 +363,7 @@ This repository contains my solutions to LeetCode problems.
 ## Recursion
 |  |
 | ------- |
+| [0002-add-two-numbers](https://github.com/keshri-prasanjeet/leetcode/tree/master/0002-add-two-numbers) |
 | [0021-merge-two-sorted-lists](https://github.com/keshri-prasanjeet/leetcode/tree/master/0021-merge-two-sorted-lists) |
 | [0143-reorder-list](https://github.com/keshri-prasanjeet/leetcode/tree/master/0143-reorder-list) |
 | [0486-predict-the-winner](https://github.com/keshri-prasanjeet/leetcode/tree/master/0486-predict-the-winner) |
@@ -384,6 +386,7 @@ This repository contains my solutions to LeetCode problems.
 ## Math
 |  |
 | ------- |
+| [0002-add-two-numbers](https://github.com/keshri-prasanjeet/leetcode/tree/master/0002-add-two-numbers) |
 | [0062-unique-paths](https://github.com/keshri-prasanjeet/leetcode/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/keshri-prasanjeet/leetcode/tree/master/0070-climbing-stairs) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/keshri-prasanjeet/leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
