@@ -53,6 +53,7 @@ This repository contains my solutions to LeetCode problems.
 | [0739-daily-temperatures](https://github.com/keshri-prasanjeet/leetcode/tree/master/0739-daily-temperatures) |
 | [0747-min-cost-climbing-stairs](https://github.com/keshri-prasanjeet/leetcode/tree/master/0747-min-cost-climbing-stairs) |
 | [0909-stone-game](https://github.com/keshri-prasanjeet/leetcode/tree/master/0909-stone-game) |
+| [1019-squares-of-a-sorted-array](https://github.com/keshri-prasanjeet/leetcode/tree/master/1019-squares-of-a-sorted-array) |
 | [1025-minimum-cost-for-tickets](https://github.com/keshri-prasanjeet/leetcode/tree/master/1025-minimum-cost-for-tickets) |
 | [1240-stone-game-ii](https://github.com/keshri-prasanjeet/leetcode/tree/master/1240-stone-game-ii) |
 | [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/keshri-prasanjeet/leetcode/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
@@ -122,6 +123,7 @@ This repository contains my solutions to LeetCode problems.
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
 | [0647-palindromic-substrings](https://github.com/keshri-prasanjeet/leetcode/tree/master/0647-palindromic-substrings) |
 | [0658-find-k-closest-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0658-find-k-closest-elements) |
+| [1019-squares-of-a-sorted-array](https://github.com/keshri-prasanjeet/leetcode/tree/master/1019-squares-of-a-sorted-array) |
 ## String
 |  |
 | ------- |
@@ -195,6 +197,7 @@ This repository contains my solutions to LeetCode problems.
 | [0242-valid-anagram](https://github.com/keshri-prasanjeet/leetcode/tree/master/0242-valid-anagram) |
 | [0347-top-k-frequent-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0658-find-k-closest-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0658-find-k-closest-elements) |
+| [1019-squares-of-a-sorted-array](https://github.com/keshri-prasanjeet/leetcode/tree/master/1019-squares-of-a-sorted-array) |
 | [1427-all-elements-in-two-binary-search-trees](https://github.com/keshri-prasanjeet/leetcode/tree/master/1427-all-elements-in-two-binary-search-trees) |
 ## Heap (Priority Queue)
 |  |
