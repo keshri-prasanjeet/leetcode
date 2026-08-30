@@ -1,27 +1,21 @@
 class Solution {
     public int[] sortedSquares(int[] nums) {
-        List<Integer> negNums = new ArrayList<>();
-        List<Integer> posNums = new ArrayList<>();
-        for(int num:nums){
-            if(num<=0) negNums.add(num*num);
-            else posNums.add(num*num);
-        }
-        int idx1 = negNums.size()-1;
-        int idx2 = 0;
-        int i = 0;
+        int[] answer = new int[nums.length];
+        int left = 0;
+        int right = nums.length-1;
+        for(int i = nums.length-1;i>=0;i--){
+            int leftCandidate = nums[left]*nums[left];
+            int rightCandidate= nums[right]*nums[right];
 
-        while(idx1 >= 0 && idx2 < posNums.size()){
-            if(negNums.get(idx1)<=posNums.get(idx2)) nums[i++] = negNums.get(idx1--);
-            else nums[i++] = posNums.get(idx2++);
+            if(leftCandidate>=rightCandidate){
+                answer[i] = leftCandidate;
+                left++;
+            }
+            else{
+                answer[i] = rightCandidate;
+                right--;
+            }
         }
-
-        while(idx1 >= 0){
-            nums[i++] = negNums.get(idx1--);
-        }
-
-        while(idx2 < posNums.size()){
-            nums[i++] = posNums.get(idx2++);
-        }
-        return nums;
+        return answer;
     }
 }
