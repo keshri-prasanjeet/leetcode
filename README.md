@@ -126,6 +126,7 @@ This repository contains my solutions to LeetCode problems.
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
 | [0647-palindromic-substrings](https://github.com/keshri-prasanjeet/leetcode/tree/master/0647-palindromic-substrings) |
 | [0658-find-k-closest-elements](https://github.com/keshri-prasanjeet/leetcode/tree/master/0658-find-k-closest-elements) |
+| [0874-backspace-string-compare](https://github.com/keshri-prasanjeet/leetcode/tree/master/0874-backspace-string-compare) |
 | [1019-squares-of-a-sorted-array](https://github.com/keshri-prasanjeet/leetcode/tree/master/1019-squares-of-a-sorted-array) |
 ## String
 |  |
@@ -153,6 +154,7 @@ This repository contains my solutions to LeetCode problems.
 | [0424-longest-repeating-character-replacement](https://github.com/keshri-prasanjeet/leetcode/tree/master/0424-longest-repeating-character-replacement) |
 | [0567-permutation-in-string](https://github.com/keshri-prasanjeet/leetcode/tree/master/0567-permutation-in-string) |
 | [0647-palindromic-substrings](https://github.com/keshri-prasanjeet/leetcode/tree/master/0647-palindromic-substrings) |
+| [0874-backspace-string-compare](https://github.com/keshri-prasanjeet/leetcode/tree/master/0874-backspace-string-compare) |
 | [1250-longest-common-subsequence](https://github.com/keshri-prasanjeet/leetcode/tree/master/1250-longest-common-subsequence) |
 | [1987-substrings-of-size-three-with-distinct-characters](https://github.com/keshri-prasanjeet/leetcode/tree/master/1987-substrings-of-size-three-with-distinct-characters) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/keshri-prasanjeet/leetcode/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
@@ -344,6 +346,7 @@ This repository contains my solutions to LeetCode problems.
 | [0739-daily-temperatures](https://github.com/keshri-prasanjeet/leetcode/tree/master/0739-daily-temperatures) |
 | [0775-n-ary-tree-preorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0775-n-ary-tree-preorder-traversal) |
 | [0776-n-ary-tree-postorder-traversal](https://github.com/keshri-prasanjeet/leetcode/tree/master/0776-n-ary-tree-postorder-traversal) |
+| [0874-backspace-string-compare](https://github.com/keshri-prasanjeet/leetcode/tree/master/0874-backspace-string-compare) |
 ## Matrix
 |  |
 | ------- |
@@ -473,4 +476,8 @@ This repository contains my solutions to LeetCode problems.
 |  |
 | ------- |
 | [0141-linked-list-cycle](https://github.com/keshri-prasanjeet/leetcode/tree/master/0141-linked-list-cycle) |
+## Simulation
+|  |
+| ------- |
+| [0874-backspace-string-compare](https://github.com/keshri-prasanjeet/leetcode/tree/master/0874-backspace-string-compare) |
 <!---LeetCode Topics End-->
